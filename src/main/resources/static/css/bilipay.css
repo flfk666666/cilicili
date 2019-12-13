@@ -1,0 +1,188 @@
+.bilipay-popup-fade {
+    display: none;
+}
+.bilipay-fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 101;
+}
+.bilipay-pop-content-wrap {
+  position: fixed;
+  top: 200px;
+  width: 420px;
+  height: 320px;
+  left: 50%;
+  z-index: 101;
+}
+.bilipay-pop-content-wrap-h5 {
+  width: 95%;
+  height: 220px;
+}
+.bilipay-pop-content {
+  position: relative;
+  left: -50%;
+  background: #ffffff;
+  border-radius: 4px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.bilipay-pop-content-h5 {
+  overflow: inherit;
+  width: 90%;
+  height: 90%;
+  left: -45%;
+}
+.bilipay-pop-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 15px;
+  width: 15px;
+  background-image: url(./assets/icon_close@2x.png);
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.bilipay-error-img {
+  /* display: none; */
+  height: 120px;
+  width: 120px;
+  margin: 50px auto 0;
+  background-image: url(./assets/error.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.bilipay-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #222222;
+  letter-spacing: 0;
+  line-height: 18px;
+  text-align: center;
+}
+.bilipay-pop-button {
+  display: none;
+  width: 142px;
+  height: 42px;
+  background: #fb7299;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: 42px;
+  cursor: pointer;
+}
+.bilipay-pop-text {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 18px;
+  color: #222222;
+  letter-spacing: 0;
+  line-height: 23px;
+  text-align: center;
+  padding: 0 88px;
+}
+.bilipay-pop-text-h5 {
+  font-size: 14px;
+  padding: 45px 20px;
+}
+.bilipay-pop-subtext {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #6d757a;
+  letter-spacing: 0;
+  line-height: 18px;
+  text-align: center;
+}
+.bilipay-pop-img {
+  /* display: none; */
+  height: 105px;
+  width: 120px;
+  margin: 57px auto 0;
+  background-image: url(./assets/lack-img.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.bilipay-img-h5 {
+  position: absolute;
+  width: 136px;
+  height: 115px;
+  top: -52%;
+  left: 50%;
+  margin-left: -68px;
+}
+.bilipay-pop-buttons {
+  /* margin: 26px 85px 0; */
+  /* padding: 0 20px; */
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bilipay-cancel-button {
+  display: none;
+  margin-right: 10px;
+  border: 1px solid #ccd0d7;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #6d757a;
+  letter-spacing: 0;
+  line-height: 40px;
+  background: transparent;
+}
+.bilipay-confirm-button {
+  display: none;
+  background: #fb7299;
+  border: 1px solid #fb7299;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: 42px;
+}
+.bilipay-sure-button {
+  display: none;
+  border: 1px solid #ccd0d7;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #6d757a;
+  letter-spacing: 0;
+  line-height: 40px;
+  background: transparent;
+}
+.bilipay-alert-top {
+  overflow: hidden;
+  display: none;
+}
+
+.bilipay-alert-wrapper {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  z-index: 3;
+  white-space: nowrap;
+}
+.bilipay-alert-content {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: 46px;
+  text-align: center;
+  min-height: 44px;
+  min-width: 112px;
+  display: inline-block;
+  margin-top: -50%;
+  margin-left: -50%;
+  padding: 0 20px;
+}
