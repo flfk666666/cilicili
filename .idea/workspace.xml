@@ -1,0 +1,1924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e79a91a6-3fa3-4f22-8dba-140ff279e764" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/ApplicationStrat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/config/Configure.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/controller/C_UserAdminController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/controller/C_VideoController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/dao/C_BarrageHistoryDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/dao/C_FolknumberDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/dao/C_FolkoperaDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/dao/C_NewsDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/dao/C_RecentlyDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/dao/C_UserAdminDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/dao/C_VideoDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/dao/C_selVideoDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/entity/C_Barrage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/entity/C_BarrageHistory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/entity/C_Folknumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/entity/C_Folkopera.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/entity/C_News.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/entity/C_Recently.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/entity/C_UserAdmin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/entity/C_Video.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/entity/C_tjVideo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/service/C_BarrageHistoryService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/service/C_FolknumberService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/service/C_FolkoperaService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/service/C_NewsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/service/C_RecentlyService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/service/C_UserAdminService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/service/C_VideoService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/aaa/service/C_selVideoService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bilipay.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/chuangzuo1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/chuangzuo2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/chuangzuo3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/chuangzuo4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/chuangzuo5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/chuangzuo6.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/chuangzuo7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/chuangzuo8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/comment.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/fanju1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/fanju2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/kongjian1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/kongjian2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/kongjian3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/kongjian4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/login1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/login2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/register2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/register3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/sb-admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/sb-admin.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/search.0.873ddf42c10f89041580a7464cc60c78d86b8329.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/search.1.873ddf42c10f89041580a7464cc60c78d86b8329.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/space.3.9129b1d055504f069cd2c03624cb09fef426030e (2).css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/space.3.9129b1d055504f069cd2c03624cb09fef426030e.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/space.4.9129b1d055504f069cd2c03624cb09fef426030e.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/space.5.9129b1d055504f069cd2c03624cb09fef426030e.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/video.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/videobofang1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/zhongxin1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/zhongxin2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/新建文本文档.css.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/changelog.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/easyloader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/jquery.easyui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/jquery.easyui.mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/license_freeware.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/locale/easyui-lang-zh_CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.accordion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.combo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.combobox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.combogrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.combotree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.combotreegrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.datagrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.datalist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.datebox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.datetimebox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.datetimespinner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.draggable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.droppable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.filebox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.linkbutton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.menubutton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.messager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.numberbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.numberspinner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.pagination.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.panel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.passwordbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.progressbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.propertygrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.resizable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.searchbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.spinner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.splitbutton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.switchbutton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.tabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.tagbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.textbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.timespinner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.treegrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.validatebox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/plugins/jquery.window.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/easyloader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.accordion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.combobox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.datebox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.draggable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.droppable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.linkbutton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.progressbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.propertygrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.resizable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.tabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/src/jquery.window.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/combo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/combobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/datalist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/datebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/easyui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/filebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/accordion_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/calendar_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/combo_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/datagrid_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/datebox_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/layout_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/linkbutton_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/menu_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/messager_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/pagination_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/panel_tools.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/passwordbox_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/passwordbox_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/searchbox_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/slider_handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/spinner_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/tabs_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/tagbox_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/tree_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/images/validatebox_warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/linkbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/menubutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/messager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/numberbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/panel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/passwordbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/progressbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/propertygrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/searchbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/splitbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/switchbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/tagbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/textbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/tree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/validatebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/bootstrap/window.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/color.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/combo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/combobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/datalist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/datebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/easyui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/filebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/accordion_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/calendar_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/combo_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/datagrid_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/datebox_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/layout_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/linkbutton_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/menu_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/messager_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/pagination_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/panel_tools.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/passwordbox_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/passwordbox_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/searchbox_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/slider_handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/spinner_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/tabs_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/tagbox_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/tree_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/images/validatebox_warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/linkbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/menubutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/messager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/numberbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/panel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/passwordbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/progressbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/propertygrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/searchbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/splitbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/switchbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/tagbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/textbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/tree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/validatebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/default/window.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/clear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/cut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/edit_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/edit_remove.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/filesave.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/filter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/large_chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/large_clipart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/large_picture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/large_shapes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/large_smartart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/mini_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/mini_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/mini_refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/more.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/no.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/ok.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/pencil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/print.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/redo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/reload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/sum.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/tip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/icons/undo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/combo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/combobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/datalist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/datebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/easyui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/filebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/accordion_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/calendar_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/combo_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/datagrid_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/datebox_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/layout_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/linkbutton_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/menu_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/messager_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/pagination_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/panel_tools.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/passwordbox_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/passwordbox_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/searchbox_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/slider_handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/spinner_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/tabs_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/tagbox_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/tree_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/images/validatebox_warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/linkbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/menubutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/messager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/numberbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/panel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/passwordbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/progressbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/propertygrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/searchbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/splitbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/switchbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/tagbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/textbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/tree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/validatebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/material/window.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/checkbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/combo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/combobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/datalist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/datebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/easyui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/filebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/accordion_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/calendar_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/combo_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/datagrid_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/datebox_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/layout_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/linkbutton_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/menu_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/messager_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/pagination_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/panel_tools.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/passwordbox_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/passwordbox_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/searchbox_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/slider_handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/spinner_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/tabs_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/tagbox_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/tree_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/images/validatebox_warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/linkbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/menubutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/messager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/numberbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/panel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/passwordbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/progressbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/propertygrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/radiobutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/searchbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/sidemenu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/splitbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/switchbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/tagbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/textbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/timepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/tree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/validatebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-gray/window.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/checkbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/combo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/combobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/datalist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/datebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/easyui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/filebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/accordion_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/calendar_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/combo_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/datagrid_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/datebox_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/layout_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/linkbutton_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/menu_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/messager_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/pagination_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/panel_tools.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/passwordbox_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/passwordbox_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/searchbox_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/slider_handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/spinner_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/tabs_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/tagbox_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/tree_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/images/validatebox_warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/linkbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/menubutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/messager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/numberbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/panel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/passwordbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/progressbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/propertygrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/radiobutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/searchbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/sidemenu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/splitbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/switchbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/tagbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/textbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/timepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/tree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/validatebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-green/window.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/checkbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/combo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/combobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/datalist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/datebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/easyui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/filebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/accordion_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/calendar_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/combo_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/datagrid_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/datebox_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/layout_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/linkbutton_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/menu_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/messager_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/pagination_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/panel_tools.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/passwordbox_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/passwordbox_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/searchbox_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/slider_handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/spinner_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/tabs_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/tagbox_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/tree_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/images/validatebox_warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/linkbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/menubutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/messager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/numberbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/panel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/passwordbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/progressbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/propertygrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/radiobutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/searchbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/sidemenu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/splitbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/switchbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/tagbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/textbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/timepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/tree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/validatebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-orange/window.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/checkbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/combo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/combobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/datalist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/datebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/easyui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/filebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/accordion_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/calendar_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/combo_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/datagrid_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/datebox_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/layout_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/linkbutton_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/menu_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/messager_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/pagination_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/panel_tools.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/passwordbox_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/passwordbox_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/searchbox_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/slider_handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/spinner_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/tabs_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/tagbox_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/tree_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/images/validatebox_warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/linkbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/menubutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/messager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/numberbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/panel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/passwordbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/progressbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/propertygrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/radiobutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/searchbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/sidemenu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/splitbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/switchbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/tagbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/textbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/timepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/tree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/validatebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro-red/window.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/combo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/combobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/datagrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/datalist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/datebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/easyui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/filebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/accordion_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/calendar_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/combo_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/datagrid_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/datebox_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/layout_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/linkbutton_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/menu_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/messager_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/pagination_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/panel_tools.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/passwordbox_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/passwordbox_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/searchbox_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/slider_handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/spinner_arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/tabs_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/tagbox_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/tree_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/images/validatebox_warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/linkbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/menubutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/messager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/numberbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/panel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/passwordbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/progressbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/propertygrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/searchbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/splitbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/switchbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/tagbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/textbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/tree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/validatebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/metro/window.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/easyUis/themes/mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/favicons/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/app-qrcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/app-qrcode__box.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/china_title_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/bangumi_img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/bangumi_img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/bangumi_img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/bangumi_img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/bangumi_img6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/bangumi_img7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/bangumi_img8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/banner-list__img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/banner-list__img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/banner-list__img5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/fdb6ab8c0af50a508718f53c9bbce30161c73fe1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game-center__img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game-list__img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game-list__img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game-list__img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game-list__img4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game-list__img5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game-list__img6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game-list__img7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game_img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game_img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/game_img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/live-box__img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/live-box__img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/live-box__img4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/live-box__img6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/live_headImg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/main-rank__img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/main-rank__img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/main_pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/nav_img.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/promote_img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/promote_img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/promote_img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/promote_img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/promote_img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/sideSlider_img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/slider-user1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/slider-user2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/slider-user3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/slider-user4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/slider_img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/slider_img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/slider_img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/cont/slider_img4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/game-center__shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/game_center_title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/header_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/header_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/icon-auth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/live_online.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/page_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/page_icons2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/state_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/user_post.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/user_post_hover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/weibo-qrcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/weixin-arcode.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/wx_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/首页背景.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/beijing1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/morentouxiang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/广告1.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/广告2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/广告3.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/jquery/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/1.search.873ddf42c10f89041580a7464cc60c78d86b8329.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/4.space.9129b1d055504f069cd2c03624cb09fef426030e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery-2.1.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.danmu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.shCircleLoader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery1.7.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/log-reporter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/payPlugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/sb-admin-charts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/sb-admin-charts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/sb-admin-datatables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/sb-admin-datatables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/sb-admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/sb-admin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/search.873ddf42c10f89041580a7464cc60c78d86b8329.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/sentry-5.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/sentry-5.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/sentry-5.7.1.vue.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/sentry.vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/space.9129b1d055504f069cd2c03624cb09fef426030e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/53.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/54.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/55.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/56.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/57.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/58.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/59.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/60.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/61.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/62.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/63.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/65.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/66.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/67.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/68.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/69.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/70.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/71.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/images/face/9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/colorpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/layedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/laytpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/rate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/lay/modules/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/layui.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/layui/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/chart.js/Chart.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/chart.js/Chart.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/chart.js/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/chart.js/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/datatables/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-easing/jquery.easing.compatibility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-easing/jquery.easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-easing/jquery.easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/video/1.Zayde Wølf - Gladiator(Av77304859,P1).mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/ht/charts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/ht/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/ht/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/ht/tables.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/Creative.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/Personal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/Personalspace.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/Playtime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/Video.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/Voucher.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/Voucher_news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/dm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/qt/search.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/controller/C_VideoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-318">
+              <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="1062" column="31" lean-forward="true" selection-start-line="1062" selection-start-column="31" selection-end-line="1062" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/config/Configure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/dao/C_FolkoperaDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="20" column="77" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>img</find>
+      <find>lv5</find>
+      <find>更换头像</find>
+      <find>header.js</find>
+      <find>头图</find>
+      <find>settings</find>
+      <find>vsrc</find>
+      <find>头像</find>
+      <find>下一页</find>
+      <find>视频简介</find>
+      <find>th:</find>
+      <find>th:src</find>
+      <find>轮播中</find>
+      <find>视频</find>
+      <find>个人中心</find>
+      <find>音乐</find>
+      <find>关注</find>
+      <find>弹幕列表</find>
+      <find>全屏观看</find>
+      <find>播放器</find>
+      <find>相关</find>
+      <find>播放</find>
+      <find>轮播</find>
+      <find>弹幕</find>
+      <find>feedback</find>
+      <find>广告</find>
+      <find>hottestDrama</find>
+      <find>.js</find>
+      <find>${hottestDrama.PlaybackValue}</find>
+      <find>番剧</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/ApplicationStrat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/entity/C_UserAdmin.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ht/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ht/tables.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ht/charts.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ht/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/video.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/Creative.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/Voucher_news.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/entity/C_Video.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/dao/C_UserAdminDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/Personalspace.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/service/C_VideoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/Configure.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/ApplicationConfiguer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/register.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/Personal.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/dao/C_VideoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/entity/C_Barrage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/dao/C_BarrageHistory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/dao/C_RecentlyDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/controller/C_UserAdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/service/C_UserAdminService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/Playtime.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/entity/C_tjVideo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/dao/C_selVideoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/service/C_selVideoService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/dm.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/Video.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/main.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/Voucher.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/entity/C_Folknumber.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/controller/C_VideoController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qt/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aaa/config/Configure.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../Maven/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="F:\AWorkSoftware\Maven\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="cilicili Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="90" />
+    <option name="y" value="40" />
+    <option name="width" value="1750" />
+    <option name="height" value="970" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cilicili" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cilicili" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.aaa.entity" />
+      <recent name="com.aaa" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\AWorkSoftware\Idea项目\cilicili\src\main\java\com\aaa\entity" />
+      <recent name="F:\AWorkSoftware\Idea项目\cilicili\src\main\resources\templates\qt" />
+      <recent name="F:\AWorkSoftware\Idea项目\cilicili\src\main\resources\static\css" />
+      <recent name="F:\AWorkSoftware\Idea项目\cilicili\src\main\java\com\aaa\service" />
+      <recent name="F:\AWorkSoftware\Idea项目\cilicili\src\main\java\com\aaa\dao" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ApplicationStrat" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cilicili" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aaa.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aaa.ApplicationStrat" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ApplicationStrat" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e79a91a6-3fa3-4f22-8dba-140ff279e764" name="Default Changelist" comment="" />
+      <created>1575539707519</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575539707519</updated>
+      <workItem from="1575539709928" duration="1894000" />
+      <workItem from="1575613118045" duration="2832000" />
+      <workItem from="1575620454386" duration="830000" />
+      <workItem from="1575850504626" duration="11403000" />
+      <workItem from="1575870049630" duration="8655000" />
+      <workItem from="1575884439449" duration="4198000" />
+      <workItem from="1575889764174" duration="4056000" />
+      <workItem from="1575942586279" duration="3783000" />
+      <workItem from="1575956411091" duration="11570000" />
+      <workItem from="1575972144735" duration="2885000" />
+      <workItem from="1576025678248" duration="12253000" />
+      <workItem from="1576047560311" duration="4862000" />
+      <workItem from="1576059850029" duration="3754000" />
+      <workItem from="1576114986904" duration="2097000" />
+      <workItem from="1576129521849" duration="12583000" />
+      <workItem from="1576144858318" duration="5353000" />
+      <workItem from="1576197250320" duration="6945000" />
+    </task>
+    <task id="LOCAL-00001" summary="初始化">
+      <created>1576207877661</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576207877661</updated>
+    </task>
+    <task id="LOCAL-00002" summary="初始化">
+      <created>1576208035762</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576208035762</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="99953000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2419571" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49798927" weight="0.4950495" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32956153" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5020107" side_tool="true" weight="0.7355021" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3281471" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3297587" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/jquery/jquery-3.4.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="50" lean-forward="true" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/payPlugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/ApplicationConfiguer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/ApplicationStrat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/service/C_VideoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/entity/C_UserAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2327#2328#0" expanded="true" />
+            <element signature="e#2366#2367#0" expanded="true" />
+            <element signature="e#2396#2397#0" expanded="true" />
+            <element signature="e#2428#2429#0" expanded="true" />
+            <element signature="e#2456#2457#0" expanded="true" />
+            <element signature="e#2498#2499#0" expanded="true" />
+            <element signature="e#2532#2533#0" expanded="true" />
+            <element signature="e#2562#2563#0" expanded="true" />
+            <element signature="e#2588#2589#0" expanded="true" />
+            <element signature="e#2626#2627#0" expanded="true" />
+            <element signature="e#2656#2657#0" expanded="true" />
+            <element signature="e#2688#2689#0" expanded="true" />
+            <element signature="e#2716#2717#0" expanded="true" />
+            <element signature="e#2758#2759#0" expanded="true" />
+            <element signature="e#2792#2793#0" expanded="true" />
+            <element signature="e#2827#2828#0" expanded="true" />
+            <element signature="e#2858#2859#0" expanded="true" />
+            <element signature="e#2906#2907#0" expanded="true" />
+            <element signature="e#2946#2947#0" expanded="true" />
+            <element signature="e#2979#2980#0" expanded="true" />
+            <element signature="e#3007#3008#0" expanded="true" />
+            <element signature="e#3050#3051#0" expanded="true" />
+            <element signature="e#3079#3080#0" expanded="true" />
+            <element signature="e#3116#3117#0" expanded="true" />
+            <element signature="e#3148#3149#0" expanded="true" />
+            <element signature="e#3199#3200#0" expanded="true" />
+            <element signature="e#3236#3237#0" expanded="true" />
+            <element signature="e#3269#3270#0" expanded="true" />
+            <element signature="e#3297#3298#0" expanded="true" />
+            <element signature="e#3340#3341#0" expanded="true" />
+            <element signature="e#3374#3375#0" expanded="true" />
+            <element signature="e#3406#3407#0" expanded="true" />
+            <element signature="e#3434#3435#0" expanded="true" />
+            <element signature="e#3476#3477#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <element signature="e#3547#3548#0" expanded="true" />
+            <element signature="e#3580#3581#0" expanded="true" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#3671#3672#0" expanded="true" />
+            <element signature="e#3710#3711#0" expanded="true" />
+            <element signature="e#3745#3746#0" expanded="true" />
+            <element signature="e#3801#3802#0" expanded="true" />
+            <element signature="e#3844#3845#0" expanded="true" />
+            <element signature="e#3887#3888#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#3990#3991#0" expanded="true" />
+            <element signature="e#4041#4042#0" expanded="true" />
+            <element signature="e#4070#4071#0" expanded="true" />
+            <element signature="e#4095#4096#0" expanded="true" />
+            <element signature="e#4131#4132#0" expanded="true" />
+            <element signature="e#4159#4160#0" expanded="true" />
+            <element signature="e#4193#4194#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
+            <element signature="e#4269#4270#0" expanded="true" />
+            <element signature="e#4302#4303#0" expanded="true" />
+            <element signature="e#4332#4333#0" expanded="true" />
+            <element signature="e#4358#4359#0" expanded="true" />
+            <element signature="e#4396#4397#0" expanded="true" />
+            <element signature="e#4426#4427#0" expanded="true" />
+            <element signature="e#4461#4462#0" expanded="true" />
+            <element signature="e#4492#4493#0" expanded="true" />
+            <element signature="e#4540#4541#0" expanded="true" />
+            <element signature="e#4580#4581#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="3788" column="24" lean-forward="true" selection-start-line="3788" selection-start-column="24" selection-end-line="3788" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/dao/C_VideoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/controller/C_OneVideoController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/dao/C_UserAdminDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/Personalspace.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="3682" column="80" lean-forward="true" selection-start-line="3682" selection-start-column="80" selection-end-line="3682" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/AAA/JDK1.8/src.zip!/java/lang/AbstractStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="71" column="33" lean-forward="true" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+          <folding>
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1369#1370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/AAA/JDK1.8/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="83" column="7" lean-forward="true" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
+          <folding>
+            <element signature="e#2871#2872#0" expanded="true" />
+            <element signature="e#2896#2897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/entity/C_Video.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="e#3054#3055#0" expanded="true" />
+            <element signature="e#3082#3083#0" expanded="true" />
+            <element signature="e#3122#3123#0" expanded="true" />
+            <element signature="e#3156#3157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/entity/C_Barrage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/Personal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="5626" selection-start-line="5626" selection-end-line="5626" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/entity/C_News.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/entity/C_Recently.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/dao/C_BarrageHistory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/entity/C_BarrageHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/dao/C_RecentlyDAO.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/service/C_RecentlyService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/service/C_UserAdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/service/C_BarrageHistoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/service/C_FolknumberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/dm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="200" selection-start-line="200" selection-end-line="278" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#2;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#2;n#ul#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#6;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4185">
+          <caret line="155" column="17" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/Video.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671814">
+          <caret line="24882" column="49" selection-start-line="24882" selection-start-column="49" selection-end-line="24882" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#span#2;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/service/C_selVideoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/dao/C_selVideoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/entity/C_tjVideo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/Playtime.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25625" column="29" selection-start-line="25625" selection-start-column="29" selection-end-line="25625" selection-end-column="29" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#3;n#div#0;n#div#1;n#div#4;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/Voucher_news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="3906" column="34" selection-start-line="3906" selection-start-column="34" selection-end-line="3906" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/entity/C_Folknumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
+            <element signature="e#1290#1291#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1360#1361#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="e#1429#1430#0" expanded="true" />
+            <element signature="e#1462#1463#0" expanded="true" />
+            <element signature="e#1512#1513#0" expanded="true" />
+            <element signature="e#1556#1557#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/dao/C_FolknumberDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-558" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/Voucher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="4077" column="10" selection-start-line="4077" selection-start-column="10" selection-end-line="4077" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#src#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#src#0;n#img#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#src#0;n#img#1;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#2;n#p#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#p#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/controller/C_UserAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="70" column="57" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/service/C_FolkoperaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/aaa/service/C_FolknumberService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/aaa/controller/C_VideoController.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/entity/C_Folkopera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/dao/C_FolkoperaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="20" column="77" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qt/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="1062" column="31" lean-forward="true" selection-start-line="1062" selection-start-column="31" selection-end-line="1062" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/controller/C_VideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-318">
+          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aaa/config/Configure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>cilicili</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: junit:junit:4.11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
