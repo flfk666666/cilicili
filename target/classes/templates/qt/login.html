@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html data-dpr="1" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -3656,38 +3657,39 @@
     </svg>
     <div id="login-app">
         <div data-v-3e357e28="" class="login-app bottom-filling">
-            <div id="bili-header-m" class="bili-header-m report-wrap-module stardust-common">
+            <div id="bili-header-m" class="bili-header-m report-wrap-module stardust-video">
                 <div class="nav-menu">
                     <!---->
                     <div class="nav-mask"></div>
-                    <div class="nav-wrapper bili-wrapper">
+                    <div class="nav-wrapper">
                         <div class="nav-con nav-wrapper-left">
                             <ul class="nav-con-ul">
-                                <li report-id="playpage_main" class="nav-item home"><a href="//www.bilibili.com"
-                                        title="主站" class="t"><i class="header-iconfont header-icon-bilibili-tv"></i>
+                                <li report-id="playpage_main" class="nav-item home">
+                                    <a href="http://localhost:8080/qt/index" title="主站"
+                                       class="t">
+                                        <img src="/img/qtlogo.png" style="height:50px;width:150px;position: absolute;left:-80px;top:-3px;">
                                         主站
-                                        <!----></a>
+                                        <span class="header-iconfont header-icon-general_pullup_s drop"></span></a>
                                     <!---->
                                 </li>
                                 <li report-id="playpage_game" class="nav-item game"><a href="//game.bilibili.com"
-                                        target="_blank" title="游戏中心" class="t">游戏中心</a>
+                                                                                       target="_blank" title="游戏中心" class="t">游戏中心</a>
                                     <!---->
                                 </li>
                                 <li report-id="playpage_live" class="nav-item live"><a href="//live.bilibili.com"
-                                        target="_blank" title="直播" class="t">直播</a>
+                                                                                       target="_blank" title="直播" class="t">直播</a>
                                     <!---->
                                 </li>
                                 <li report-id="playpage_buy" class="nav-item buy"><a
-                                        href="//show.bilibili.com/platform/home.html?msource=pc_web" target="_blank"
-                                        title="会员购" class="t">会员购</a></li>
+                                        href="//show.bilibili.com/platform/home.html?msource=pc_web" target="_blank" title="会员购"
+                                        class="t">会员购</a></li>
                                 <li report-id="playpage_manga" class="nav-item manga"><a
                                         href="//manga.bilibili.com?from=bill_top_mbanner" target="_blank" title="漫画"
                                         class="t">漫画</a>
                                     <!---->
                                 </li>
-                                <li report-id="playpage_match" class="nav-item match"><a
-                                        href="//www.bilibili.com/v/game/match/" target="_blank" title="赛事"
-                                        class="t">赛事</a></li>
+                                <li report-id="playpage_match" class="nav-item match"><a href="//www.bilibili.com/v/game/match/"
+                                                                                         target="_blank" title="赛事" class="t">赛事</a></li>
                                 <li class="nav-item loc-menu"><a
                                         href="https://show.bilibili.com/platform/detail.html?id=21148&amp;noTitleBar=1&amp;msource=ad_bml_cpt78547"
                                         target="_blank" class="t">BML</a>
@@ -3704,43 +3706,51 @@
                         </div>
                         <div class="nav-search-box">
                             <div class="nav-search showSearch-media">
-                                <form id="nav_searchform"><input type="text" autocomplete="off" accesskey="s"
-                                        x-webkit-speech="" x-webkit-grammar="builtin:translate"
-                                        placeholder="55元冰淇淋，贵就好吃吗" class="nav-search-keyword"><button type="submit"
-                                        class="header-iconfont header-icon-general_search nav-search-submit"></button>
-                                </form>
+                                <form id="nav_searchform">
+                                    <input type="text"  name="name" id="seanname" autocomplete="off" accesskey="s" x-webkit-speech="" x-webkit-grammar="builtin:translate" placeholder="在此处进行搜索" class="nav-search-keyword">
+                                    <button type="button" onclick="VagueSubmit()" class="header-iconfont header-icon-general_search nav-search-submit"></button></form>
                                 <!---->
-                                <!---->
+                                <ul class="bilibili-suggest nav" style="display: none;">
+                                    <li class="kw">
+                                        <div class="b-line">
+                                            <p><span>历史搜索</span></p>
+                                        </div>
+                                    </li>
+                                    <li class="suggest-item"><a
+                                            href="//search.bilibili.com/all?keyword=%E9%9D%92%E6%98%A5%E7%8C%AA%E5%A4%B4&amp;from_source=nav_search"
+                                            target="_blank">青春猪头</a>
+                                        <div class="cancel"></div>
+                                    </li>
+                                </ul>
                             </div><a href="//search.bilibili.com/" target="_blank"
-                                class="header-iconfont header-icon-general_search btn-search"></a>
+                                     class="header-iconfont header-icon-general_search btn-search"></a>
                         </div>
                         <div class="nav-wrapper-right">
                             <div class="nav-con">
-                                <ul class="nav-con-ul">
-                                    <li class="nav-item profile-info"><a href="//passport.bilibili.com/login" class="t">
-                                            <div class="i-face"><img src="//static.hdslb.com/images/akari.jpg"
-                                                    class="face"></div>
-                                        </a>
-                                        <!---->
-                                    </li>
-                                    <li report-id="playpage_dynamic" class="nav-item"><a href="//t.bilibili.com/"
-                                            target="_blank" class="t">动态</a></li>
-                                    <li report-id="playpage_history" class="nav-item"><a
-                                            href="//www.bilibili.com/account/history" target="_blank" class="t">历史</a>
-                                    </li>
-                                    <li report-id="playpage_create_center" class="nav-item"><a
-                                            href="//member.bilibili.com/v2#/home" target="_blank" class="t">创作中心</a>
-                                    </li>
-                                </ul>
+                                <div th:if="${session.userAdmin == null}">
+
+                                    <ul class="nav-con-ul">
+
+                                        <li report-id="playpage_dynamic" class="nav-item">
+                                            <a href="/qt/login.html" target="_blank" class="t">登录</a></li>
+                                        <li report-id="playpage_history" class="nav-item">
+                                            <a href="/qt/register.html" target="_blank" class="t">注册</a></li>
+
+                                    </ul>
+
+
+                                </div>
+
+
                             </div>
                             <div class="nav-con">
                                 <!---->
                             </div>
-                            <div report-id="playpage_contribution" class="up-load"><a
-                                    href="//member.bilibili.com/v2#/upload/video/frame" target="_blank" class="u-link">
-                                    投稿
-                                </a>
-                                <!---->
+                            <div th:if="${session.userAdmin != null}" report-id="playpage_contribution" class="up-load"><a
+                                     target="_blank" class="u-link">
+                                投稿
+                            </a>
+
                             </div>
                         </div>
                     </div>
@@ -3750,30 +3760,27 @@
             </div>
             <div data-v-3e357e28="">
                 <div data-v-3e357e28="" class="top-banner"><img
-                        src="//s1.hdslb.com/bfs/static/passport/static/img/rl_top.35edfde.png"></div>
+                        src="/img/logintop.png"></div>
                 <div data-v-3e357e28="" class="title-line"><span class="tit" style="font-size: 38px;">登录</span></div>
                 <div data-v-3e357e28="" class="login-box clearfix">
                     <div data-v-3e357e28="" class="login-left">
                         <div data-v-3e357e28="" class="qrcode-login">
-                            <div class="qrcode-con"><i class="tv-icon"></i>
-                                <div class="qrcode-box">
-                                    <div class="qrcode-tips"></div>
-                                    <div class="qrcode-img"
-                                        title="https://passport.bilibili.com/qrcode/h5/login?oauthKey=f14af46fd2c028041c9399079a0b3302">
-                                        <canvas width="140" height="140" style="display: none;"></canvas><img
-                                            style="display: block;"
-                                            src="data:image/png;base64,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">
-                                    </div>
-                                    <!---->
-                                </div>
+                            <div class="qrcode-con">
+
                             </div>
                             <div class="qrcode-footer">
-                                <p class="status-txt">扫描二维码登录</p>
-                                <!---->
-                                <!---->
-                                <p class="app-link">请使用 <a href="//app.bilibili.com/"
-                                        target="_blank">哔哩哔哩客户端</a><br>扫码登录<br>或扫码下载APP</p>
-                                <!---->
+                                <center>
+                                    欢迎进入CiliCili
+                                    <br/>
+                                    此网站非常友好！
+                                    <br/>
+                                    善良！
+                                    <br/>
+                                    正能量！
+                                    <br/>
+
+
+                                </center>
                             </div>
                         </div>
                     </div>
@@ -3786,14 +3793,14 @@
                                             placeholder="用户名" id="login-username" name="uname" maxlength="50" autocomplete="off"
                                             class=""> <span class="status"></span>
                                         <div class="text clearfix">
-                                            <p class="tips"></p>
+                                            <p class="tips a" id="error-uname"></p>
                                         </div>
                                         <!---->
                                     </li>
                                     <li class="item password status-box"><input type="password" placeholder="密码"
                                             id="login-passwd" name="pwd" class=""> <span class="status"></span>
                                         <div class="text clearfix">
-                                            <p class="tips" th:text="${session.msg}"></p>
+                                            <p class="tips a" th:text="${session.msg}" id="error-pwd"></p>
                                         </div>
                                     </li>
                                     <!---->
@@ -3829,7 +3836,7 @@
                     <div class="footer-cnt clearfix report-wrap-module">
                         <ul class="boston-postcards">
                             <li>
-                                <div class="tips">bilibili</div>
+                                <div class="tips">CiliCili</div>
                                 <div class="cards"><a target="_blank"
                                         href="//www.bilibili.com/blackboard/aboutUs.html">关于我们</a></div>
                                 <div class="cards"><a target="_blank"
@@ -4064,6 +4071,24 @@
     function login() {
         var uname=$("#login-username").val();
         var pwd=$("#login-passwd").val();
+        if(uname==""){
+            $("#error-uname").text("请输入用户名");
+        }else{
+            $("#error-uname").text("");
+        }
+        if(pwd==""){
+            $("#error-pwd").text("请输入用户名");
+        }else{
+            $("#error-pwd").text("");
+        }
+        var a=$(".a");
+        for(var i=0;i<a.length;i++){
+            //这里可以对获取的对象做各种操作
+            if(a[i].innerHTML==""){
+                continue;
+            }
+            return;
+        }
         window.location="http://localhost:8080/qt_C_User/login?uname="+uname+"&pwd="+pwd+"";
     }
 </script>

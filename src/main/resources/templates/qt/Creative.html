@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<base href="http://localhost:8080/">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -9,6 +9,9 @@
 	<link rel="icon" href="//www.bilibili.com/favicon.ico">
 	<link rel="apple-touch-icon" href="//www.bilibili.com/favicon.ico">
 	<link rel="apple-touch-icon-precomposed" href="//static.hdslb.com/mobile/img/512.png">
+	<link rel="stylesheet" href="/layui/css/layui.css">
+	<script src="/layer/layer.js"></script>
+    <script src="/layui/layui.js"></script>
 	<title>开发者中心</title>
 	<script>
 		if (!Object.defineProperty || !Element.prototype.addEventListener) alert('少年哟～你的浏览器太老了辣～赶快去换个chrome吧～')
@@ -3870,9 +3873,10 @@
 					<li class="nav-link-item"><span>
 									<div role="tooltip" id="van-popover-527" aria-hidden="true" class="van-popover van-popper popover-channe"
 										 style="display: none;" tabindex="0">
+
 										<!---->
-									</div> <a href="//www.bilibili.com" class="link van-popover__reference" aria-describedby="van-popover-527"
-											  tabindex="0"><i class="bilifont bili-Navbar_logo"></i>
+									</div> <a href="http://localhost:8080/qt/index" class="link van-popover__reference" aria-describedby="van-popover-527"
+											  tabindex="0">
 										主站
 										<i class="bilifont bili-general_pullup_s"></i></a>
 								</span></li>
@@ -3934,8 +3938,8 @@
 									<div role="tooltip" id="van-popover-372" aria-hidden="true" class="van-popover van-popper van-popper-nav van-popper-avatar"
 										 style="width: 280px; display: none;" tabindex="0">
 										<!---->
-										<div data-v-dd0b43fa="" class="container"><a data-v-dd0b43fa="" href="//space.bilibili.com/14341990" target="_blank"
-																					 class="avatar">
+										<div data-v-dd0b43fa="" class="container" style="height: 1000px;"><a data-v-dd0b43fa="" href="//space.bilibili.com/14341990" target="_blank"
+																											 class="avatar">
 												<!----><img data-v-dd0b43fa="" src="//i2.hdslb.com/bfs/face/a847cb68ea7bbbf6a0eb90bb54ad400a7ecf3a83.jpg@87w_88h_1c_100q.jpg"
 															alt="" class="avatar-img"><svg data-v-dd0b43fa="" aria-hidden="true" class="svg-icon vip-icon">
 													<!----></svg></a>
@@ -4046,90 +4050,56 @@
 										</div>
 									</div>
 									<div data-v-dd0b43fa="" class="mini-avatar van-popover__reference" aria-describedby="van-popover-372" tabindex="0"><a
-											data-v-dd0b43fa="" href="//space.bilibili.com/undefined"><img data-v-dd0b43fa="" src="//i2.hdslb.com/bfs/face/a847cb68ea7bbbf6a0eb90bb54ad400a7ecf3a83.jpg@87w_88h_1c_100q.jpg"
-																										  alt="" class=""></a></div>
+											data-v-dd0b43fa="" href="//space.bilibili.com/undefined">
+										<img data-v-dd0b43fa="" th:src="@{/tx/{img}(img=${session.userAdmin.Headimg})}" src="//i2.hdslb.com/bfs/face/a847cb68ea7bbbf6a0eb90bb54ad400a7ecf3a83.jpg@87w_88h_1c_100q.jpg"
+																										  alt="" class=""></a>
+
+
+
+									</div>
 								</span></div>
-					<div data-v-1fc5df64="" class="item"><span data-v-1fc5df64="">
+					<div data-v-1fc5df64="" class="item">
+						<span data-v-1fc5df64="">
 									<div role="tooltip" id="van-popover-6500" aria-hidden="true" class="van-popover van-popper van-popper-vip"
 										 style="width: 260px; display: none;" tabindex="0">
 										<!---->
 									</div>
 									<div data-v-1fc5df64="" class="mini-vip van-popover__reference" aria-describedby="van-popover-6500" tabindex="0"><i
-											data-v-1fc5df64="" class="red-point"></i><a data-v-1fc5df64="" href="//account.bilibili.com/account/big"
-																						target="_blank"><span data-v-1fc5df64="" class="name">大会员</span></a></div>
+											data-v-1fc5df64="" class="red-point"></i><a data-v-1fc5df64="" th:href="@{qt_C_User/goPersonalspace(uid=${session.userAdmin.uid})}"
+																						target="_blank"><span data-v-1fc5df64="" class="name">个人空间</span></a></div>
 								</span></div>
 					<div data-v-cba1b22a="" class="item">
 						<div data-v-1f9a8793="" data-v-cba1b22a="" class="nav-item">
 							<div data-v-1f9a8793="" class="t">
 								<!---->
-								<!----><a data-v-cba1b22a="" data-v-1f9a8793="" href="//message.bilibili.com/new" target="_blank"><span
-									data-v-cba1b22a="" data-v-1f9a8793="" class="name">消息</span></a></div>
+								<!----><a data-v-cba1b22a="" data-v-1f9a8793="" href="qt/Personal" target="_blank"><span
+									data-v-cba1b22a="" data-v-1f9a8793="" class="name">个人中心</span></a></div>
 							<!---->
 							<div data-v-1f9a8793="" class="i-frame" style="display: none;"><iframe data-v-1f9a8793="" src="//message.bilibili.com/pages/nav/index_new_pc_sync"
 																								   width="100%" height="100%" frameborder="0"></iframe></div>
 						</div>
 					</div>
 					<div data-v-7fd0073e="" class="item">
-						<div data-v-5826e6da="" data-v-7fd0073e="" class="nav-item">
-							<div data-v-5826e6da="" class="t">
-								<!---->
-								<!----><a data-v-7fd0073e="" data-v-5826e6da="" href="//t.bilibili.com" target="_blank"><span data-v-7fd0073e=""
-																															  data-v-5826e6da="" class="name">动态</span></a></div>
+					<div data-v-5826e6da="" data-v-7fd0073e="" class="nav-item">
+						<div data-v-5826e6da="" class="t">
 							<!---->
-						</div>
+							<!----><a data-v-7fd0073e="" data-v-5826e6da="" href="/qt/Creative" target="_blank"><span data-v-7fd0073e=""
+																													  data-v-5826e6da="" class="name">创作中心</span></a></div>
+						<!---->
 					</div>
-					<div data-v-71b5e2a6="" class="item"><span data-v-71b5e2a6="">
-									<div role="tooltip" id="van-popover-9262" aria-hidden="true" class="van-popover van-popper van-popper-favorite"
-										 style="width: 520px; display: none;" tabindex="0">
-										<!---->
-										<div data-v-71b5e2a6="" class="container">
-											<div data-v-71b5e2a6="" class="tabs-panel">
-												<!---->
-											</div>
-											<!---->
-										</div>
-									</div>
-									<div data-v-71b5e2a6="" class="mini-favorite van-popover__reference" aria-describedby="van-popover-9262"
-										 tabindex="0"><a data-v-71b5e2a6="" href="//space.bilibili.com/14341990/favlist" target="_blank"><span
-											data-v-71b5e2a6="" class="name">收藏</span>
-										<!----></a></div>
-								</span></div>
-					<div data-v-0a68bf96="" class="item"><span data-v-0a68bf96="">
-									<div role="tooltip" id="van-popover-4293" aria-hidden="true" class="van-popover van-popper van-popper-history"
-										 style="width: 370px; display: none;" tabindex="0">
-										<!---->
-										<div data-v-0a68bf96="" class="container">
-											<div data-v-0a68bf96="" class="tab-header">
-												<div data-v-0a68bf96="" class="tab-item tab-item--active">视频历史</div>
-												<div data-v-0a68bf96="" class="tab-item">专栏</div>
-											</div>
-											<div data-v-0a68bf96="" class="panel">
-												<!---->
-												<!---->
-											</div>
-										</div>
-									</div>
-									<div data-v-0a68bf96="" class="mini-history van-popover__reference" aria-describedby="van-popover-4293"
-										 tabindex="0"><a data-v-0a68bf96="" href="//www.bilibili.com/account/history" target="_blank"><span
-											data-v-0a68bf96="" class="name">历史</span></a></div>
-								</span></div>
-					<div class="item"><a href="https://member.bilibili.com/v2#/home" target="_blank"><span class="name">创作中心</span></a></div>
 				</div>
-				<!---->
+					<div data-v-7fd0073e="" class="item">
+					<div data-v-5826e6da="" data-v-7fd0073e="" class="nav-item">
+						<div data-v-5826e6da="" class="t">
+							<!---->
+							<!----><a data-v-7fd0073e="" data-v-5826e6da="" href="qt/Voucher" target="_blank"><span data-v-7fd0073e=""
+																													  data-v-5826e6da="" class="name">充值中心</span></a></div>
+						<!---->
+					</div>
+				</div>
+
 				<div data-v-4b8ecd32=""><span data-v-4b8ecd32="">
-								<div role="tooltip" id="van-popover-9459" aria-hidden="true" class="van-popover van-popper van-popper-upload"
-									 style="width: 304px; display: none;" tabindex="0">
-									<!---->
-									<div data-v-4b8ecd32="" class="container"><a data-v-4b8ecd32="" href="//member.bilibili.com/v2#/upload/text/apply"
-																				 target="_blank" class="upload-item"><i data-v-4b8ecd32="" class="bilifont bili-icon_dingdao_wenzhangtougao"></i><span
-											data-v-4b8ecd32="" class="item-title">专栏投稿</span></a><a data-v-4b8ecd32="" href="//member.bilibili.com/v2#/upload/audio"
-																									target="_blank" class="upload-item"><i data-v-4b8ecd32="" class="bilifont bili-icon_dingdao_yinpintougao"></i><span
-											data-v-4b8ecd32="" class="item-title">音频投稿</span></a><a data-v-4b8ecd32="" href="//member.bilibili.com/v2#/upload/video/frame"
-																									target="_blank" class="upload-item"><i data-v-4b8ecd32="" class="bilifont bili-icon_dingdao_shipintougao"></i><span
-											data-v-4b8ecd32="" class="item-title">视频投稿</span></a><a data-v-4b8ecd32="" href="//member.bilibili.com/v2#/upload-manager/article"
-																									target="_blank" class="upload-item"><i data-v-4b8ecd32="" class="bilifont bili-icon_dingdao_tougaoguanli1"></i><span
-											data-v-4b8ecd32="" class="item-title">投稿管理</span></a></div>
-								</div> <a data-v-4b8ecd32="" href="//member.bilibili.com/v2#/upload/video/frame" target="_blank" class="mini-upload van-popover__reference"
+								 <a data-v-4b8ecd32="" href="/qt/Creative" target="_blank" class="mini-upload van-popover__reference"
 										  aria-describedby="van-popover-9459" tabindex="0">
 									投稿
 								</a>
@@ -4139,10 +4109,11 @@
 	</div>
 	<!---->
 	<!---->
+
 </div>
 <div data-v-6969394c="" class="container">
 	<div data-v-37e65e02="" data-v-6969394c="" id="link-message-container" class="">
-		<div data-v-37e65e02="" class="container">
+		<div data-v-37e65e02="" class="container" style="height: auto">
 			<div data-v-37e65e02="" class="space-left">
 				<div data-v-18cad42e="" data-v-37e65e02="" class="side-bar">
 					<div data-v-18cad42e="" class="title">
@@ -4153,17 +4124,17 @@
 					<ul class="nav nav-pills nav-stacked" style="color: #0a0a0a;" role="tablist">
 						<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" style="color: black;">创作者学习</a></li>
 						<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"  style="color: black;">视频上传</a></li>
-						<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"  style="color: black;">视频管理</a></li>
+						<li role="presentation" id="li11"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"  style="color: black;">视频管理</a></li>
 						<li role="presentation"><a href="#mytaks" aria-controls="mytaks" role="tab" data-toggle="tab"  style="color: black;">数据中心</a></li>
 						<li role="presentation"><a href="#Audited" aria-controls="Audited" role="tab" data-toggle="tab"  style="color: black;">创作者激励计划</a></li>
-						<li role="presentation"><a href="#Audited" aria-controls="dssel" role="tab" data-toggle="tab"  style="color: black;">打赏记录查看</a></li>
-						<li role="presentation"><a href="#Audited" aria-controls="tx" role="tab" data-toggle="tab"  style="color: black;">提现</a></li>
+						<li role="presentation"><a href="#dssel" aria-controls="dssel" role="tab" data-toggle="tab"  style="color: black;">获赏记录查看</a></li>
+						<li role="presentation"><a href="#tx" aria-controls="tx" role="tab" data-toggle="tab"  style="color: black;">提现</a></li>
 
 
 					</ul>
 
 					<div data-v-18cad42e="" class="divided-line"></div>
-					<div data-v-18cad42e="" class="setting item"><a data-v-18cad42e="" href="#/config" class="" title="消息设置">消息设置</a></div>
+					<div data-v-18cad42e="" class="setting item"><a data-v-18cad42e="" href="qt/Personal" class="" title="消息设置">消息设置</a></div>
 				</div>
 			</div>
 			<div data-v-37e65e02="" class="space-right">
@@ -4171,7 +4142,7 @@
 					<div data-v-37e65e02="" class="title">
 						<div data-v-37e65e02="">
 							<!---->
-							<!----><span data-v-37e65e02="">回复我的</span></div>
+							<!----><span data-v-37e65e02="">创作者中心</span></div>
 						<!---->
 					</div>
 				</div>
@@ -4185,8 +4156,103 @@
 										<div>
 											<div data-v-fb77dc7a="" data-v-27cf29e0="" data-v-59d2523a="" class="card">
 												<div data-v-27cf29e0="" data-v-fb77dc7a="" class="nothing">
-													内容
+													<div class="layui-carousel" id="xx1">
+														<div carousel-item>
+															<div>
+																<div class="layui-card" style="width:300px;height: 100%;display: inline-block;">
+																	<div class="layui-card-header">慢速快门拍夜景：【原来这么拍】第83集</div>
+																	<div class="layui-card-body">
+																		<a href="/qt/selvideo?vid=95">
+																			<img src="img/创作学习1.jpg" style="width: 280px;;height:200px;">
+																		</a>
+																	</div>
 
+																</div>
+																<div class="layui-card" style="width:300px;height: 100%;display: inline-block;">
+																	<div class="layui-card-header">用手机学剪辑第二弹，拍视频如何克服真人出镜的尴尬</div>
+																	<div class="layui-card-body">
+																		<a href="/qt/selvideo?vid=96">
+																			<img src="img/创作学习2.jpg" style="width: 280px;;height:200px;">
+																		</a>
+																	</div>
+
+																</div>
+																<div class="layui-card" style="width:300px;height: 100%;display: inline-block;">
+																	<div class="layui-card-header">完美曝光的秘诀</div>
+																	<div class="layui-card-body">
+																		<a href="/qt/selvideo?vid=96">
+																			<img src="img/创作学习3.jpg" style="width: 280px;;height:200px;">
+																		</a>
+																	</div>
+
+																</div>
+															</div>
+
+
+
+
+															<div>
+																<div class="layui-card" style="width:300px;height: 100%;display: inline-block;">
+																	<div class="layui-card-header">进退与透视：【原来这么拍】 第41集</div>
+																	<div class="layui-card-body">
+																		<a href="/qt/selvideo?vid=96">
+																			<img src="img/创作学习4.jpg" style="width: 280px;;height:200px;">
+																		</a>
+																	</div>
+
+																</div>
+																<div class="layui-card" style="width:300px;height: 100%;display: inline-block;">
+																	<div class="layui-card-header">七分钟带你了解十五种基础电影拍摄技法</div>
+																	<div class="layui-card-body">
+																		<a href="/qt/selvideo?vid=97">
+																			<img src="img/创作学习5.jpg" style="width: 280px;;height:200px;">
+																		</a>
+																	</div>
+
+																</div>
+																<div class="layui-card" style="width:300px;height: 100%;display: inline-block;">
+																	<div class="layui-card-header">构图决定一切（9条经典构图法则）：【原来这么拍】 第78集</div>
+																	<div class="layui-card-body">
+																		<a href="/qt/selvideo?vid=98">
+																			<img src="img/创作学习6.jpg" style="width: 280px;;height:200px;">
+																		</a>
+																	</div>
+
+																</div>
+															</div>
+															<div>
+																<div class="layui-card" style="width:300px;height: 100%;display: inline-block;">
+																	<div class="layui-card-header">分享｜ 摄影很难吗？❤︎ 我的拍片工具全公开 ｜OhLeeemon</div>
+																	<div class="layui-card-body">
+																		<a href="/qt/selvideo?vid=96">
+																			<img src="img/创作学习7.jpg" style="width: 280px;;height:200px;">
+																		</a>
+																	</div>
+
+																</div>
+																<div class="layui-card" style="width:300px;height: 100%;display: inline-block;">
+																	<div class="layui-card-header">我是如何用最简单的方法拍摄剪辑视频的</div>
+																	<div class="layui-card-body">
+																		<a href="/qt/selvideo?vid=99">
+																			<img src="img/创作学习8.jpg" style="width: 280px;;height:200px;">
+																		</a>
+																	</div>
+
+																</div>
+																<div class="layui-card" style="width:300px;height: 100%;display: inline-block;">
+																	<div class="layui-card-header">你们要的酷炫pr转场来了！以后再也不用AE了，pr就可以简单完成 更新版传送门在简介</div>
+																	<div class="layui-card-body">
+																		<a href="/qt/selvideo?vid=100">
+																			<img src="img/创作学习9.jpg" style="width: 280px;;height:200px;">
+																		</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+														</div>
+													</div>
 
 
 												</div>
@@ -4195,13 +4261,271 @@
 										<!---->
 									</div>
 								</div>
-								<div role="tabpanel" class="tab-pane" id="profile">2</div>
-								<div role="tabpanel" class="tab-pane" id="messages">.3.</div>
+								<div role="tabpanel" class="tab-pane" id="profile" style="height: 800px;">
+                                    <!--视频上传-->
+                                    <form class="layui-form" action="/qt/UploadVideo" method="post" enctype="multipart/form-data">
+										<div class="layui-form-item layui-form-text">
+                                            <label class="layui-form-label" style="width: 100px;">视频标题</label>
+                                            <div class="layui-input-block">
+												<textarea name="vname" id="vname" placeholder="请输入视频标题" maxlength="50" class="layui-textarea"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item layui-form-text">
+                                            <label class="layui-form-label" style="width: 100px;">视频简介</label>
+                                            <div class="layui-input-block">
+                                                <textarea id="Videointroduction" name="Videointroduction" placeholder="请输入视频简介" class="layui-textarea"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label" style="width: 100px;">视频分类</label>
+                                            <div class="layui-input-block">
+                                                <select id="vfid" name="vfid" lay-verify="required">
+                                                    <option th:each="cate:${cates}" th:value="${cate.vfid}" th:text="${cate.vcname}"></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label" style="width: 100px;">视频封面</label>
+                                            <div class="layui-input-block">
+												<button type="button" class="layui-btn" id="test1">
+													<i class="layui-icon">&#xe67c;</i>上传封面
+												</button>
+                                                <!--<input type="file" name="Videocover" >-->
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label" style="width: 100px;">视频</label>
+                                            <div class="layui-input-block">
+												<button type="button" class="layui-btn" id="test2">
+													<i class="layui-icon">&#xe67c;</i>上传视频
+												</button>
+                                                <!--<input type="file" name="video">-->
+												<div class="layui-progress layui-progress-big" lay-filter="demo" lay-showPercent="true">
+													<div class="layui-progress-bar" lay-percent="0%"></div>
+												</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <div class="layui-input-block">
+												<input type="button" class="layui-btn" th:value="发布视频" onclick="uploadVideo()">
+                                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+								<div role="tabpanel" class="tab-pane" id="messages" style="background-color: white;overflow: auto; height: 800px;">
+									<!--视频管理-->
+
+									<div th:if="${userVideos.size()==0}" style="text-align: center;padding: 50px 0 0 0;">
+										<div class="text" >你还没有投过一个稿件("▔□▔)</div>
+										<img src="//s1.hdslb.com/bfs/static/jinkela/studio/creativecenter-v3/assets/article_empty.716e40d.png" class="img">
+									</div>
+
+									<table class="table table-hover" th:if="${userVideos.size()>0}">
+										<tbody><tr>
+
+											<th>视频封面</th>
+											<th>视频标题</th>
+											<th>视频简介</th>
+											<th>投稿时间</th>
+											<th></th>
+										</tr>
+										<tr th:each="userVideo:${userVideos}">
+
+											<td>
+												<img width="200px" height="100px" th:src="@{upload/{img}(img=${userVideo.Videocover})}" alt="">
+											</td>
+											<td th:text="${userVideo.vname}"></td>
+											<td th:text="${userVideo.Videointroduction}"></td>
+											<td th:text="${#dates.format(userVideo.vtime,'yyyy-MM-dd hh:mm:ss')}"></td>
+											<td onclick="delVideo()" th:onclick="'javascript:delVideo('+${userVideo.vid}+')'"><i class="layui-icon layui-icon-delete" style="font-size: 30px; color: #1E9FFF;"></i></td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
 								<div role="tabpanel" class="tab-pane" id="settings">.4.</div>
-								<div role="tabpanel" class="tab-pane" id="mytaks">5</div>
-								<div role="tabpanel" class="tab-pane" id="Audited">6</div>
-								<div role="tabpanel" class="tab-pane" id="dssel">ds</div>
-								<div role="tabpanel" class="tab-pane" id="tx">tx</div>
+								<div role="tabpanel" class="tab-pane" id="mytaks" style="background-color: white;">
+
+									<fieldset class="layui-elem-field" style="width: 300px;height: 200px;display: inline-block;">
+										<legend><h4>粉丝数:</h4></legend>
+										<div class="layui-field-box" style="font-weight: 600;color: #00a1d6;font-size: 28px;line-height: 32px;" th:text="${data['a']!=null?data['a']:'0'}">
+											内容区域
+										</div>
+									</fieldset>
+									<fieldset class="layui-elem-field" style="width: 300px;height: 200px;display: inline-block;">
+										<legend><h4>视频播放数:</h4></legend>
+										<div class="layui-field-box" style="font-weight: 600;color: #00a1d6;font-size: 28px;line-height: 32px;" th:text="${data['b']!=null?data['b']:'0'}">
+											内容区域
+										</div>
+									</fieldset>
+									<fieldset class="layui-elem-field" style="width: 300px;height: 200px;display: inline-block;">
+										<legend><h4>弹幕数:</h4></legend>
+										<div class="layui-field-box" style="font-weight: 600;color: #00a1d6;font-size: 28px;line-height: 32px;" th:text="${data['c']!=null?data['c']:'0'}">
+											内容区域
+										</div>
+									</fieldset>
+									<fieldset class="layui-elem-field" style="width: 300px;height: 200px;display: inline-block;">
+										<legend><h4>视频点赞数:</h4></legend>
+										<div class="layui-field-box" style="font-weight: 600;color: #00a1d6;font-size: 28px;line-height: 32px;" th:text="${data['d']!=null?data['d']:'0'}">
+											内容区域
+										</div>
+									</fieldset>
+									<fieldset class="layui-elem-field" style="width: 300px;height: 200px;display: inline-block;">
+										<legend><h4>评论数:</h4></legend>
+										<div class="layui-field-box" style="font-weight: 600;color: #00a1d6;font-size: 28px;line-height: 32px;" th:text="${reviewCount}">
+											内容区域
+										</div>
+									</fieldset>
+									<fieldset class="layui-elem-field" style="width: 300px;height: 200px;display: inline-block;">
+										<legend><h4>提现总金额:</h4></legend>
+										<div class="layui-field-box" style="font-weight: 600;color: #00a1d6;font-size: 28px;line-height: 32px;" th:text="${data['f']!=null?data['f']:'0'}">
+											内容区域
+										</div>
+									</fieldset>
+
+
+
+								</div>
+								<div role="tabpanel" class="tab-pane" id="Audited">
+									<!--创作者激励计划-->
+									<h1 th:if="${TotalPlaybackVolume <50000}">视频总播放量未达到5万，继续努力把</h1>
+									<div th:if="${TotalPlaybackVolume >=50000}">
+
+										<div class="layui-form-item" style="display: inline-block;">
+
+
+											<div class="layui-col-md6" style="width: 300px;display: inline-block;position: relative;top:50px;left: 50px;">
+												<div class="layui-card">
+													<div class="layui-card-header">个人信息</div>
+													<div class="layui-card-body">
+														用户:<span th:text="${session.userAdmin.alias}"></span><br/><br/>
+														视频总播放量:<span th:text="${TotalPlaybackVolume}"></span><br/><br/>
+														创作激励金额:<span th:text="|${TotalPlaybackVolume*0.01}元|" title="1w播放量奖励100￥"></span><br/><br/>
+														可提现金额:<span th:text="|${TotalPlaybackVolume*0.01-TotalWithdrawalAmount}元|"></span><br/><br/>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<form class="layui-form" action="" style="position: relative;top:-260px;left: 500px;">
+											<h3 style="margin-left: 170px;">提现</h3>
+											<div class="layui-form-item">
+												<label class="layui-form-label" style="width: 100px;">提现金额</label>
+												<div class="layui-input-block">
+													<input type="text" id="money" required style="width: 200px;"  lay-verify="required"  autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-form-item">
+												<label class="layui-form-label" style="width: 100px;">提现方式</label>
+												<div class="layui-input-block">
+													<input type="radio" name="tmode" value="支付宝提现" title="支付宝">
+													<input type="radio" name="tmode" value="微信提现" title="微信" checked>
+												</div>
+											</div>
+											<div class="layui-form-item">
+												<label class="layui-form-label" style="width: 100px;">提现账号</label>
+												<div class="layui-input-block">
+													<input type="text" id="account" required style="width: 200px;"  lay-verify="required"  autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-form-item">
+												<label class="layui-form-label" style="width: 100px;">真实姓名</label>
+												<div class="layui-input-block">
+													<input type="text" id="names" required style="width: 200px;"  lay-verify="required"  autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-form-item">
+												<div class="layui-input-block">
+													<input class="layui-btn" type="button" onclick="CashWithdrawal()" value="立即提现" />
+													<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+												</div>
+											</div>
+										</form>
+										<table style="position: relative;top:-150px;" class="table table-hover" th:if="${WithdrawalsRecords.size()!=0}">
+											<caption>提现记录查看</caption>
+											<tr>
+												<th>提现时间</th>
+												<th>提现金额</th>
+												<th>提现方式</th>
+											</tr>
+											<tr th:each="WithdrawalsRecord:${WithdrawalsRecords}">
+												<td th:text="${#dates.format(WithdrawalsRecord.vtime,'yyyy-MM-dd HH:mm:ss')}"></td>
+												<td th:text="${WithdrawalsRecord.money}"></td>
+												<td th:text="${WithdrawalsRecord.tmode}"></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="dssel">
+									<!--获赏记录查看-->
+									<h1 th:text="|获赏总金额${TotalAmountofReward}|"></h1>
+									<table class="table table-hover" th:if="${RecordofAwards.size()!=0}">
+										<tr>
+											<th>视频标题</th>
+											<th>视频封面</th>
+											<th>获赏金额</th>
+											<th>获赏时间</th>
+										</tr>
+										<tr th:each="RecordofAward:${RecordofAwards}">
+											<td th:text="${RecordofAward.vname}"></td>
+											<td>
+												<img th:src="@{upload/{img}(img=${RecordofAward.Videocover})}" width="100" height="100">
+											</td>
+											<td th:text="${RecordofAward.prices}"></td>
+											<td th:text="${#dates.format(RecordofAward.vtime,'yyyy-MM-dd HH:mm:ss')}"></td>
+										</tr>
+									</table>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="tx">
+									<!--提现-->
+
+									<form class="layui-form" style="position: relative;left: 200px;" action="">
+										<div class="layui-form-item">
+											<label class="layui-form-label" style="width: 100px;">账户余额</label>
+											<div class="layui-input-block">
+												<input type="text" style="width: 230px;" readonly th:value="|${session.userAdmin.CCoin}￥|" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+											</div>
+										</div>
+										<div class="layui-form-item">
+											<label class="layui-form-label" style="width: 100px;">提现金额</label>
+											<div class="layui-input-inline">
+												<input type="text" id="moneys"  maxlength="4" onchange="VerificationAmount()"  required lay-verify="required" placeholder="请输入提现金额(10-9999)" autocomplete="off" class="layui-input">
+											</div>
+											<div class="layui-form-mid layui-word-aux">提现手续费为10%</div>
+										</div>
+										<div class="layui-form-item">
+											<label class="layui-form-label" style="width: 100px;">到账金额</label>
+											<div class="layui-input-block">
+												<input type="text" style="width: 230px;" id="AmountofAccountPayable" readonly required  lay-verify="required"  autocomplete="off" class="layui-input">
+											</div>
+										</div>
+										<div class="layui-form-item">
+											<label class="layui-form-label" style="width: 100px;">提现方式</label>
+											<div class="layui-input-block">
+												<input type="radio" name="tmodes" value="支付宝提现" title="支付宝">
+												<input type="radio" name="tmodes" value="微信提现" title="微信" checked>
+											</div>
+										</div>
+										<div class="layui-form-item">
+											<label class="layui-form-label" style="width: 100px;">提现账号</label>
+											<div class="layui-input-block">
+												<input type="text" id="accounts" style="width: 230px;" required  lay-verify="required"  autocomplete="off" class="layui-input">
+											</div>
+										</div>
+										<div class="layui-form-item">
+											<label class="layui-form-label" style="width: 100px;">真实姓名</label>
+											<div class="layui-input-block">
+												<input type="text" id="namess" style="width: 230px;"  required  lay-verify="required"  autocomplete="off" class="layui-input">
+											</div>
+										</div>
+										<div class="layui-form-item">
+											<div class="layui-input-block">
+												<input class="layui-btn" type="button" onclick="UserWithdrawals()" value="立即提现" />
+												<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+											</div>
+										</div>
+									</form>
+								</div>
 							</div>
 
 						</div>
@@ -4246,6 +4570,156 @@
 
 <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script>
+	function delVideo(vid){
+        layer.confirm('确定删除视频吗?', {
+            btn: ['确定','取消'] //按钮
+        }, function(index){
+            $.post('qt/delVideo',{vid:vid},function (data) {
+				layer.msg('删除成功');
+                location.href='qt/Creative'
+            });
+            layer.close(index);
+        });
+	}
+    layui.use('form', function(){
+        var form = layui.form;
+        form.render();
+        //监听提交
+        // form.on('submit(formDemo)', function(data){
+        //     alert(JSON.stringify(data.field));
+        //     return false;
+        // });
+    });
+	function CashWithdrawal() {
+        if($("#money").val()==""){
+            alert('请输入提现金额');
+            return;
+        }
+	    if($("#account").val()==""){
+	        alert('请输入提现账号');
+	        return;
+		}
+        if($("#names").val()==""){
+            alert('请输入姓名');
+            return;
+        }
+        $.post('qt/CashWithdrawal',{money:$("#money").val(),tmode:$('input[name="tmode"]:checked').val()},function (data) {
+            layer.msg('提现成功');
+            location.href='qt/Creative'
+        });
+    }
+    function UserWithdrawals() {
+        if($("#moneys").val()==""){
+            alert('请输入提现金额');
+            return;
+        }
+        if($("#accounts").val()==""){
+            alert('请输入提现账号');
+            return;
+        }
+        if($("#namess").val()==""){
+            alert('请输入姓名');
+            return;
+        }
+
+		$.post('qt/UserWithdrawals',{moneys:$("#moneys").val(),tmodes:$('input[name="tmodes"]:checked').val()},function (data) {
+            layer.msg('提现成功');
+            location.href='qt/Creative'
+        });
+    }
+    function VerificationAmount() {
+	    var moneys=$("#moneys").val();
+        var reg=/^([1-9][0-9]{1,3})$/;
+        if(!reg.test(moneys)){
+            $("#moneys").val(10);
+        }
+        $("#AmountofAccountPayable").val($("#moneys").val()-($("#moneys").val()*0.1));
+    }
+	function uploadVideo() {
+	    var vname=$("#vname").val();
+	    var Videointroduction=$("#Videointroduction").val();
+		var vfid=$("#vfid option:checked").val();
+        var s=$(".layui-progress-bar").width();
+        var p=$(".layui-progress-big").width();
+        var res=s/p;
+        var str=Number(res*100).toFixed()+"%";
+        if(str=="0%"){
+            alert('请先上传视频');
+            return;
+		}
+		if(str!="100%"){
+		    alert('视频正在上传中');
+		    return;
+		}
+		alert('发布成功');
+        // $("#vname").val("");
+        // $("#Videointroduction").val("");
+        // $(".layui-progress-bar").width(0);
+		$.post('qt/UploadVideo',{vname:vname,Videointroduction:Videointroduction,vfid:vfid},function (data) {
+            layer.msg('发布成功');
+            location.href='qt/Creative'
+        });
+
+    }
+    layui.use(['upload','element'], function(){
+        var upload = layui.upload;
+		var element=layui.element;
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#test1' //绑定元素
+            ,url: 'qt/upload' //上传接口
+            ,done: function(res,index,upload){
+                //上传完毕回调
+            },acceptMime: 'image/*'
+            ,error: function(index,upload){
+                //请求异常回调
+            }
+        });
+        var uploadInst2 = upload.render({
+            elem: '#test2' //绑定元素
+            ,url: 'qt/upload' //上传接口
+            ,done: function(res,index,upload){
+                //上传完毕回调
+            },accept:'video',progress: function(n){
+                var percent = n + '%' //获取进度百分比
+                element.progress('demo', percent); //可配合 layui 进度条元素使用
+            }
+            ,error: function(index,upload){
+                //请求异常回调
+            }
+        });
+    });
+
+</script>
+<script>
+	layui.use('carousel', function(){
+		var carousel = layui.carousel;
+		//建造实例
+		carousel.render({
+			elem: '#xx1'
+			,width: '100%' //设置容器宽度
+			,arrow: 'always' //始终显示箭头
+			//,anim: 'updown' //切换动画方式
+		});
+	});
+</script>
+	<script>
+		function VagueSubmit() {
+			var name =$("#name").val();
+			$.post('vague/qt_findbyname',{name:name},function (data) {
+				if (data=='2') {
+					window.location.href = "http://localhost:8080/vague/qt_show";
+				}
+				if (data=='1') {
+					window.location.href = "http://localhost:8080/vague/vagueshow?name="+name;
+				}
+			});
+		}
+	</script>
+
+
 <div class="bp-popup-ctnr">
 	<!---->
 </div>

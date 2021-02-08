@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <base href="http://localhost:8080/">
@@ -9,6 +9,25 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>后台</title>
+
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="/easyUis/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Page level plugin JavaScript-->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin.min.js"></script>
+  <!-- Custom scripts for this page-->
+  <script src="js/sb-admin-datatables.min.js"></script>
+  <script src="js/sb-admin-charts.min.js"></script>
+
+
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -17,40 +36,36 @@
   <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+
+<!--  <script src="/easyUis/jquery.min.js"></script>-->
+  <script src="/easyUis/jquery.easyui.min.js"></script>
+  <script src="/easyUis/locale/easyui-lang-zh_CN.js"></script>
+  <link type="text/css" href="/easyUis/themes/default/easyui.css" rel="stylesheet"/>
+  <link type="text/css" href="/easyUis/themes/icon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+
+
+
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" >
     	<img src="img/logo.png" height="45">
     </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="ht/index.html">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion" >
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard" th:each="ht:${ht_list}">
+          <a class="nav-link" th:text="${ht.lname}"   th:href="${ht.href}"  >
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Dashboard</span>
+            <!--<span class="nav-link-text" th:text="${ht.lname}"></span>-->
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="ht/charts.html">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Charts</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="ht/tables.html">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Tables</span>
-          </a>
-        </li>
-     
-
-    
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -60,6 +75,7 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
+
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>退出</a>
@@ -68,10 +84,147 @@
     </div>
   </nav>
   <div class="content-wrapper">
-            Dashboard
+    <div class="c-banner">
+      <div class="banner">
+        <ul>
+          <li><img src="/img/1.jpg"></li>
+          <li><img src="/img/4.jpg"></li>
+          <li><img src="/img/5.jpg"></li>
+          <li><img src="/img/6.jpg"></li>
+          <li><img src="/img/7.jpg"></li>
+          <li><img src="/img/8.jpg"></li>
+          <li><img src="/img/10.jpg"></li>
+          <li><img src="/img/14.jpg"></li>
+          <li><img src="/img/15.jpg"></li>
+          <li><img src="/img/16.jpg"></li>
+          <li><img src="/img/17.jpg"></li>
+        </ul>
+      </div>
+      <div class="jumpBtn">
+        <ul>
+          <li jumpImg="0"></li>
+          <li jumpImg="1"></li>
+          <li jumpImg="2"></li>
+          <li jumpImg="3"></li>
+          <li jumpImg="4"></li>
+          <li jumpImg="5"></li>
+          <li jumpImg="6"></li>
+          <li jumpImg="7"></li>
+          <li jumpImg="8"></li>
+          <li jumpImg="9"></li>
+          <li jumpImg="10"></li>
+          <li jumpImg="11"></li>
+        </ul>
+      </div>
     </div>
 
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      //定时器返回值
+      var time=null;
+      //记录当前位子
+      var nexImg = 0;
+      //用于获取轮播图图片个数
+      var imgLength = $(".c-banner .banner ul li").length;
+      //当时动态数据的时候使用,上面那个删除
+      // var imgLength =0;
+      //设置底部第一个按钮样式
+      $(".c-banner .jumpBtn ul li[jumpImg="+nexImg+"]").css("background-color","black");
 
+      //页面加载
+      $(document).ready(function(){
+        // dynamicData();
+        //启动定时器,设置时间为3秒一次
+        time =setInterval(intervalImg,3000);
+      });
+
+      //点击上一张
+      $(".preImg").click(function(){
+        //清楚定时器
+        clearInterval(time);
+        var nowImg = nexImg;
+        nexImg = nexImg-1;
+        console.log(nexImg);
+        if(nexImg<0){
+          nexImg=imgLength-1;
+        }
+        //底部按钮样式设置
+        $(".c-banner .jumpBtn ul li").css("background-color","white");
+        $(".c-banner .jumpBtn ul li[jumpImg="+nexImg+"]").css("background-color","black");
+
+        //将当前图片试用绝对定位,下一张图片试用相对定位
+        $(".c-banner .banner ul img").eq(nowImg).css("position","absolute");
+        $(".c-banner .banner ul img").eq(nexImg).css("position","relative");
+
+        //轮播淡入淡出
+        $(".c-banner .banner ul li").eq(nexImg).css("display","block");
+        $(".c-banner .banner ul li").eq(nexImg).stop().animate({"opacity":1},1000);
+        $(".c-banner .banner ul li").eq(nowImg).stop().animate({"opacity":0},1000,function(){
+          $(".c-banner ul li").eq(nowImg).css("display","none");
+        });
+
+        //启动定时器,设置时间为3秒一次
+        time =setInterval(intervalImg,3000);
+      })
+
+      //点击下一张
+      $(".nexImg").click(function(){
+        clearInterval(time);
+        intervalImg();
+        time =setInterval(intervalImg,3000);
+      })
+
+      //轮播图
+      function intervalImg(){
+        if(nexImg<imgLength-1){
+          nexImg++;
+        }else{
+          nexImg=0;
+        }
+
+        //将当前图片试用绝对定位,下一张图片试用相对定位
+        $(".c-banner .banner ul img").eq(nexImg-1).css("position","absolute");
+        $(".c-banner .banner ul img").eq(nexImg).css("position","relative");
+
+        $(".c-banner .banner ul li").eq(nexImg).css("display","block");
+        $(".c-banner .banner ul li").eq(nexImg).stop().animate({"opacity":1},1000);
+        $(".c-banner .banner ul li").eq(nexImg-1).stop().animate({"opacity":0},1000,function(){
+          $(".c-banner .banner ul li").eq(nexImg-1).css("display","none");
+        });
+        $(".c-banner .jumpBtn ul li").css("background-color","white");
+        $(".c-banner .jumpBtn ul li[jumpImg="+nexImg+"]").css("background-color","black");
+      }
+
+      //轮播图底下按钮
+      //动态数据加载的试用应放在请求成功后执行该代码,否则按钮无法使用
+      $(".c-banner .jumpBtn ul li").each(function() {
+                //为每个按钮定义点击事件
+                $(this).click(function () {
+                  clearInterval(time);
+                  $(".c-banner .jumpBtn ul li").css("background-color", "white");
+                  jumpImg = $(this).attr("jumpImg");
+                  if (jumpImg != nexImg) {
+                    var after = $(".c-banner .banner ul li").eq(jumpImg);
+                    var befor = $(".c-banner .banner ul li").eq(nexImg);
+
+                    //将当前图片试用绝对定位,下一张图片试用相对定位
+                    $(".c-banner .banner ul img").eq(nexImg).css("position", "absolute");
+                    $(".c-banner .banner ul img").eq(jumpImg).css("position", "relative");
+
+                    after.css("display", "block");
+                    after.stop().animate({"opacity": 1}, 1000);
+                    befor.stop().animate({"opacity": 0}, 1000, function () {
+                      befor.css("display", "none");
+                    });
+                    nexImg = jumpImg;
+                  }
+                  $(this).css("background-color", "black");
+                  time = setInterval(intervalImg, 3000);
+                });
+              })
+              </script>
+    </div>
+    </div>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -90,25 +243,12 @@
           <div class="modal-body">你确定要退出吗?</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
-            <a class="btn btn-primary" href="ht/login.html">退出</a>
+            <a class="btn btn-primary"  href="/admin/ht_login_show">退出</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-    <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
+
   </div>
 </body>
 

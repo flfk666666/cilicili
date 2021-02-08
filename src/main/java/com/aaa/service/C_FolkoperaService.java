@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class C_FolkoperaService {
@@ -36,4 +37,38 @@ public class C_FolkoperaService {
         return c_folkoperaDAO.queryByFid();
     }
 
+    public List<C_Folkopera> selpalayallfolk(){
+        return c_folkoperaDAO.selpalayallfolk();
+    }
+
+    public List<C_Folkopera> selnewallfolk(){
+        return c_folkoperaDAO.selnewallfolk();
+    }
+
+
+
+    public List<Map<String,Object>> qtfindvaguefname(String fname){
+        return c_folkoperaDAO.qtfindvaguefname(fname);
+    }
+
+    public List<Map<String,Object>> qt_findfolkopera(){
+        return c_folkoperaDAO.qt_findfolkopera();
+    }
+
+    //查询番剧库未上架的番剧
+    public  List<Map<String,Object>> queryNotonshelves(){
+        return c_folkoperaDAO.queryNotonshelves();
+    }
+
+    public int selavgpf(int fid){
+        return c_folkoperaDAO.selavgpf(fid);
+    }
+
+    public int selzfcount(int fid){
+        return c_folkoperaDAO.selzfcount(fid);
+    }
+
+    public List<Map<String,Object>> query5ByPlaybackValue(){
+        return c_folkoperaDAO.query5ByPlaybackValue();
+    }
 }

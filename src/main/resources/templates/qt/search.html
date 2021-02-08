@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html  xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<base href="http://localhost:8080/">
-		<title data-vue-meta="true">1 - 搜索结果 - 哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ  乾杯~  - bilibili</title> <meta data-vue-meta="true" charset="UTF-8"><meta data-vue-meta="true" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta data-vue-meta="true" name="renderer" content="webkit|ie-comp|ie-stand"><meta data-vue-meta="true" name="description" content="bilibili是国内知名的视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐。">
-		<meta data-vue-meta="true" name="keywords" content="B站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid"><meta name="spm_prefix" content="333.337"><link rel="dns-prefetch" href="//s1.hdslb.com"><link rel="dns-prefetch" href="//i0.hdslb.com"><link rel="dns-prefetch" href="//i1.hdslb.com"><link rel="dns-prefetch" href="//i2.hdslb.com"><link rel="dns-prefetch" href="//static.hdslb.com"><link rel="shortcut icon" href="//static.hdslb.com/images/favicon.ico"><script type="text/javascript">window.spmReportData={},window.reportConfig={sample:1,scrollTracker:!0,msgObjects:"spmReportData",errorTracker:!0,searchPage:!0}</script><script type="text/javascript" src="js/log-reporter.js" crossorigin=""></script><script charset="utf-8" src="js/5.1320c.function.chunk.js"></script>
-		<script charset="utf-8" src="js/7.b40a2.function.chunk.js"></script>
-		<script charset="utf-8" src="js/3.9035b.function.chunk.js"></script>
+		<title data-vue-meta="true">CiliCili搜索</title> <meta data-vue-meta="true" charset="UTF-8"><meta data-vue-meta="true" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta data-vue-meta="true" name="renderer" content="webkit|ie-comp|ie-stand"><meta data-vue-meta="true" name="description" content="bilibili是国内知名的视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐。">
+<!--		<meta data-vue-meta="true" name="keywords" content="B站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid"><meta name="spm_prefix" content="333.337"><link rel="dns-prefetch" href="//s1.hdslb.com"><link rel="dns-prefetch" href="//i0.hdslb.com"><link rel="dns-prefetch" href="//i1.hdslb.com"><link rel="dns-prefetch" href="//i2.hdslb.com"><link rel="dns-prefetch" href="//static.hdslb.com"><link rel="shortcut icon" href="//static.hdslb.com/images/favicon.ico"><script type="text/javascript">window.spmReportData={},window.reportConfig={sample:1,scrollTracker:!0,msgObjects:"spmReportData",errorTracker:!0,searchPage:!0}</script><script type="text/javascript" src="js/log-reporter.js" crossorigin=""></script><script charset="utf-8" src="js/5.1320c.function.chunk.js"></script>-->
+<!--		<script charset="utf-8" src="js/7.b40a2.function.chunk.js"></script>-->
+<!--		<script charset="utf-8" src="js/3.9035b.function.chunk.js"></script>-->
 		<script type="text/javascript" src="js/jquery1.7.2.min.js"></script>
 		<link rel="prefetch" as="script" href="js/video.js?v=20191119">
 		<script type="text/javascript" src="js/polyfill.js?features=Promise%2CObject.assign%2CString.prototype.includes%2CNumber.isNaN"></script>
@@ -18,6 +18,29 @@
 		<link rel="preload" href="js/search.873ddf42c10f89041580a7464cc60c78d86b8329.js" as="script">
 		<link rel="stylesheet" href="css/search.1.873ddf42c10f89041580a7464cc60c78d86b8329.css">
 		<link rel="stylesheet" href="css/search.0.873ddf42c10f89041580a7464cc60c78d86b8329.css">
+		<link rel="stylesheet" href="css/index_new_pc_sync.652a25d7.css">
+
+
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+		<script>
+			function VagueSubmit() {
+				var name =$("#search-keyword").val();
+				$.post('vague/qt_findbyname',{name:name},function (data) {
+					if (data=='1') {
+						window.location.href = "http://localhost:8080/vague/vagueshow?name="+name;
+					}
+					if (data=='2') {
+						window.location.href = "http://localhost:8080/vague/qt_show";
+					}
+				});
+			}
+
+		</script>
 		<style type="text/css">@font-face {
 	  font-family: "bili-footer-font";
 	  src: url(data:application/vnd.ms-fontobject;base64,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);
@@ -41,7 +64,8 @@
 	.bili-footer-icon_download:before {
 	  content: "\E752";
 	}
-	</style><style type="text/css">body {
+	</style>
+		<style type="text/css">body {
 	  margin: 0;
 	  padding: 0;
 	}
@@ -2987,7 +3011,12 @@
 	}
 	</style></head>
 <body>
-	<div id="internationalHeader" class="international-header report-wrap-module"><div class="mini-header m-header mini-type"><div class="mini-header__content"><div class="nav-link"><ul class="nav-link-ul mini"><li class="nav-link-item"><span><div role="tooltip" id="van-popover-8479" aria-hidden="true" class="van-popover van-popper popover-channe" style="display: none;" tabindex="0"><!----> </div> <a href="//www.bilibili.com" class="link van-popover__reference" aria-describedby="van-popover-8479" tabindex="0"><i class="bilifont bili-Navbar_logo"></i>
+	<div id="internationalHeader" class="international-header report-wrap-module">
+		<div class="mini-header m-header mini-type"><div class="mini-header__content">
+			<div class="nav-link"><ul class="nav-link-ul mini"><li class="nav-link-item"><span>
+				<div role="tooltip" id="van-popover-8479" aria-hidden="true" class="van-popover van-popper popover-channe" style="display: none;" tabindex="0"><!----> </div>
+				<a href="qt/index" class="link van-popover__reference" aria-describedby="van-popover-8479" tabindex="0">
+
 	          主站
 	          <i class="bilifont bili-general_pullup_s"></i></a></span></li><li class="nav-link-item"><a href="//www.bilibili.com/anime/" target="_blank" class="link">番剧</a></li><li class="nav-link-item"><span><div role="tooltip" id="van-popover-4356" aria-hidden="true" class="van-popover van-popper popover-game" style="display: none;" tabindex="0"><!----> </div> <a href="//game.bilibili.com" target="_blank" class="link van-popover__reference" aria-describedby="van-popover-4356" tabindex="0">游戏中心</a></span></li><li class="nav-link-item"><span><div role="tooltip" id="van-popover-2166" aria-hidden="true" class="van-popover van-popper popover-live" style="display: none;" tabindex="0"><!----> </div> <a href="//live.bilibili.com" target="_blank" class="link van-popover__reference" aria-describedby="van-popover-2166" tabindex="0">直播</a></span></li><li class="nav-link-item"><a href="//show.bilibili.com/platform/home.html?msource=pc_web" target="_blank" class="link">会员购</a></li><li class="nav-link-item"><span><div role="tooltip" id="van-popover-542" aria-hidden="true" class="van-popover van-popper popover-manga" style="display: none;" tabindex="0"><!----> </div> <a href="//manga.bilibili.com?from=bill_top_mnav" target="_blank" class="link van-popover__reference" aria-describedby="van-popover-542" tabindex="0">漫画</a></span></li><li class="nav-link-item"><a href="//www.bilibili.com/v/game/match/" target="_blank" class="link">赛事</a></li><!----><!----><li class="nav-link-item"><span><div role="tooltip" id="van-popover-3270" aria-hidden="true" class="van-popover van-popper popover-app-download" style="display: none;" tabindex="0"><!----> </div> <a href="//app.bilibili.com" target="_blank" class="link van-popover__reference" aria-describedby="van-popover-3270" tabindex="0"><i class="bilifont bili-icon_dingdao_xiazaiapp"></i>下载APP</a></span></li></ul></div><div class="nav-search-box"><div class="nav-search"><form id="nav_searchform"><input type="text" autocomplete="off" accesskey="s" x-webkit-speech="" x-webkit-grammar="builtin:translate" placeholder="好好学习，瓜分奖学金！" class="nav-search-keyword"><div class="nav-search-btn"><button type="button" class="bilifont bili-icon_dingdao_sousuo nav-search-submit"></button></div></form><!----><!----></div></div><div class="nav-user-center"><div class="user-con search-icon"><a href="//search.bilibili.com/" target="_blank"><i class="bilifont bili-icon_dingdao_sousuo"></i></a></div><!----><div class="user-con logout"><div class="item"><div data-v-211808ba=""><span data-v-211808ba=""><div role="tooltip" id="van-popover-5324" aria-hidden="true" class="van-popover van-popper van-popper-login" style="width: 360px; display: none;" tabindex="0"><!----> <div data-v-211808ba="" class="container"><p data-v-211808ba="" class="title">登录后你可以：</p><div data-v-211808ba="" class="img-panel"><img data-v-211808ba="" src="//static.hdslb.com/images/danmu.png" style="left: 0px;"><img data-v-211808ba="" src="//static.hdslb.com/images/danmu.png" style="left: 320px;"></div><div data-v-211808ba="" class="btn-box"><a data-v-211808ba="" href="//passport.bilibili.com/register/phone.html" class="btn reg-btn">
 	          注册
@@ -2997,249 +3026,300 @@
 	      语言：简体中文
 	    </div><i class="lang-icon-more bilifont bili-icon_caozuo_qianwang"></i></div><div class="lang-intro"><ul><li class="lang-intro-item on">
 	        简体中文 <i class="bilifont bili-icon_caozuo_xuanzhong"></i></li><li class="lang-intro-item">
-	        繁体中文 <i class="bilifont bili-icon_caozuo_xuanzhong"></i></li></ul></div></div></div> <div data-v-211808ba="" class="mini-login van-popover__reference" aria-describedby="van-popover-5324" tabindex="0"><a data-v-211808ba="" href="//passport.bilibili.com/login" class="name"><img data-v-211808ba="" src="//static.hdslb.com/images/akari.jpg" class="logout-face">
-	      登录</a></div></span></div></div><div class="item"><a href="//passport.bilibili.com/register/phone.html" class="txt name">注册</a></div></div><div data-v-4b8ecd32=""><span data-v-4b8ecd32=""><div role="tooltip" id="van-popover-531" aria-hidden="true" class="van-popover van-popper van-popper-upload" style="width: 304px; display: none;" tabindex="0"><!----> <div data-v-4b8ecd32="" class="container"><a data-v-4b8ecd32="" href="//member.bilibili.com/v2#/upload/text/apply" target="_blank" class="upload-item"><i data-v-4b8ecd32="" class="bilifont bili-icon_dingdao_wenzhangtougao"></i><span data-v-4b8ecd32="" class="item-title">专栏投稿</span></a><a data-v-4b8ecd32="" href="//member.bilibili.com/v2#/upload/audio" target="_blank" class="upload-item"><i data-v-4b8ecd32="" class="bilifont bili-icon_dingdao_yinpintougao"></i><span data-v-4b8ecd32="" class="item-title">音频投稿</span></a><a data-v-4b8ecd32="" href="//member.bilibili.com/v2#/upload/video/frame" target="_blank" class="upload-item"><i data-v-4b8ecd32="" class="bilifont bili-icon_dingdao_shipintougao"></i><span data-v-4b8ecd32="" class="item-title">视频投稿</span></a><a data-v-4b8ecd32="" href="//member.bilibili.com/v2#/upload-manager/article" target="_blank" class="upload-item"><i data-v-4b8ecd32="" class="bilifont bili-icon_dingdao_tougaoguanli1"></i><span data-v-4b8ecd32="" class="item-title">投稿管理</span></a></div></div> <a data-v-4b8ecd32="" href="//member.bilibili.com/v2#/upload/video/frame" target="_blank" class="mini-upload van-popover__reference" aria-describedby="van-popover-531" tabindex="0">
-	      投稿
-	    </a></span></div></div></div></div><!----><!----></div>
+	        繁体中文 <i class="bilifont bili-icon_caozuo_xuanzhong"></i></li></ul></div></div></div>
+
+			<div th:if="${session.userAdmin != null}" data-v-211808ba="" class="mini-login van-popover__reference" aria-describedby="van-popover-5324" tabindex="0">
+			<a data-v-211808ba="" th:href="@{qt_C_User/goPersonalspace(uid=${session.userAdmin.uid})}" class="name">
+			<img data-v-211808ba="" th:src="@{/tx/{img}(img=${session.userAdmin.Headimg})}" class="logout-face">
+				<span th:text="${session.userAdmin.alias}"></span></a>
+			</div></span></div></span></div></div>&nbsp;&nbsp;
+			<div th:if="${session.userAdmin != null}" class="item">
+			<a href="qt/Personal" class="txt name">个人中心</a>&nbsp;&nbsp;
+			<a href="qt/Creative" class="txt name">创作中心</a>&nbsp;&nbsp;
+			<a href="qt/Voucher" class="txt name">充值中心</a>&nbsp;&nbsp;
+		</div></div>
+		</div>
+
+
+
+
+
+			<div data-v-4b8ecd32=""><span data-v-4b8ecd32=""><div role="tooltip" id="van-popover-531" aria-hidden="true" class="van-popover van-popper van-popper-upload" style="width: 304px; display: none;" tabindex="0"><!----> <div data-v-4b8ecd32="" class="container">
+			<a th:if="${session.userAdmin != null}" data-v-4b8ecd32="" href="qt/Creative" target="_blank" class="upload-item">
+	        投稿
+	        </a>
+		<a th:if="${session.userAdmin == null}" data-v-4b8ecd32="" href="qt/Creative" target="_blank" class="upload-item">
+			投稿
+		</a>
+
+			</span></div></div></div></div><!----><!----></div>
 		<div id="search-app"></div>
-		<div id="server-search-app" class="bili-search"><div class="contain"><div class="head-contain"><div class="search-wrap"><div class=""><div class="logo-input clearfix"><a href="javascript:;" class="search-logo"></a><div class="search-block"><div class="input-wrap"><input id="search-keyword" type="text" maxlength="100" autocomplete="off"><div class="suggest-wrap" style="display: none;"><div class="hotword-wrap" style="display: none;"><ul class="horizontal"><li><a href="javascript:;" class="hz-text">
-		          jojo
-		        </a></li><li><a href="javascript:;" class="hz-text">
-		          刺客伍六七
-		        </a></li><li><a href="javascript:;" class="hz-text">
-		          奥利给
-		        </a></li><li><a href="javascript:;" class="hz-text">
-		          明日方舟
-		        </a></li><li><a href="javascript:;" class="hz-text">
-		          TGA
-		        </a></li><li><a href="javascript:;" class="hz-text">
-		          中国BOY超级大猩猩
-		        </a></li><li><a href="javascript:;" class="hz-text">
-		          防弹少年团
-		        </a></li><li><a href="javascript:;" class="hz-text">
-		          新西游记
-		        </a></li><li><a href="javascript:;" class="hz-text">
-		          RUNNINGMAN
-		        </a></li><li><a href="javascript:;" class="hz-text">
-		          英雄联盟
-		        </a></li></ul></div><ul class="keyword-wrap" style=""><li><a class="vt-text keyword"><em class="suggest_high_light">1</em>2·<em class="suggest_high_light">1</em>枪杀大案</a></li><li><a class="vt-text keyword"><em class="suggest_high_light">1</em>00个春节故事</a></li><li><a class="vt-text keyword"><em class="suggest_high_light">1</em>0月追番挑战</a></li><li><a class="vt-text keyword"><em class="suggest_high_light">1</em>MILLION_OFFICIAL</a></li><li><a class="vt-text keyword"><em class="suggest_high_light">1</em>0后找人带</a></li><li><a class="vt-text keyword"><em class="suggest_high_light">1</em>THE9</a></li><li><a class="vt-text keyword"><em class="suggest_high_light">1</em>291357910</a></li><li><a class="vt-text keyword"><em class="suggest_high_light">1</em>9八3</a></li><li><a class="vt-text keyword"><em class="suggest_high_light">1</em>433223</a></li><li><a class="vt-text keyword"><em class="suggest_high_light">1</em>0天CAD教程</a></li></ul><ul class="history-wrap" style="display: none;"><li class="title"><span>搜索历史</span></li><li class="history-li"><a class="vt-text history">1</a><i class="clear"></i></li><li class="history-li"><a class="vt-text history">jojo</a><i class="clear"></i></li><li class="history-li"><a class="vt-text history">哈喽</a><i class="clear"></i></li><li class="history-li"><a class="vt-text history">hisahdi1</a><i class="clear"></i></li><li class="history-li"><a class="vt-text history">11</a><i class="clear"></i></li><li class="clearall"><a>清空搜索历史</a></li></ul></div></div><div class="search-button"><i class="icon-search-white"></i><span class="search-text">搜索</span></div><div class="search-loupe"><i class="icon-loupe"></i></div></div></div></div></div><div id="navigator"><div class="v-switcher"><div class="v-switcher-header-wrap" style="height: 56px;"><div class="v-switcher-header-before"></div><div class="v-switcher-header-after"></div><div class="v-switcher-header-tabs"><ul class="v-switcher-header v-switcher-header-around v-switcher-header-translate"><li class="v-switcher-header-item is-active" style="height: 56px; line-height: 56px; width: 11.1111%;"><a href="/all?keyword=1" class="router-link-exact-active router-link-active">
-		      综合
-		      <span class="num"></span></a></li><li class="v-switcher-header-item" style="height: 56px; line-height: 56px; width: 11.1111%;"><a href="/video?keyword=1" class="">
-		      视频
-		      <span class="num">99+</span></a></li><li class="v-switcher-header-item" style="height: 56px; line-height: 56px; width: 11.1111%;"><a href="/bangumi?keyword=1" class="">
-		      番剧
-		      <span class="num">26</span></a></li><li class="v-switcher-header-item" style="height: 56px; line-height: 56px; width: 11.1111%;"><a href="/pgc?keyword=1" class="">
-		      影视
-		      <span class="num">99+</span></a></li><li class="v-switcher-header-item" style="height: 56px; line-height: 56px; width: 11.1111%;"><a href="/live?keyword=1" class="">
-		      直播
-		      <span class="num">99+</span></a></li><li class="v-switcher-header-item" style="height: 56px; line-height: 56px; width: 11.1111%;"><a href="/article?keyword=1" class="">
-		      专栏
-		      <span class="num">99+</span></a></li><li class="v-switcher-header-item" style="height: 56px; line-height: 56px; width: 11.1111%;"><a href="/topic?keyword=1" class="">
-		      话题
-		      <span class="num">42</span></a></li><li class="v-switcher-header-item" style="height: 56px; line-height: 56px; width: 11.1111%;"><a href="/upuser?keyword=1" class="">
-		      用户
-		      <span class="num">99+</span></a></li><li class="v-switcher-header-item" style="height: 56px; line-height: 56px; width: 11.1111%;"><a href="/photo?keyword=1" class="">
-		      相簿
-		      <span class="num">99+</span></a></li><li class="v-switcher-header-anchor" style="width: 40px; transform: translateX(37px); transition-duration: 200ms;"></li></ul></div></div><div style="display: none;"></div><!----></div></div></div><div class="body-contain"><div id="all-list"><div class="flow-loader"><!----><div class="filter-wrap"><ul class="filter-type clearfix order" style=""><li class="filter-item active"><a href="javascript:;">综合排序</a></li><li class="filter-item"><a href="javascript:;">最多点击</a></li><li class="filter-item"><a href="javascript:;">最新发布</a></li><li class="filter-item"><a href="javascript:;">最多弹幕</a></li><li class="filter-item"><a href="javascript:;">最多收藏</a></li></ul><ul class="filter-type clearfix duration"><li class="filter-item active"><a href="javascript:;">全部时长</a></li><li class="filter-item"><a href="javascript:;">10分钟以下</a></li><li class="filter-item"><a href="javascript:;">10-30分钟</a></li><li class="filter-item"><a href="javascript:;">30-60分钟</a></li><li class="filter-item"><a href="javascript:;">60分钟以上</a></li></ul><ul class="filter-type clearfix tids_1" style=""><li class="filter-item active"><a href="javascript:;">全部分区</a></li><li class="filter-item"><a href="javascript:;">动画</a></li><li class="filter-item"><a href="javascript:;">番剧</a></li><li class="filter-item"><a href="javascript:;">国创</a></li><li class="filter-item"><a href="javascript:;">音乐</a></li><li class="filter-item"><a href="javascript:;">舞蹈</a></li><li class="filter-item"><a href="javascript:;">游戏</a></li><li class="filter-item"><a href="javascript:;">科技</a></li><li class="filter-item"><a href="javascript:;">数码</a></li><li class="filter-item"><a href="javascript:;">生活</a></li><li class="filter-item"><a href="javascript:;">鬼畜</a></li><li class="filter-item"><a href="javascript:;">时尚</a></li><li class="filter-item"><a href="javascript:;">广告</a></li><li class="filter-item"><a href="javascript:;">娱乐</a></li><li class="filter-item"><a href="javascript:;">影视</a></li><li class="filter-item"><a href="javascript:;">纪录片</a></li><li class="filter-item"><a href="javascript:;">电影</a></li><li class="filter-item"><a href="javascript:;">电视剧</a></li><!----><!----></ul><a class="fold up" style=""><span>收起</span><i class="arrow-up"></i></a><a class="fold down" style="display: none;"><span>更多筛选</span><i class="arrow-down"></i></a><div class="switch-wrap"><div class="aver type active"><i class="icon-aver"></i></div><div class="imgleft type"><i class="icon-imgleft"></i></div></div></div><div class="mixin-list"><!----><!----><!----><!----><!----><!----><!----><!----><ul class="video-list clearfix" type="video"><li class="video-item matrix"><a href="//www.bilibili.com/video/av77242437?from=search&amp;seid=1132265582546006367" title="【纪录片】百家讲坛之先秦诸子百家争鸣（1-6部）" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i0.hdslb.com/bfs/archive/3d37a85fa7e9402267124467ad091b9b0570f11d.png@400w_250h.png"></div><span class="so-imgTag_rb">22:58:43</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">人文·历史</span><a title="【纪录片】百家讲坛之先秦诸子百家争鸣（1-6部）" href="//www.bilibili.com/video/av77242437?from=search&amp;seid=1132265582546006367" target="_blank" class="title">【纪录片】百家讲坛之先秦诸子百家争鸣（<em class="keyword">1</em>-6部）</a></div><div class="des hide">
-		      《百家讲坛》栏目一贯坚持“让专家、学者为百姓服务”的栏目宗旨，栏目在专家、学者和百姓之间架起一座桥梁“一座让专家通向老百姓的桥梁”，从而达到普及优秀中国传统文化的目的。
-		
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        1.6万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        257
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-12-01
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/7584632?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">哔哩哔哩纪录片</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77686601?from=search&amp;seid=1132265582546006367" title="1辈子只能玩一次的倒放挑战！" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i2.hdslb.com/bfs/archive/c2c94a65e61ec06c9c2a8f6fb6cf9ca6be0c7fbe.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">11:02</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">日常</span><a title="1辈子只能玩一次的倒放挑战！" href="//www.bilibili.com/video/av77686601?from=search&amp;seid=1132265582546006367" target="_blank" class="title"><em class="keyword">1</em>辈子只能玩一次的倒放挑战！</a></div><div class="des hide">
-		      喜欢我的视频记得点个赞哦！
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        24.1万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        5375
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-12-01
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/19642758?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">力元君</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av70621445?from=search&amp;seid=1132265582546006367" title="英雄联盟s1—s9总决赛主题曲（合集）" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i1.hdslb.com/bfs/archive/9b3a8d057af841e6f06dcd1a248ca4a79536b708.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">49:30</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">MV</span><a title="英雄联盟s1—s9总决赛主题曲（合集）" href="//www.bilibili.com/video/av70621445?from=search&amp;seid=1132265582546006367" target="_blank" class="title">英雄联盟s<em class="keyword">1</em>—s9总决赛主题曲（合集）</a></div><div class="des hide">
-		      qq音乐 爱奇艺 优酷 腾讯视频 
-		s9总决赛MV发布了，自己做个合集收藏的。新的征程，LPL加油！
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        73.4万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        6726
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-10-09
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/146796537?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">冰雪少年林空镜</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77659608?from=search&amp;seid=1132265582546006367" title="R1SE《角儿无大小》MV" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i0.hdslb.com/bfs/archive/e686ca71a3410f8424ccb97ddcf26453e8d49edb.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">03:09</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">MV</span><a title="R1SE《角儿无大小》MV" href="//www.bilibili.com/video/av77659608?from=search&amp;seid=1132265582546006367" target="_blank" class="title">R<em class="keyword">1</em>SE《角儿无大小》MV</a></div><div class="des hide">
-		      -
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        3.1万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        1356
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-12-01
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/433215523?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">R1SE_official</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77644266?from=search&amp;seid=1132265582546006367" title="【硬件科普】为什么买内存推荐买8GX2而不是16GX1？详解内存双通道工作原理与作用" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i2.hdslb.com/bfs/archive/76180326cd0b21b08e700c15d4546a716f7cc762.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">10:13</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">电脑装机</span><a title="【硬件科普】为什么买内存推荐买8GX2而不是16GX1？详解内存双通道工作原理与作用" href="//www.bilibili.com/video/av77644266?from=search&amp;seid=1132265582546006367" target="_blank" class="title">【硬件科普】为什么买内存推荐买8GX2而不是16GX<em class="keyword">1</em>？详解内存双通道工作原理与作用</a></div><div class="des hide">
-		      我说过打算给大家做一期磁盘阵列的科普，不过在做磁盘阵列科普之前，我们需要讲另外一个东西，双通道内存。相信细心的同学应该都发现了，我的配置推荐里，如果是需要16G内存的，我写的都是8GX2也就是两根8G，所以就经常有小白跑过来私信问我，大佬，...
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        2.9万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        332
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-12-01
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/14871346?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">硬件茶谈</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77691625?from=search&amp;seid=1132265582546006367" title="【是大腿TOP10】91：跌落神坛（0/1）？盘点知名游戏制作人" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i0.hdslb.com/bfs/archive/21ff34888a1a2cf0d89aa3673ca3cfc3ba4b0021.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">15:40</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">单机游戏</span><a title="【是大腿TOP10】91：跌落神坛（0/1）？盘点知名游戏制作人" href="//www.bilibili.com/video/av77691625?from=search&amp;seid=1132265582546006367" target="_blank" class="title">【是大腿TOP10】91：跌落神坛（0/<em class="keyword">1</em>）？盘点知名游戏制作人</a></div><div class="des hide">
-		      本期由是大腿出品的《是大腿TOP10》每周固定更新。 微博@是大腿 @甄一一是大腿 获取更多精彩内容。 合作邮箱：bd@shidatui.com 合作VX：shidatuimcn
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        11.0万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        911
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-12-01
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/1565155?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">起小点是大腿</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77690092?from=search&amp;seid=1132265582546006367" title="伦敦恐袭现场&nbsp;有人拿1.5米独角鲸长牙冲了上去" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i0.hdslb.com/bfs/archive/b98fec9fa7e2e9d4655fcc21c3ddb5054f6cb976.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">01:10</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">日常</span><a title="伦敦恐袭现场&nbsp;有人拿1.5米独角鲸长牙冲了上去" href="//www.bilibili.com/video/av77690092?from=search&amp;seid=1132265582546006367" target="_blank" class="title">伦敦恐袭现场&nbsp;有人拿<em class="keyword">1</em>.5米独角鲸长牙冲了上去</a></div><div class="des hide">
-		      29日，伦敦市中心发生恐怖袭击，2人遇害，3人受伤。在恐袭现场，一群路人自发上前制服袭击者，有人朝凶手喷灭火器，有人则手拿独角鲸长牙攻击凶手……另外还有一名“路人”吸引了媒体关注，他曾在现场试图救助一名遇袭女性。就在他被称赞为“英雄”的同时...
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        17.3万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        355
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-12-01
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/10330740?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">观察者网</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av75796950?from=search&amp;seid=1132265582546006367" title="【完整版】史上最全所有奥特曼死亡/战败合集（分P），1-18期全集整理版" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i1.hdslb.com/bfs/archive/e62438577ca990bc4ceaae7f1d6611253b259941.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">03:48:27</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">特摄</span><a title="【完整版】史上最全所有奥特曼死亡/战败合集（分P），1-18期全集整理版" href="//www.bilibili.com/video/av75796950?from=search&amp;seid=1132265582546006367" target="_blank" class="title">【完整版】史上最全所有奥特曼死亡/战败合集（分P），<em class="keyword">1</em>-18期全集整理版</a></div><div class="des hide">
-		      断断续续做了一年多，现在整理成一期视频发出来，还是值得收藏的吧~求个三连呀~
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        85.4万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        1.2万
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-11-16
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/290041187?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">恩赐老师</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77338790?from=search&amp;seid=1132265582546006367" title="2019 DNF F1天王赛 个人赛 4强赛~决赛" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i0.hdslb.com/bfs/archive/d7bd9c81548a7408649ed893bcd33defd71b829e.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">01:23:40</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">网络游戏</span><a title="2019 DNF F1天王赛 个人赛 4强赛~决赛" href="//www.bilibili.com/video/av77338790?from=search&amp;seid=1132265582546006367" target="_blank" class="title">2019 DNF F<em class="keyword">1</em>天王赛 个人赛 4强赛~决赛</a></div><div class="des hide">
-		      https://www.douyu.com/664810
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        2.0万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        434
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-11-28
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/32482729?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">意如梦</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av75923327?from=search&amp;seid=1132265582546006367" title="金贡：上路在1v1男人大战，你＊＊来干嘛啊" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i2.hdslb.com/bfs/archive/d0ad82965d93389d7e7e73577d2c9463591857ad.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">00:24</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">电子竞技</span><a title="金贡：上路在1v1男人大战，你＊＊来干嘛啊" href="//www.bilibili.com/video/av75923327?from=search&amp;seid=1132265582546006367" target="_blank" class="title">金贡：上路在<em class="keyword">1</em>v<em class="keyword">1</em>男人大战，你＊＊来干嘛啊</a></div><div class="des hide">
-		      -
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        28.0万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        28
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-11-16
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/27404045?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">虎牙有个风行菜</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77158687?from=search&amp;seid=1132265582546006367" title="【本气黑猫】明日方舟CB-EX1通关攻略（含突袭）" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i1.hdslb.com/bfs/archive/210e975595bbfe820cb33c273fd360bbda813e2b.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">05:05</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">手机游戏</span><a title="【本气黑猫】明日方舟CB-EX1通关攻略（含突袭）" href="//www.bilibili.com/video/av77158687?from=search&amp;seid=1132265582546006367" target="_blank" class="title">【本气黑猫】明日方舟CB-EX<em class="keyword">1</em>通关攻略（含突袭）</a></div><div class="des hide">
-		      全合约挑战将更新至合集av51121699
-		每晚8点直播~
-		喜欢的话可以【关注】【点赞】【投币】【收藏】
-		有问题可以在视频下方评论
-		感谢大家的弹幕建议！
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        6.6万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        43
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-11-27
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/38829?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">本气黑猫</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77706458?from=search&amp;seid=1132265582546006367" title="【超级小桀】2019年12月1日直播录像" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i2.hdslb.com/bfs/archive/ae8198b8e120cb4a2d396202fb3971a720166ddd.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">05:59:07</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">单机游戏</span><a title="【超级小桀】2019年12月1日直播录像" href="//www.bilibili.com/video/av77706458?from=search&amp;seid=1132265582546006367" target="_blank" class="title">【超级小桀】2019年12月<em class="keyword">1</em>日直播录像</a></div><div class="des hide">
-		      相关游戏: 马里奥制造2
-		简介补充: 超级小桀2019年12月1日直播录像
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        1.3万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        180
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-12-01
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/29440965?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">超级小桀的日常</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77638271?from=search&amp;seid=1132265582546006367" title="【外网1.4分】国外最烂的3D动画长啥样？评分竟然低过“雷锋的故事“UP冒生命危险看完" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i0.hdslb.com/bfs/archive/b5249a0d1114f9f14e7aec73c1c329da8b63c6c8.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">07:19</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">综合</span><a title="【外网1.4分】国外最烂的3D动画长啥样？评分竟然低过“雷锋的故事“UP冒生命危险看完" href="//www.bilibili.com/video/av77638271?from=search&amp;seid=1132265582546006367" target="_blank" class="title">【外网<em class="keyword">1</em>.4分】国外最烂的3D动画长啥样？评分竟然低过“雷锋的故事“UP冒生命危险看完</a></div><div class="des hide">
-		      Leo the lion大家可以自行油管搜索
-		差点这期视频没做完就猝死了... 如果还想看比这个更辣鸡的，把赞给你鹿哥点过500我就做。要不风险回报率太低。。
-		个人群：733799159
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        6.3万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        747
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-12-01
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/471723540?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">一块电鹿板</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av76982844?from=search&amp;seid=1132265582546006367" title="FPX小天被辱骂：1-9的废物滚出峡谷之巅，你不配在这个区！" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i1.hdslb.com/bfs/archive/f53e56863b588a6c8d0916bd237fdc80a72526b3.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">05:50</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">电子竞技</span><a title="FPX小天被辱骂：1-9的废物滚出峡谷之巅，你不配在这个区！" href="//www.bilibili.com/video/av76982844?from=search&amp;seid=1132265582546006367" target="_blank" class="title">FPX小天被辱骂：<em class="keyword">1</em>-9的废物滚出峡谷之巅，你不配在这个区！</a></div><div class="des hide">
-		      每天更新主播圈新鲜趣事，请大力关注我吧~
-		FPX小天被辱骂：1-9的废物滚出峡谷之巅，你不配在这个区！
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        63.6万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        1649
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-11-25
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/234324480?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">主播圈内事</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av76009714?from=search&amp;seid=1132265582546006367" title="「科技美学」我们花1万元买6款最热门TWS耳机详细对比  差异巨大" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src="//i1.hdslb.com/bfs/archive/72da5fd278fbf07c48cad31f84c5418c2822bcfb.jpg@400w_250h.jpg"></div><span class="so-imgTag_rb">26:58</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">影音智能</span><a title="「科技美学」我们花1万元买6款最热门TWS耳机详细对比  差异巨大" href="//www.bilibili.com/video/av76009714?from=search&amp;seid=1132265582546006367" target="_blank" class="title">「科技美学」我们花<em class="keyword">1</em>万元买6款最热门TWS耳机详细对比  差异巨大</a></div><div class="des hide">
-		      「科技美学」TWS耳机详细对比测 | 苹果AirPods Pro/三星Galaxy Buds/华为FreeBuds 3/索尼降噪豆/Powerbeats Pro
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        43.6万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        1.6万
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-11-17
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/3766866?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">科技美学</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77362169?from=search&amp;seid=1132265582546006367" title="F1天王赛59再夺冠！宝哥上台祝福全场欢呼！恭喜59！祝DNF越来越好！" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src=""></div><span class="so-imgTag_rb">03:27</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">日常</span><a title="F1天王赛59再夺冠！宝哥上台祝福全场欢呼！恭喜59！祝DNF越来越好！" href="//www.bilibili.com/video/av77362169?from=search&amp;seid=1132265582546006367" target="_blank" class="title">F<em class="keyword">1</em>天王赛59再夺冠！宝哥上台祝福全场欢呼！恭喜59！祝DNF越来越好！</a></div><div class="des hide">
-		      旭旭宝宝直播间：https://www.douyu.com/99999 
-		本视频得到旭旭宝宝授权
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        6.2万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        95
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-11-28
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/19419058?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">10后找人带</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av6643355?from=search&amp;seid=1132265582546006367" title="黑社会砸网吧 我从53秒笑到1分30秒" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src=""></div><span class="so-imgTag_rb">03:13</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">日常</span><a title="黑社会砸网吧 我从53秒笑到1分30秒" href="//www.bilibili.com/video/av6643355?from=search&amp;seid=1132265582546006367" target="_blank" class="title">黑社会砸网吧 我从53秒笑到<em class="keyword">1</em>分30秒</a></div><div class="des hide">
-		      
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        1730.6万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        4.8万
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2016-10-12
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/1768547?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">10969Kaze</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av75329712?from=search&amp;seid=1132265582546006367" title="s1到s9世界赛冠军战，这些年你都经历了什么？" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src=""></div><span class="so-imgTag_rb">19:23</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">电子竞技</span><a title="s1到s9世界赛冠军战，这些年你都经历了什么？" href="//www.bilibili.com/video/av75329712?from=search&amp;seid=1132265582546006367" target="_blank" class="title">s<em class="keyword">1</em>到s9世界赛冠军战，这些年你都经历了什么？</a></div><div class="des hide">
-		      回想这么多年，有的已经为人父，为人母，为人妻，有开心，有悲伤，有畏惧，又自卑，有坚强，有无畏，这是精彩的人生啊。
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        65.5万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        8076
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-11-11
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/251802097?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">LWJ起风了</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av77334135?from=search&amp;seid=1132265582546006367" title="【张嘉文】上单单排男枪教学！1v5才是男枪的浪漫。新装备新符文新体验" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src=""></div><span class="so-imgTag_rb">10:26</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">电子竞技</span><a title="【张嘉文】上单单排男枪教学！1v5才是男枪的浪漫。新装备新符文新体验" href="//www.bilibili.com/video/av77334135?from=search&amp;seid=1132265582546006367" target="_blank" class="title">【张嘉文】上单单排男枪教学！<em class="keyword">1</em>v5才是男枪的浪漫。新装备新符文新体验</a></div><div class="des hide">
-		      虎牙张嘉文
-		就问你能不能点个赞
-		░░░░░░░░░░▄▀▀▀▄
-		░░░░░░░░▄▀░░░░░▀▄
-		░░░░░░░█░░░░▄▀░░░█
-		░░░░░░█░░░▄▀█░░░░░█
-		░░░░░█░░░░░░█░░░░░░█
-		░░░░░█░░░█...
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        3.4万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        158
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-11-28
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/38996839?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">蚊子哥的直播日常</a></span></div></div></li><li class="video-item matrix"><a href="//www.bilibili.com/video/av76281620?from=search&amp;seid=1132265582546006367" title="战斗民族の婚后日常Vlog1【鹿斯白】" target="_blank" class="img-anchor"><div class="img"><div class="lazy-img"><img alt="" src=""></div><span class="so-imgTag_rb">04:45</span><div class="watch-later-trigger watch-later"></div><span class="mask-video"></span></div><!----></a><div class="info"><div class="headline clearfix"><!----><!----><span class="type hide">搞笑</span><a title="战斗民族の婚后日常Vlog1【鹿斯白】" href="//www.bilibili.com/video/av76281620?from=search&amp;seid=1132265582546006367" target="_blank" class="title">战斗民族の婚后日常Vlog<em class="keyword">1</em>【鹿斯白】</a></div><div class="des hide">
-		      | 不务正业
-		| 合法婚姻
-		| All Works @鹿斯白
-		    </div><div class="tags"><span title="观看" class="so-icon watch-num"><i class="icon-playtime"></i>
-		        65.3万
-		      </span><span title="弹幕" class="so-icon hide"><i class="icon-subtitle"></i>
-		        1565
-		      </span><span title="上传时间" class="so-icon time"><i class="icon-date"></i>
-		        2019-11-19
-		      </span><span title="up主" class="so-icon"><i class="icon-uper"></i><a href="//space.bilibili.com/26439953?from=search&amp;seid=1132265582546006367" target="_blank" class="up-name">鹿斯白</a></span></div></div></li></ul></div><!----><div class="page-wrap"><div class="pager"><ul class="pages"><!----><!----><!----><li class="page-item active"><button class="pagination-btn num-btn">
-		        1
-		      </button></li><li class="page-item"><button class="pagination-btn num-btn">
-		        2
-		      </button></li><li class="page-item"><button class="pagination-btn num-btn">
-		        3
-		      </button></li><li class="page-item"><button class="pagination-btn num-btn">
-		        4
-		      </button></li><li class="page-item"><button class="pagination-btn num-btn">
-		        5
-		      </button></li><li class="page-item"><button class="pagination-btn num-btn">
-		        6
-		      </button></li><li class="page-item"><button class="pagination-btn num-btn">
-		        7
-		      </button></li><strong>...</strong><li class="page-item last"><button class="pagination-btn">
-		        50
-		      </button></li><li class="page-item next"><button class="nav-btn iconfont icon-arrowdown3">
-		        下一页
-		      </button></li></ul><!----></div></div><div class="flow-loader-state" style="text-align: center;"><!----></div></div><div class="video-info-module" style="display: none;"><div class="v-title"></div><div class="v-info"><span class="name"></span><span class="line"></span><span class="time"></span></div><div class="v-preview clearfix"><div class="lazy-img"><img alt="" src=""></div><p class="txt"></p></div><div class="v-data"><span class="play"><i class="icon"></i>--</span><span class="danmu"><i class="icon"></i>--</span><span class="star"><i class="icon"></i>--</span><span class="coin"><i class="icon"></i>--</span></div></div></div></div><div class="rocket-con" style="display: none;"></div></div></div>
-	<div class="international-footer"><div class="link-box b-footer-wrap"><div class="link-item link-a"><span class="bt">bilibili</span><ul><a target="_blank" href="//www.bilibili.com/blackboard/aboutUs.html">关于我们</a><a target="_blank" href="//www.bilibili.com/blackboard/contact.html">联系我们</a><a target="_blank" href="//www.bilibili.com/blackboard/join.html">加入我们</a><a target="_blank" href="//www.bilibili.com/blackboard/friends-links.html">友情链接</a><a target="_blank" href="//account.bilibili.com/account/official/home">bilibili认证</a><a target="_blank" href="http://ir.bilibili.com">Investor Relations</a></ul></div><div class="link-item link-b"><span class="bt">传送门</span><ul><a target="_blank" href="//www.bilibili.com/blackboard/help.html">帮助中心</a><a target="_blank" href="//www.bilibili.com/video/av120040/">高级弹幕</a><a target="_blank" href="//www.bilibili.com/blackboard/activity_list.html">活动专题页</a><a target="_blank" href="//www.bilibili.com/v/copyright/intro/">侵权申诉</a><a target="_blank" href="//www.bilibili.com/blackboard/x/act_list/">活动中心</a><a target="_blank" href="http://link.acg.tv">用户反馈论坛</a><a target="_blank" href="//space.bilibili.com/6823116#/album">壁纸站</a><a target="_blank" href="//www.bilibili.com/basc">专车号服务中心</a><a target="_blank" href="//www.bilibili.com/blackboard/activity-S1jfy69Jz.html">名人堂</a></ul></div><div class="link-item link-c"><a href="//app.bilibili.com/" target="_blank" class="biliapp"><i class="bili-footer-font bili-footer-icon_download"></i><p>客户端下载</p><div class="qrcode"></div></a><a href="//weibo.com/bilibiliweb" target="_blank" class="weibo"><i class="bili-footer-font bili-footer-icon_weibo"></i><p>新浪微博</p><div class="qrcode"></div></a><a class="weixin"><i class="bili-footer-font bili-footer-icon_wechat"></i><p>官方微信</p><div class="qrcode"></div></a></div></div><div class="partner b-footer-wrap"><div class="pic-box"><img src="//s1.hdslb.com/bfs/seed/jinkela/footer-v2/images/partner.png" class="pic"><img src="https://s1.hdslb.com/bfs/static/jinkela/long/images/pic962110.png" class="pic962110" width="100" height="40"><a id="jvs-cert" href="https://webcert.cnmstl.net/cert/grade?sn=d3ec53ae63a84350945198bab0251d59" target="_blank" style="display: block; max-width: 132px;"><div id="jvs-certifyOuter" class="jvs-certifyOuter" style="width: 100%; position: relative;"><img id="certify-img1" class="                         " crossorigin="anonymous" style="position: absolute; left: 0px; top: 0px; display: block; width: 100%; height: auto; opacity: 0; max-height: none; border: medium none;" src="data:image/png;base64,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"><img id="certify-img2" class="                         act" crossorigin="anonymous" style="position: absolute; left: 0px; top: 0px; display: block; max-height: none; width: 100%; height: auto; opacity: 1; border: medium none;" src="data:image/png;base64,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"></div></a></div><div class="text-con"><p>广播电视节目制作经营许可证：（沪）字第1248号|网络文化经营许可证：沪网文【2016】2296-134号|信息网络传播视听节目许可证：0910417</p><p>互联网ICP备案：<a href="http://beian.miit.gov.cn/" target="_blank">沪ICP备13002172号-3</a>沪ICP证：沪B2-20100043 |违法不良信息举报邮箱：help@bilibili.com |违法不良信息举报电话：4000233233转3 | <a href="//static.hdslb.com/images/yyzz.png" target="_blank">营业执照</a></p><p><i class="sprite bg1"></i><a href="http://www.shjbzx.cn" target="_blank">上海互联网举报中心</a> | <a href="http://jb.ccm.gov.cn/" target="_blank">12318全国文化市场举报网站</a> | <i class="sprite bg2"></i><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011002002436" target="_blank">沪公网安备31011002002436号</a> | <a href="mailto:userreport@bilibili.com">儿童色情信息举报专区</a></p><p>网上有害信息举报专区：<i class="sprite bg3"></i><a href="http://report.12377.cn:13225/toreportinputNormal_anis.do" target="_blank">中国互联网违法和不良信息举报中心</a></p><p>亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。</p><p>公司名称：上海宽娱数码科技有限公司|公司地址：上海市杨浦区政立路485号|电话：021-25099888</p></div></div></div>
+		<div id="server-search-app" class="bili-search"><div class="contain"><div class="head-contain"><div class="search-wrap"><div class=""><div class="logo-input clearfix">
+			<img src="img/qtlogo.png" style="height:50px;width:150px;position: absolute;left:-80px;top:-3px;">
+
+
+			<div class="search-block"><div class="input-wrap">
+
+            <!--搜索框-->
+			<div style="position: relative;left: 120px;">
+			<input id="search-keyword" type="text" style="height: 50px;" maxlength="100" name="name"  autocomplete="off">
+			<div class="suggest-wrap" style="display: none;">
+			</div>
+		</div></div>
+			<div class="search-button" style="position: relative;left: 120px;" onclick="VagueSubmit()">
+				<i class="icon-search-white"></i>
+				<span class="search-text">
+					搜索
+				</span>
+			</div>
+			<div class="search-loupe"><i class="icon-loupe"></i></div>
+		</div></div></div></div>
+			<div id="navigator">
+				<div class="v-switcher">
+					<div class="v-switcher-header-wrap" style="height: 56px;">
+						<div class="v-switcher-header-before"></div>
+						<div class="v-switcher-header-after"></div>
+<!--						<div class="v-switcher-header-tabs">-->
+
+						<ul class="nav nav-tabs">
+							<li role="presentation" class="active"><a href="#menu1" data-toggle="tab">视频</a></li>
+							<li role="presentation"><a href="#menu2" data-toggle="tab">番剧</a></li>
+							<li role="presentation"><a href="#menu3" data-toggle="tab">用户</a></li>
+							</ul>
+
+<!--						</div>-->
+
+
+					</div><div style="display: none;">
+
+				</div><!----></div></div></div>
+
+			<div class="body-contain"><div id="all-list">
+				<div class="flow-loader"><!---->
+					<div class="filter-wrap">
+						<ul class="filter-type clearfix order" style="">
+							<div class="switch-wrap">
+								<div class="aver type active"></div>
+								<div class="imgleft type">
+						</div></div>
+
+
+							<div class="tab-content">
+								<div id="menu1" class="container tab-pane active">
+									<div class="dropdown-wrap clearfix">
+										<div class="total-wrap">
+											<p class="total-text" th:text="|共找到${c_video.size()}条视频|">
+												共找到45个用户
+											</p>
+										</div>
+
+									</div>
+
+									<div class="mixin-list" >
+
+										<ul class="video-list clearfix" type="video" >
+											<li class="video-item matrix" th:each="c:${c_video}">
+												<a  target="_blank" class="img-anchor"  >
+													<div class="img" >
+														<div class="lazy-img">
+															<img alt=""  th:src="@{/upload/{img}(img=${c.Videocover})}">
+														</div>
+														<!--							<span class="so-imgTag_rb">22:58:43</span>-->
+														<div class="watch-later-trigger watch-later"></div>
+														<span class="mask-video"></span>
+													</div><!---->
+												</a>
+												<div class="info">
+													<div class="headline clearfix"><!----><!---->
+														<a th:href="@{qt/selvideo(vid=${c.vid})}" target="_blank" class="title" th:text="${c.vname}"></a></div>
+													<div class="des hide"></div>
+													<div class="tags">
+								<span title="观看" class="so-icon watch-num">
+
+									    <i class="icon-playtime"></i>
+										<span th:text="@{{bx}(bx=${c.PlaybackValue}>=10000?|${c.PlaybackValue/1000/10.0}w|:${c.PlaybackValue})}">6732</span>
+								     </span>
+
+
+				                 <span title="上传时间" class="so-icon time">
+									 <i class="icon-date"></i>
+									 <span th:text="${c.vtime}"></span>
+								</span>
+														<span title="up主" class="so-icon">
+									<i class="icon-uper"></i>
+									<a href="" target="_blank" class="up-name" th:text="${c.uname}"></a>
+								</span>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+
+
+								</div>
+
+								<div id="menu2" class="container tab-pane">
+									<div class="mixin-list">
+
+
+
+										<div class="body-contain">
+											<div class="flow-loader" id="bangumi-list">
+												<div>
+													<div class="total-wrap">
+														<p class="total-text" th:text="|共找到${c_folk.size()}部番剧|">
+															共27条数据
+														</p>
+													</div>
+												</div>
+												<ul>
+													<li class="bangumi-item" th:each="f,i:${c_folk}">
+														<div class="bangumi-item-wrap">
+															<a th:href="@{fj/selonefj(fid=${f.fid})}" target="_blank" class="left-img">
+															<div class="lazy-img">
+																<img alt="" th:src="@{/upload/{img}(img=${f.folkcover})}"></div>
+															<!---->
+														</a>
+															<div class="right-info">
+																<div class="headline">
+																	<span class="bangumi-label">番剧</span><a th:href="@{fj/selonefj(fid=${f.fid})}" style="font-size: 25px;" target="_blank" class="title" th:text="${f.fname}">GaoGaiGar
+																	Final Grand Glorious Gathering</a></div>
+																<div class="intros">
+																	<div class="line clearfix" style="font-size: 13px;">
+																		<div class="left-block"><span class="label" style="font-size: 15px;">总集数：</span><span class="value" th:text="|${f. Severalepisodes}话|"></span></div>
+																		<div class="right-block"><span class="label" style="font-size: 15px;">公司：</span><span class="value" th:text="${f.company}"></span></div>
+																	</div>
+																	<div class="line clearfix" style="font-size: 13px;">
+																		<div class="left-block"><span class="label" style="font-size: 13px;">开播时间：</span><span class="value" th:text="${f.stateupdate}">2005-04-11</span></div>
+																		<div class="right-block"></div>
+
+																	</div>
+																	<h4>简介:</h4>
+																	<div class="desc">
+
+																		<span th:text="${f.folkintroduction}">11</span>
+
+																	</div>
+																</div>
+																<div id="pgc-navigate-wrap" class="grid">
+																	<!---->
+																	<ul class="ep-box clearfix grid">
+																		<li class="ep-sub" th:each="fj:${fj__${i.count}__}">
+																			<a th:href="@{fj/selonefj(fid=${fj.fid},fnumber=${fj.fnumber})}" target="_blank">
+																			<div  class="ep-item" th:text="${fj.fnumber}"></div>
+																		    </a>
+																		</li>
+
+																	</ul>
+																</div>
+																<div class="score">
+																	<!---->
+																	<!---->
+																</div>
+															</div>
+														</div>
+													</li>
+
+
+												</ul>
+
+
+											</div>
+
+
+										</div>
+
+
+
+
+									</div>
+
+								</div>
+
+
+								<div id="menu3" class="container tab-pane">
+
+									<div class="body-contain">
+										<div id="user-list">
+											<div class="flow-loader user-wrap">
+												<div class="dropdown-wrap clearfix">
+													<div class="total-wrap">
+														<p class="total-text" th:text="|共找到${c_user.size()}个用户|">
+															共找到45个用户
+														</p>
+													</div>
+
+												</div>
+												<ul>
+													<li class="user-item" th:each="c_u:${c_user}">
+														<div class="up-face"><a th:href="@{qt_C_User/goPersonalspace(uid=${c_u.uid})}" title="=咬人猫="
+																				target="_blank" class="face-img">
+															<div class="lazy-img">
+																<img alt="" th:src="|/tx/${c_u.Headimg}|"></div>
+														</a><i title="个人认证" class="verify-icon icon-individual"></i></div>
+														<div class="info-wrap">
+															<div class="headline">
+																<a target="_blank" class="title" th:text="${c_u.alias}"></a>
+																<i th:class="|lv icon-lv${c_u.Grade}|" class="lv icon-lv6"></i><a class="attention-btn followed">
+																个人空间
+															</a>
+
+															</div>
+															<div class="up-info clearfix"><span>性别：<span th:text="${c_u.sex}">93</span></span></div>
+															个性签名:
+															<div class="desc" th:text="${c_u.Personalized}">
+
+															</div>
+															<div class="up-videos clearfix">
+																<a th:href="@{qt_C_User/goPersonalspace(uid=${c_u.uid})}" target="_blank" class="video-more">访问个人空间&gt;</a>
+															</div>
+														</div>
+													</li>
+
+
+												</ul>
+												<!---->
+
+											</div>
+											<div class="video-info-module" style="left: 371.6px; top: 144px; display: none;">
+												<div class="v-title">【咬人猫】芒种 ❤️ 一想到你我就……</div>
+												<div class="v-info"><span class="name">=咬人猫=</span><span class="line"></span><span class="time">2019-11-29</span></div>
+												<div class="v-preview clearfix">
+													<div class="lazy-img"><img alt="" src="//i1.hdslb.com/bfs/archive/e39a31768758aaf94f6a59a73765bae1956fd66c.jpg@120w_75h.jpg"></div>
+													<p class="txt">芒种这首歌刚发布就很喜欢，还没有编舞的时候就开始准备，前前后后一共学了、编了三个版本，一直在寻找最想要的感觉，要感谢白小白老师的编舞，很喜欢动作里面和歌曲契合的节奏感，我也结合自己的想法和想传递的感觉，做了一些小调整～尽可能想跳出一个仙仙柔柔的芒种，也是我对这首歌的一点自己的理解～幻想在一个如仙境一般美丽的地方，住着一个在讲述自己美丽的爱情故事的仙子～服装也是按这样的想法去制作，希望大家能够喜欢～在美丽的风景，让我们一起享受它的美好吧～
+														音乐：芒种 av64186665
+														编舞：白小白 av66896179</p>
+												</div>
+												<div class="v-data"><span class="play"><i class="icon"></i>178.3万</span><span class="danmu"><i class="icon"></i>4612</span><span
+														class="star"><i class="icon"></i>4.3万</span><span class="coin"><i class="icon"></i>7.3万</span></div>
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
+	<!--使用Bootstrap的js插件，必须先调入jQuery-->
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+
+	<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
 
 </html>

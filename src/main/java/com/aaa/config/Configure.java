@@ -12,5 +12,6 @@ public class Configure implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         // upload/1.jpeg  f:\\upload\\1.jpeg==f:/upload/1.jpeg
         registry.addResourceHandler("/upload/**").addResourceLocations("file:F:/B站视频/bilibiliVideo/");
+        registry.addResourceHandler("/tx/**").addResourceLocations("file:F:/B站视频/biliTx/");
     }
 }

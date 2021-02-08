@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
     <base href="http://localhost:8080/">
     <meta charset="utf-8">
@@ -10,6 +10,8 @@
     <meta name="keywords" content="B站 弹幕 字幕 AMV MAD MTV ANIME 动漫 动漫音乐 游戏 游戏解说 ACG galgame 动画 番组 新番 初音 洛天依 vocaloid">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>充值中心——C币充值</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
     <link href="//s1.hdslb.com/bfs/static/open-bcoin/static/css/charge_alipay.2870fe4d2ec53df01218f53c191f07a0.css" rel="stylesheet">
     <style type="text/css">
         .lazy-img {
@@ -3765,113 +3767,122 @@
 </svg>
 <div id="app">
     <div>
-        <div id="bili-header-m" class="bili-header-m report-wrap-module stardust-common">
+        <div id="bili-header-m" class="bili-header-m report-wrap-module stardust-video">
             <div class="nav-menu">
                 <!---->
                 <div class="nav-mask"></div>
-                <div class="nav-wrapper bili-wrapper">
+                <div class="nav-wrapper">
                     <div class="nav-con nav-wrapper-left">
                         <ul class="nav-con-ul">
-                            <li report-id="playpage_main" class="nav-item home"><a href="//www.bilibili.com" title="主站" class="t"><i class="header-iconfont header-icon-bilibili-tv"></i>
-                                主站
-                                <!----></a>
+                            <li report-id="playpage_main" class="nav-item home">
+                                <a href="http://localhost:8080/qt/index" title="主站"
+                                   class="t">
+                                    <img src="img/qtlogo.png" style="height:50px;width:150px;position: absolute;left:-80px;top:-3px;">
+                                    主站
+                                    <span class="header-iconfont header-icon-general_pullup_s drop"></span></a>
                                 <!---->
                             </li>
-                            <li report-id="playpage_game" class="nav-item game"><a href="//game.bilibili.com" target="_blank" title="游戏中心"
-                                                                                   class="t">游戏中心</a>
+                            <li report-id="playpage_game" class="nav-item game"><a href="//game.bilibili.com"
+                                                                                   target="_blank" title="游戏中心" class="t">游戏中心</a>
                                 <!---->
                             </li>
-                            <li report-id="playpage_live" class="nav-item live"><a href="//live.bilibili.com" target="_blank" title="直播"
-                                                                                   class="t">直播</a>
+                            <li report-id="playpage_live" class="nav-item live"><a href="//live.bilibili.com"
+                                                                                   target="_blank" title="直播" class="t">直播</a>
                                 <!---->
                             </li>
-                            <li report-id="playpage_buy" class="nav-item buy"><a href="//show.bilibili.com/platform/home.html?msource=pc_web"
-                                                                                 target="_blank" title="会员购" class="t">会员购</a></li>
-                            <li report-id="playpage_manga" class="nav-item manga"><a href="//manga.bilibili.com?from=bill_top_mbanner"
-                                                                                     target="_blank" title="漫画" class="t">漫画</a>
+                            <li report-id="playpage_buy" class="nav-item buy"><a
+                                    href="//show.bilibili.com/platform/home.html?msource=pc_web" target="_blank" title="会员购"
+                                    class="t">会员购</a></li>
+                            <li report-id="playpage_manga" class="nav-item manga"><a
+                                    href="//manga.bilibili.com?from=bill_top_mbanner" target="_blank" title="漫画"
+                                    class="t">漫画</a>
                                 <!---->
                             </li>
-                            <li report-id="playpage_match" class="nav-item match"><a href="//www.bilibili.com/v/game/match/" target="_blank"
-                                                                                     title="赛事" class="t">赛事</a></li>
-                            <li class="nav-item loc-menu"><a href="https://www.bilibili.com/blackboard/activity-BML2019GZ.html" target="_blank"
-                                                             class="t">BML</a>
+                            <li report-id="playpage_match" class="nav-item match"><a href="//www.bilibili.com/v/game/match/"
+                                                                                     target="_blank" title="赛事" class="t">赛事</a></li>
+                            <li class="nav-item loc-menu"><a
+                                    href="https://show.bilibili.com/platform/detail.html?id=21148&amp;noTitleBar=1&amp;msource=ad_bml_cpt78547"
+                                    target="_blank" class="t">BML</a>
                                 <!---->
                             </li>
                             <!---->
-                            <li report-id="playpage_download" class="nav-item mobile"><i class="header-iconfont header-icon-Navbar_mobile b-icon-app"></i><a
-                                    id="header-mobile-app" href="//app.bilibili.com" target="_blank" title="下载APP" class="t">下载APP</a>
+                            <li report-id="playpage_download" class="nav-item mobile"><i
+                                    class="header-iconfont header-icon-Navbar_mobile b-icon-app"></i><a
+                                    id="header-mobile-app" href="//app.bilibili.com" target="_blank" title="下载APP"
+                                    class="t">下载APP</a>
                                 <!---->
                             </li>
                         </ul>
                     </div>
                     <div class="nav-search-box">
                         <div class="nav-search showSearch-media">
-                            <form id="nav_searchform"><input type="text" autocomplete="off" accesskey="s" x-webkit-speech=""
-                                                             x-webkit-grammar="builtin:translate" placeholder="JOJO的奇妙鬼畜" class="nav-search-keyword"><button type="submit"
-                                                                                                                                                             class="header-iconfont header-icon-general_search nav-search-submit"></button></form>
+                            <form id="nav_searchform">
+                                <input type="text"  name="name" id="seanname" autocomplete="off" accesskey="s" x-webkit-speech="" x-webkit-grammar="builtin:translate" placeholder="在此处进行搜索" class="nav-search-keyword">
+                                <button type="button" onclick="VagueSubmit()" class="header-iconfont header-icon-general_search nav-search-submit"></button></form>
                             <!---->
-                            <!---->
-                        </div><a href="//search.bilibili.com/" target="_blank" class="header-iconfont header-icon-general_search btn-search"></a>
+                            <ul class="bilibili-suggest nav" style="display: none;">
+                                <li class="kw">
+                                    <div class="b-line">
+                                        <p><span>历史搜索</span></p>
+                                    </div>
+                                </li>
+                                <li class="suggest-item"><a
+                                        href="//search.bilibili.com/all?keyword=%E9%9D%92%E6%98%A5%E7%8C%AA%E5%A4%B4&amp;from_source=nav_search"
+                                        target="_blank">青春猪头</a>
+                                    <div class="cancel"></div>
+                                </li>
+                            </ul>
+                        </div><a href="//search.bilibili.com/" target="_blank"
+                                 class="header-iconfont header-icon-general_search btn-search"></a>
                     </div>
                     <div class="nav-wrapper-right">
-                        <!---->
                         <div class="nav-con">
-                            <ul class="nav-con-ul">
-                                <li report-id="playpage_account" class="nav-item profile-info"><a href="//space.bilibili.com" target="_blank"
-                                                                                                  class="t">
-                                    <div class="i-face"><img src="//i1.hdslb.com/bfs/face/a847cb68ea7bbbf6a0eb90bb54ad400a7ecf3a83.jpg@72w_72h.jpg"
-                                                             class="face"><img class="pendant">
+                            <div th:if="${session.userAdmin == null}">
+
+                                <ul class="nav-con-ul">
+
+                                    <li report-id="playpage_dynamic" class="nav-item">
+                                        <a href="/qt/login.html" target="_blank" class="t">登录</a></li>
+                                    <li report-id="playpage_history" class="nav-item">
+                                        <a href="/qt/register.html" target="_blank" class="t">注册</a></li>
+
+                                </ul>
+
+
+                            </div>
+                            <div th:if="${session.userAdmin != null}">
+                                <ul class="nav-con-ul">
+                                    <li class="nav-item profile-info"><a href="//passport.bilibili.com/login" class="t">
+                                        <div class="i-face">
+                                            <img th:src="@{/tx/{img}(img=${session.userAdmin.Headimg})}" class="face">
+                                        </div>
+                                    </a>
                                         <!---->
-                                    </div>
-                                </a>
-                                    <!---->
-                                </li>
-                                <li report-id="big_tab_click" class="nav-item"><a href="//account.bilibili.com/account/big" target="_blank"
-                                                                                  class="t">
-                                    大会员<div class="dot"></div></a>
-                                    <!---->
-                                </li>
-                                <!---->
-                                <li data-v-4d9bc88b="" class="nav-item" report-id="playpage_message"><a data-v-4d9bc88b="" href="//message.bilibili.com"
-                                                                                                        target="_blank" title="消息" class="t">
-                                    <!---->
-                                    <!---->
-                                    消息
-                                </a>
-                                    <!---->
-                                    <div data-v-4d9bc88b="" class="i-frame" style="display: none;"><iframe data-v-4d9bc88b="" src="//message.bilibili.com/pages/nav/index_new_sync"
-                                                                                                           width="100%" height="100%" frameborder="0"></iframe></div>
-                                </li>
-                                <li data-v-637a89c0="" class="nav-item" report-id="playpage_dynamic"><a data-v-637a89c0="" href="//t.bilibili.com"
-                                                                                                        target="_blank" class="t">
-                                    <div data-v-637a89c0="" class="num">1
-                                    </div>
-                                    <!---->
-                                    动态
-                                </a>
-                                    <!---->
-                                </li>
-                                <li report-id="playpage_watchlater" class="nav-item"><a href="//www.bilibili.com/watchlater/#/list" target="_blank"
-                                                                                        class="t">稍后再看</a>
-                                    <!---->
-                                </li>
-                                <li report-id="playpage_collection" class="nav-item"><a href="//space.bilibili.com/14341990/favlist" target="_blank"
-                                                                                        class="t">收藏</a>
-                                    <!---->
-                                </li>
-                                <li report-id="playpage_history" class="nav-item"><a href="//www.bilibili.com/account/history" target="_blank"
-                                                                                     class="t">历史</a>
-                                    <!---->
-                                </li>
-                                <li report-id="playpage_create_center" class="nav-item"><a href="//member.bilibili.com/v2#/home" target="_blank"
-                                                                                           class="t">创作中心</a></li>
-                            </ul>
+                                    </li>
+                                    <li report-id="playpage_dynamic" class="nav-item">
+                                        <a th:href="@{qt_C_User/goPersonalspace(uid=${session.userAdmin.uid})}" target="_blank" class="t">我的空间</a></li>
+                                    <li report-id="playpage_history" class="nav-item">
+                                        <a href="qt/Personal" target="_blank" class="t">个人中心</a></li>
+                                    <li report-id="playpage_create_center" class="nav-item">
+                                        <a href="/qt/Creative" target="_blank" class="t">创作中心</a></li>
+                                    <li report-id="playpage_create_center" class="nav-item">
+                                        <a href="qt/Voucher" target="_blank" class="t">充值中心</a></li>
+                                </ul>
+
+
+
+                            </div>
+
+
                         </div>
-                        <div report-id="playpage_contribution" class="up-load"><a href="//member.bilibili.com/v2#/upload/video/frame"
-                                                                                  target="_blank" class="u-link">
+                        <div class="nav-con">
+                            <!---->
+                        </div>
+                        <div th:if="${session.userAdmin != null}" report-id="playpage_contribution" class="up-load"><a
+                                href="/qt/Creative" target="_blank" class="u-link">
                             投稿
                         </a>
-                            <!---->
+
                         </div>
                     </div>
                 </div>
@@ -3881,7 +3892,7 @@
         </div>
         <div class="top-bp">
             <div class="bp-top">
-                <div class="bp-logo-left"></div>
+
                 <div class="bp-logo-right"></div>
             </div>
         </div>
@@ -3890,10 +3901,10 @@
                 <div id="bp_user_box">
                     <div class="loading" style="display: none;"></div>
                     <div class="user-info" style="">
-                        <div class="bp-user-box-top"><span style="background-image: url(&quot;http://i1.hdslb.com/bfs/face/a847cb68ea7bbbf6a0eb90bb54ad400a7ecf3a83.jpg&quot;);"></span>
-                            <p>言子同学丶</p>
+                        <div class="bp-user-box-top"><span style="background-image: url(&quot;&quot;);" th:style="'background-image:url(/tx/'+ ${session.userAdmin.Headimg}+');'" ></span>
+                            <p th:text="${session.userAdmin.alias}">言子同学丶</p>
                             <div class="bp-user-box">
-                            <div class="bp-user-box-bb">C币<i>0</i></div>
+                            <div class="bp-user-box-bb">C币<i th:text="${session.userAdmin.CCoin}">0</i></div>
 
                         </div>
                         </div>
@@ -3910,8 +3921,8 @@
                             <p>C币</p>
                         </div>
                         <div class="bp_box_bot">
-                            <a href="qt/Voucher.html" class="bp_box_bot_click">B币充值</a>
-                            <a href="qt/Voucher_news.html" class="">交易记录</a></div>
+                            <a href="qt/Voucher" class="bp_box_bot_click">C币充值</a>
+                            <a href="qt/Voucher_news" class="">交易记录</a></div>
                     </div>
 
                 </div>
@@ -3919,7 +3930,7 @@
             <div class="bp-right">
                 <div data-v-594076a4="">
                     <div data-v-594076a4="" class="bb-intro-top">
-                        <div data-v-594076a4="" class="bb-icon"></div> <a data-v-594076a4="" class="b-icon-title">B币充值</a>
+                        <div data-v-594076a4="" class="bb-icon"></div> <a data-v-594076a4="" class="b-icon-title">C币充值</a>
                         <div data-v-594076a4="" class="b-question">
                             <div data-v-594076a4="" class="b-question-icon"></div> <a data-v-594076a4="" href="http://www.bilibili.com/html/help.html#n1"
                                                                                       target="_blank" class="b-question-title">常见问题</a>
@@ -3928,51 +3939,56 @@
                     <div data-v-594076a4="" class="trade-list">
                         <p data-v-594076a4="" class="num-tip">充值数量</p>
                         <div data-v-594076a4="" class="trade-list-wrapper">
-                            <div data-v-594076a4="" class="trade-wrapper">
-                                <div data-v-594076a4=""><span data-v-594076a4="">6</span> <span data-v-594076a4="" class="bb-name">B币</span>
-                                    <div data-v-594076a4="">¥6.00</div>
+                            <div data-v-594076a4="" class="trade-wrapper" onclick="selected(this)">
+                                <div data-v-594076a4=""><span data-v-594076a4="">6</span> <span data-v-594076a4="" class="bb-name">C币</span>
+                                    <div data-v-594076a4="">¥<span>6.00</span></div>
                                 </div>
                             </div>
-                            <div data-v-594076a4="" class="trade-wrapper">
-                                <div data-v-594076a4=""><span data-v-594076a4="">18</span> <span data-v-594076a4="" class="bb-name">B币</span>
-                                    <div data-v-594076a4="">¥18.00</div>
+                            <div data-v-594076a4="" class="trade-wrapper" onclick="selected(this)">
+                                <div data-v-594076a4=""><span data-v-594076a4="">18</span> <span data-v-594076a4="" class="bb-name">C币</span>
+                                    <div data-v-594076a4="">¥<span>18.00</span></div>
                                 </div>
                             </div>
-                            <div data-v-594076a4="" class="trade-wrapper is-selected">
-                                <div data-v-594076a4=""><span data-v-594076a4="">68</span> <span data-v-594076a4="" class="bb-name">B币</span>
-                                    <div data-v-594076a4="">¥68.00</div>
+                            <div data-v-594076a4="" class="trade-wrapper is-selected" onclick="selected(this)">
+                                <div data-v-594076a4=""><span data-v-594076a4="">68</span> <span data-v-594076a4="" class="bb-name">C币</span>
+                                    <div data-v-594076a4="">¥<span>68.00</span></div>
                                 </div>
                             </div>
-                            <div data-v-594076a4="" class="trade-wrapper">
-                                <div data-v-594076a4=""><span data-v-594076a4="">233</span> <span data-v-594076a4="" class="bb-name">B币</span>
-                                    <div data-v-594076a4="">¥233.00</div>
+                            <div data-v-594076a4="" class="trade-wrapper" onclick="selected(this)">
+                                <div data-v-594076a4=""><span data-v-594076a4="">233</span> <span data-v-594076a4="" class="bb-name">C币</span>
+                                    <div data-v-594076a4="">¥<span>233.00</span></div>
                                 </div>
                             </div>
-                            <div data-v-594076a4="" class="trade-wrapper">
-                                <div data-v-594076a4=""><span data-v-594076a4="">648</span> <span data-v-594076a4="" class="bb-name">B币</span>
-                                    <div data-v-594076a4="">¥648.00</div>
+                            <div data-v-594076a4="" class="trade-wrapper" onclick="selected(this)">
+                                <div data-v-594076a4=""><span data-v-594076a4="">648</span> <span data-v-594076a4="" class="bb-name">C币</span>
+                                    <div data-v-594076a4="">¥<span>648.00</span></div>
                                 </div>
                             </div>
-                            <div data-v-594076a4="" class="trade-wrapper">
-                                <div data-v-594076a4=""><span data-v-594076a4="">998</span> <span data-v-594076a4="" class="bb-name">B币</span>
-                                    <div data-v-594076a4="">¥998.00</div>
+                            <div data-v-594076a4="" class="trade-wrapper" onclick="selected(this)">
+                                <div data-v-594076a4=""><span data-v-594076a4="">998</span> <span data-v-594076a4="" class="bb-name">C币</span>
+                                    <div data-v-594076a4="">¥<span>998.00</span></div>
                                 </div>
                             </div>
-                            <div data-v-594076a4="" class="trade-wrapper trade-customn">
-                                <div data-v-594076a4="" class="tips">自定义B币数量（1-5000）</div>
+                            <div data-v-594076a4="" class="trade-wrapper trade-customn" onclick="selected(this)">
+                                <div data-v-594076a4="" class="tips">
+                                    <input type="text" id="customAmount" style="width: 300px;" onchange="reloadMoney()" value="" maxlength="4" placeholder="自定义C币数量（1-9999）" >
+                                </div>
                             </div>
                         </div>
                         <div data-v-594076a4="" class="instructions">使用说明</div>
                         <div data-v-594076a4="" class="qrpay-group">
                             <div data-v-594076a4="" class="qr-icon-group">
-                                <div data-v-594076a4="" id="qr-code" class="qrcode-icon"><canvas width="148" height="148" style="display: block;"></canvas><img
-                                        alt="Scan me!" style="display: none;" crossorigin="anonymous" src="data:image/png;base64,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"></div>
-                                <!---->
-                                <!----> <i data-v-594076a4="" class="bili-logo"></i>
+                                <span onclick="pay()">
+                                    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                        去支付
+                                    </button>
+
+                                   </span>
+
                             </div>
                             <div data-v-594076a4="" class="qrpay-content">
                                 <div data-v-594076a4="" class="price"><span data-v-594076a4="" class="price-type">¥</span>
-                                    <p data-v-594076a4="">68.00</p>
+                                    <p data-v-594076a4="" id="payMoney">68.00</p>
                                 </div>
                                 <p data-v-594076a4="" class="pay-tips">微信、支付宝、QQ扫码付款</p>
                                 <div data-v-594076a4="" class="pay-icon-group"><i data-v-594076a4="" class="pay-icon-item wechat-icon"></i>
@@ -3994,7 +4010,7 @@
                 <div class="footer-cnt clearfix report-wrap-module">
                     <ul class="boston-postcards">
                         <li>
-                            <div class="tips">bilibili</div>
+                            <div class="tips">CiliCili</div>
                             <div class="cards"><a target="_blank" href="//www.bilibili.com/blackboard/aboutUs.html">关于我们</a></div>
                             <div class="cards"><a target="_blank" href="//www.bilibili.com/blackboard/contact.html">联系我们</a></div>
                             <div class="cards"><a target="_blank" href="//www.bilibili.com/blackboard/join.html">加入我们</a></div>
@@ -4077,15 +4093,53 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript" src="//s1.hdslb.com/bfs/static/open-bcoin/static/js/charge_alipay.aa5fb38e71326bdbdc6c.js"></script>
-<script type="text/javascript" src="//s1.hdslb.com/bfs/static/open-bcoin/static/js/vendor.fe4b65dcb97cd02c05cf.js"></script>
-<script type="text/javascript" src="//s1.hdslb.com/bfs/static/open-bcoin/dep/es6-promise.auto.min.js"></script>
-<script type="text/javascript" src="//s1.hdslb.com/bfs/static/open-bcoin/dep/dll.js"></script>
 <script src="//static.hdslb.com/js/jquery.min.js"></script>
 <script src="//s1.hdslb.com/bfs/seed/jinkela/header/header.js"></script>
 <script src="//s1.hdslb.com/bfs/seed/log/report/log-reporter.js"></script>
 <script src="//static.hdslb.com/common/js/footer.js"></script>
 <script src="//static.hdslb.com/common/js/xazx.min.js"></script>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+
+<script>
+    function selected(aa) {
+        if($(aa).hasClass('is-selected')){
+            return;
+        }else{
+            $(aa).siblings().removeClass('is-selected');
+            $(aa).addClass('is-selected');
+        }
+        if($(aa).find('div').find('div').find('span').text()==""){
+            $("#payMoney").text($("#customAmount").val());
+        }else{
+            $("#payMoney").text($(aa).find('div').find('div').find('span').text());
+        }
+    }
+    function reloadMoney() {
+        var money=$("#customAmount").val();
+        var reg=/^([1-9][0-9]{0,3})$/;
+        if(!reg.test(money)){
+            $("#customAmount").val(1);
+        }
+        $("#payMoney").text($("#customAmount").val());
+    }
+    function pay() {
+        var money=$("#payMoney").text();
+        location.href="/goAlipay?price="+money;
+    }
+</script>
+
+<script>
+    function VagueSubmit() {
+        var name =$("#name").val();
+        $.post('vague/qt_findbyname',{name:name},function (data) {
+            if (data=='2') {
+                window.location.href = "http://localhost:8080/vague/qt_show";
+            }
+            if (data=='1') {
+                window.location.href = "http://localhost:8080/vague/vagueshow?name="+name;
+            }
+        });
+    }
+</script>
 </body>
 </html>

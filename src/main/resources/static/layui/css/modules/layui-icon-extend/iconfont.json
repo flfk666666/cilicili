@@ -1,0 +1,58 @@
+{
+  "id": "1583230",
+  "name": "layui-icon-extend",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-extend",
+  "description": "layui框架的图标扩展示例项目",
+  "glyphs": [
+    {
+      "icon_id": "398899",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "579286",
+      "name": "点赞",
+      "font_class": "dianzan1",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "688583",
+      "name": "点赞",
+      "font_class": "dianzan2",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "1089598",
+      "name": "点赞",
+      "font_class": "buoumaotubiao17",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "3050826",
+      "name": "点赞",
+      "font_class": "like-b",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "6027488",
+      "name": "点赞",
+      "font_class": "dianzan3",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "8338689",
+      "name": "点赞",
+      "font_class": "dianzan4",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    }
+  ]
+}

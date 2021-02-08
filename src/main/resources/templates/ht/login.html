@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
   <base href="http://localhost:8080/">
@@ -23,22 +23,22 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form>
+
+        <form method="post" action="/admin/ht_login_submit">
           <div class="form-group">
             <label for="exampleInputEmail1">用户名</label>
-            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="username">
+            <input class="form-control" id="exampleInputEmail1" name="uname" type="text" aria-describedby="emailHelp" placeholder="username">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">密码</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+            <input class="form-control" id="exampleInputPassword1" name="pwd" type="password" placeholder="Password">
           </div>
           <div class="form-group">
             <div class="form-check">
-              <label class="form-check-label">
-               
+                <span th:if="${msg}!=''" th:text="${msg}" style="color: red"></span>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.html">登录</a>
+          <input class="btn btn-primary btn-block" type="submit" value="登录">
         </form>
         
       </div>

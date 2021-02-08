@@ -112,6 +112,39 @@
     <!--      <version>5.1.10</version>-->
     <!--    </dependency>-->
 
+    <dependency>
+      <groupId>com.alipay.sdk</groupId>
+      <artifactId>alipay-sdk-java</artifactId>
+      <version>4.8.56.ALL</version>
+    </dependency>
+
+    <!--娣诲姞shiro瀹夊叏妗嗘灦-->
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-core</artifactId>
+      <version>1.4.0</version>
+    </dependency>
+    <!--shiro鑷畾涔夐厤缃渶瑕佺殑鎻掍欢-->
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.3</version>
+    </dependency>
+    <!--shiro-spring鏁村悎-->
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-spring</artifactId>
+      <version>1.4.0</version>
+    </dependency>
+    <!--shiro缂撳瓨-->
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-ehcache</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+
+
+
   </dependencies>
 
   <build>

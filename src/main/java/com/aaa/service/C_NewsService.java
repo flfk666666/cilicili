@@ -18,4 +18,14 @@ public class C_NewsService {
     public List<C_News> queryByUidAndType(Integer uid,String type){
         return c_newsDAO.queryByUidAndType(uid,type);
     }
+
+    //充值
+    public int Recharge(C_News c_news){
+        return c_newsDAO.insert(c_news);
+    }
+    //根据uid和类型查询充值或消费消息
+    public List<C_News> queryByUidAndTypeAndCon(Integer uid, String type,String ncontext){
+        return c_newsDAO.queryByUidAndTypeAndCon(uid,type,ncontext);
+    }
+
 }

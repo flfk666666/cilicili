@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <base href="http://localhost:8080/">
+  <title>Demo</title>
+  <link rel="shortcut icon" href="favicons/1.png">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/flindex.css">
+  <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body>
+<input type="hidden" id="loginvid" value="1" th:value="${session.loginvid}">
+<input type="hidden" id="loginfid" value="1" th:value="${session.loginfid}">
+<input type="hidden" id="loginfnumber" value="1" th:value="${session.loginfnumber}">
+
+<header id="header">
+  <div id="page_top">
+    <div class="bg-wrap">
+      <div class="bg"></div>
+      <div class="mask"></div>
+    </div>
+    <div class="header-top">
+      <div class="page-width clearfix">
+        <div class="header-top__nav">
+          <ul>
+            <li class="item item-home">
+              <a href="#">主站</a>
+            </li>
+            <li class="item"><a href="#">画友</a></li>
+            <li class="item">
+              <a href="#">游戏中心</a>
+              <div class="game-center header-hover">
+                <div class="c clearfix">
+                  <div class="fl">
+                    <div class="imgbox">
+                      <a href="#">
+                        <img src="images/cont/game-center__img1.jpg" alt="#">
+                        <span>命运-冠位指定（Fate/GO）</span>
+                      </a>
+                    </div>
+                    <div class="game-img">
+                      <a href="#">
+                        <img src="images/cont/game_img1.png" alt="#">
+                        <span>刀剑乱舞</span>
+                      </a>
+                      <a href="#">
+                        <img src="images/cont/game_img2.png" alt="#">
+                        <span>刀剑乱舞</span>
+                      </a>
+                      <a href="#">
+                        <img src="images/cont/game_img3.jpg" alt="#">
+                        <span>刀剑乱舞</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="fr">
+                    <div class="game-list">
+                      <div class="title">
+                        <i></i>
+                        <a href="#">游戏论坛</a>
+                      </div>
+                      <div class="all">
+                        <a href="#">仙剑奇侠传幻璃镜</a>
+                        <a href="#">魔法禁书目录</a>
+                        <a href="#">萌王EX</a>
+                        <a href="#">妖精的衣橱</a>
+                        <a href="#">神代梦华谭</a>
+                        <a href="#">碧蓝航线</a>
+                        <a href="#">光明大陆</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="gameImg"></div>
+              </div>
+            </li>
+            <li class="item">
+              <a href="#">直播</a>
+              <div class="live-box header-hover">
+                <div class="live-box__c">
+                  <div class="fl">
+                    <div class="title">热门直播:</div>
+                    <div class="cont">
+                      <a href="#">
+                        <img src="images/cont/live-box__img1.jpg" alt="#">
+                        <i>LIVE</i>
+                        <p>热爱电竞の三三</p>
+                      </a>
+                      <a href="#">
+                        <img src="images/cont/live-box__img2.jpg" alt="#">
+                        <i>LIVE</i>
+                        <p>大角虫漫画</p>
+                      </a>
+                      <a href="#">
+                        <img src="images/cont/live-box__img3.jpg" alt="#">
+                        <i>LIVE</i>
+                        <p>木本青</p>
+                      </a>
+                      <a href="#">
+                        <img src="images/cont/live-box__img4.gif" alt="#">
+                        <i>LIVE</i>
+                        <p>一只小鹿噜噜噜</p>
+                      </a>
+                      <a href="#">
+                        <img src="images/cont/live-box__img5.jpg" alt="#">
+                        <i>LIVE</i>
+                        <p>污叶妹屮</p>
+                      </a>
+                      <a href="#">
+                        <img src="images/cont/live-box__img6.jpg" alt="#">
+                        <i>LIVE</i>
+                        <p>污污_永远的魔法师_</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="fl">
+                    <div class="title">热门直播:</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="item"><a href="#">周边</a></li>
+            <li class="item">
+              <a href="#">移动端</a>
+              <!-- <div class="header-app header-hover">
+                <i></i>
+              </div> -->
+            </li>
+          </ul>
+        </div>
+        <div class="header-top__user">
+          <div class="login-box">
+            <!-- 如果未登录-->
+            <div th:if="${session.userAdmin == null}">
+              <a href="/qt/login.html">登录</a>
+              <span></span>
+              <a href="/qt/register.html">注册</a>
+            </div>
+            <!-- 如果已登录-->
+            <div class="dropdown" th:if="${session.userAdmin != null}">
+              <img style="width: 38px;height: 38px;border-radius:50%;margin-top:2px;" th:src="@{/tx/{img}(img=${session.userAdmin.Headimg})}">
+              <a th:text="${session.userAdmin.alias}">昵称</a>
+              <span></span>
+              <a th:href="@{qt_C_User/goPersonalspace(uid=${session.userAdmin.uid})}">我的空间</a>
+              <a href="qt/Personal">个人中心</a>
+              <a href="qt/Voucher">充值中心</a>
+              <span></span>
+              <a href="qt_C_User/zx">退出登录</a>
+            </div>
+          </div>
+          <div th:if="${session.userAdmin!=null}" class="user-post">
+            <a href="/qt/Creative" class="link">投 稿</a>
+            <div class="user-post__hover header-hover">
+              <a href="/qt/Creative" class="post">视频投稿</a>
+              <a href="/qt/Creative" class="manage">投稿管理</a>
+              <a href="/qt/Creative" class="create">创作中心</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-c">
+    <div class="page-width">
+
+      <p id="header_title"></p>
+      <span style="font-size: 35px;position:relative;top: 65px;left: 20px; " th:text="${flname.vcname}"></span>
+      <div id="search" class="clearfix">
+        <div class="search-rank">排行榜</div>
+        <div class="search-box">
+          <!-- 搜索框 -->
+          <input type="text" class="text"  name="name" id="name" placeholder="在此处进行搜索...">
+          <a class="btn" onclick="VagueSubmit()"><i></i></a>
+
+          <div class="search-history">
+            <div class="title">历史搜索</div>
+            <div class="list">
+              <a href="#">努巴尼欢乐秀<i></i></a>
+              <a href="#">主播真会玩守望篇<i></i></a>
+              <a href="#">主播真会玩女神篇<i></i></a>
+              <a href="#">暴暴勺暴暴<i></i></a>
+              <a href="#">OverWatch<i></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-title">哔哩哔哩 (゜-゜)つロ 干杯~</div>
+    </div>
+  </div>
+</header>
+
+<nav id="nav">
+  <div class="page-width clearfix">
+    <ul class="nav-list">
+      <li class="item item-home">
+        <a href="qt/index" class="link">首页</a>
+      </li>
+
+      <li class="item">
+        <a href="qt/folkindex" class="link">
+          <div class="num"><i th:text="${cates['番剧']}">23</i></div>
+          番剧
+        </a>
+
+      </li>
+      <li class="item">
+        <a href="qt/fjindex?vfid=1" class="link">
+          <div class="num"><i th:text="${cates['音乐']}">999+</i></div>
+          音乐
+        </a>
+
+      </li>
+
+      <li class="item">
+        <a href="qt/fjindex?vfid=2" class="link">
+          <div class="num"><i th:text="${cates['游戏']}">999+</i></div>
+          游戏
+        </a>
+
+      </li>
+      <li class="item">
+        <a href="qt/fjindex?vfid=3" class="link">
+          <div class="num"><i th:text="${cates['科技']}">999+</i></div>
+          科技
+        </a>
+
+      </li>
+      <li class="item">
+        <a href="qt/fjindex?vfid=4" class="link">
+          <div class="num"><i th:text="${cates['生活']}">999+</i></div>
+          生活
+        </a>
+
+      </li>
+
+
+      <li class="item">
+        <a href="qt/fjindex?vfid=5" class="link">
+          <div class="num"><i th:text="${cates['广告']}">100</i></div>
+          广告
+        </a>
+      </li>
+      <li class="item">
+        <a href="qt/fjindex?vfid=6" class="link">
+          <div class="num"><i th:text="${cates['娱乐']}">999+</i></div>
+          娱乐
+        </a>
+
+      </li>
+
+      <li class="item item-square">
+        <a href="#" class="link">广场</a>
+        <!-- <div class="nav-square__hover">
+           <ul>
+            <li><a href="#"><i class="icon-activity"></i>活动中心</a></li>
+            <li><a href="#"><i class="icon-game"></i>游戏中心</a></li>
+            <li><a href="#"><i class="icon-news"></i>新闻中心</a></li>
+            <li><a href="#"><i class="icon-friend"></i>画友</a></li>
+            <li><a href="#"><i class="icon-tv"></i>芒果TV</a></li>
+          </ul>
+          <a href="#" class="activity"><img src="images/cont/nav-square__img.jpg" alt="#"></a>
+        </div> -->
+      </li>
+      <li class="item item-live">
+        <a href="#" class="link">直播</a>
+        <!-- <ul class="nav-item__hover">
+          <li>
+            <a href="#">
+              <em>推荐主播<i></i></em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <em>手机直播<i></i></em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <em>绘画专区<i></i></em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <em>唱见舞见<i></i></em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <em>御宅文化<i></i></em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <em>单机联机<i></i></em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <em>网络游戏<i></i></em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <em>电子竞技<i></i></em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <em>手游直播<i></i></em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <em>放映厅<i></i></em>
+            </a>
+          </li>
+        </ul> -->
+      </li>
+      <li class="item item-room">
+        <a href="#" class="link">小黑屋</a>
+      </li>
+    </ul>
+    <div class="nav-gif"><img src="images/cont/nav_img.gif" alt="求领养"></div>
+  </div>
+</nav>
+
+<div id="banner">
+  <div class="page-width clearfix">
+    <div class="slider fl">
+      <div class="slider-img">
+        <a href="https://game.bilibili.com/dwbgx/yyjly/?msource=1&source=afid_6c7d264017fc11eaa8ab6e5b89a58bd3" slider-title="1月9日公测就可以拥有哦~"><img src="/img/indexgg1.webp" alt="#"></a>
+        <a href="https://live.bilibili.com/5086?spm_id_from=333.851.b_7265706f7274466972737431.1" slider-title="一起来捕捉野生up主！"><img src="/img/indexgg2.webp" alt="#"></a>
+        <a href="https://www.bilibili.com/read/cv4195544?spm_id_from=333.851.b_7265706f7274466972737431.3" slider-title="您有圣诞礼物记得签收!"><img src="/img/indexgg3.webp" alt="#"></a>
+        <a href="https://game.bilibili.com/sssj/?msource=1&source=afid_7310ed30c4b311e991f0cee9399d72b0" slider-title="忘破幻想"><img src="/img/indexgg4.jpg" alt="#"></a>
+      </div>
+      <div class="slider-title"><p>1月9日公测就可以拥有哦~</p></div>
+      <div class="slider-btn">
+        <span class="cur"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a href="#" class="slider-more">更多</a>
+    </div>
+    <div class="banner-list fr">
+      <ul class="pic-list__wrapper clearfix tab-cont__item tab-cont__cur">
+        <li class="item" th:each="PraisePoint : ${headvideo}">
+          <a th:href="@{qt/selvideo(vid=${PraisePoint.vid})}" class="img-link">
+            <img src="images/cont/main_pic.jpg" th:src="@{/upload/{img}(img=${PraisePoint.Videocover})}" alt="#">
+            <span class="mask">
+                  <i class="layui-icon layui-icon-play" style="font-size: 16px;"></i>
+                  <span th:text="@{{bx}(bx=${PraisePoint.PlaybackValue}>=10000?|${PraisePoint.PlaybackValue/1000/10.0}w|:${PraisePoint.PlaybackValue})}">3.30</span>
+                </span>
+            <span class="time">
+                  <i class="layui-icon layui-icon-praise" style="font-size: 16px;"></i>
+                  <span th:text="@{{bx}(bx=${PraisePoint.Fabulous}>=10000?|${PraisePoint.Fabulous/10000}w|:${PraisePoint.Fabulous})}">3.30</span>
+                </span>
+          </a>
+          <div class="img-info">
+            <a href="#" th:href="@{qt/selvideo(vid=${PraisePoint.vid})}" th:text="${PraisePoint.vname}">【FGO】轮到两仪式来给你洗脑了~</a>
+            <div class="btm">
+              <div class="user"><i></i><span th:text="${PraisePoint.alias}">菱花</span></div>
+              <div class="online"><i></i><span th:text="@{{bx}(bx=${PraisePoint.PlaybackValue}>=10000?|${PraisePoint.PlaybackValue/10000}w|:${PraisePoint.PlaybackValue})}">6732</span></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<div id="main">
+  <div class="page-width">
+    <!-- 推广 -->
+    <div class="mainCont clearfix" id="promote">
+      <div class="pic-list fl">
+        <div class="pic-list__title">
+          <i class="icon icon-promote"></i>
+          <h2>前方高能</h2>
+          <a href="#" class="promote-link">来感受创作的力量吧！</a>
+        </div>
+
+        <ul class="pic-list__wrapper clearfix tab-cont__item tab-cont__cur">
+          <li class="item" th:each="AdvertisingVideo : ${AdvertisingVideos}">
+            <a th:href="@{qt/selvideo(vid=${AdvertisingVideo.vid})}" class="img-link">
+              <img src="images/cont/main_pic.jpg" th:src="@{/upload/{img}(img=${AdvertisingVideo.Videocover})}" alt="#">
+              <span class="mask">
+                  <i class="layui-icon layui-icon-play" style="font-size: 16px;"></i>
+                  <span th:text="@{{bx}(bx=${AdvertisingVideo.PlaybackValue}>=10000?|${AdvertisingVideo.PlaybackValue/1000/10.0}w|:${AdvertisingVideo.PlaybackValue})}">3.30</span>
+                </span>
+              <span class="time">
+                  <i class="layui-icon layui-icon-praise" style="font-size: 16px;"></i>
+                  <span th:text="@{{bx}(bx=${AdvertisingVideo.Fabulous}>=10000?|${AdvertisingVideo.Fabulous/10000}w|:${AdvertisingVideo.Fabulous})}">3.30</span>
+                </span>
+            </a>
+            <div class="img-info">
+              <a href="#" th:href="@{qt/selvideo(vid=${AdvertisingVideo.vid})}" th:text="${AdvertisingVideo.vname}">【FGO】轮到两仪式来给你洗脑了~</a>
+              <div class="btm">
+                <div class="user"><i></i><span th:text="${AdvertisingVideo.alias}">菱花</span></div>
+                <div class="online"><i></i><span th:text="@{{bx}(bx=${AdvertisingVideo.PlaybackValue}>=10000?|${AdvertisingVideo.PlaybackValue/10000}w|:${AdvertisingVideo.PlaybackValue})}">6732</span></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+
+      </div>
+      <div class="main-side fr">
+        <div class="promote-side__title">
+          欢迎访问本网站！
+        </div>
+        <a href="https://www.bilibili.com/read/cv4031668?spm_id_from=333.851.b_7265706f7274466972737432.14" class="promote-side__img">
+          <img src="/img/indexgg5.jpg" alt="#">
+        </a>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 音乐 -->
+    <div class="mainCont clearfix" id="music" js-move="true">
+      <div class="pic-list fl" js-tab="true">
+        <div class="pic-list__title">
+          <i class="icon icon-music"></i>
+          <h2><span th:text="${flname.vcname}"></span></h2>
+          <div class="tab-title">
+            <a href="#" class="cur">最热投稿</a>
+            <a href="#">最新投稿</a>
+          </div>
+          <a href="#" class="main-link"><i></i>我的十月新番打开方式一定有问题</a>
+
+        </div>
+        <ul class="pic-list__wrapper clearfix tab-cont__item tab-cont__cur">
+
+          <li class="item" th:each="music : ${allvideo}">
+            <a th:href="@{qt/selvideo(vid=${music.vid})}" class="img-link">
+              <img src="images/cont/main_pic.jpg" th:src="@{/upload/{img}(img=${music.Videocover})}" alt="#">
+              <span class="mask">
+                  <i class="layui-icon layui-icon-play" style="font-size: 16px;"></i>
+                  <span th:text="@{{bx}(bx=${music.PlaybackValue}>=10000?|${music.PlaybackValue/1000/10.0}w|:${music.PlaybackValue})}">3.30</span>
+                </span>
+              <span class="time">
+                  <i class="layui-icon layui-icon-praise" style="font-size: 16px;"></i>
+                  <span th:text="@{{bx}(bx=${music.Fabulous}>=10000?|${music.Fabulous/10000}w|:${music.Fabulous})}">3.30</span>
+                </span>
+            </a>
+            <div class="img-info">
+              <a href="#" th:href="@{qt/selvideo(vid=${music.vid})}" th:text="${music.vname}">【FGO】轮到两仪式来给你洗脑了~</a>
+              <div class="btm">
+                <div class="user"><i></i><span th:text="${music.alias}">菱花</span></div>
+                <div class="online"><i></i><span th:text="@{{bx}(bx=${music.PlaybackValue}>=10000?|${music.PlaybackValue/1000/10.0}w|:${music.PlaybackValue})}">6732</span></div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+        <ul class="pic-list__wrapper clearfix tab-cont__item">
+          <li class="item" th:each="music2:${newvideo}">
+            <a th:href="@{qt/selvideo(vid=${music2.vid})}" class="img-link">
+              <img src="images/cont/main_pic.jpg" th:src="@{/upload/{img}(img=${music2.Videocover})}" alt="#">
+              <span class="mask">
+                  <i class="layui-icon layui-icon-play" style="font-size: 16px;"></i>
+                  <span th:text="@{{bx}(bx=${music2.PlaybackValue}>=10000?|${music2.PlaybackValue/1000/10.0}w|:${music2.PlaybackValue})}">3.30</span>
+                </span>
+              <span class="time">
+                  <i class="layui-icon layui-icon-praise" style="font-size: 16px;"></i>
+                  <span th:text="@{{bx}(bx=${music2.Fabulous}>=10000?|${music2.Fabulous/10000}w|:${music2.Fabulous})}">3.30</span>
+                </span>
+            </a>
+            <div class="img-info">
+              <a href="#" th:href="@{qt/selvideo(vid=${music2.vid})}" th:text="${music2.vname}">【FGO】轮到两仪式来给你洗脑了~</a>
+              <div class="btm">
+                <div class="user"><i></i><span th:text="${music2.alias}">铃椛</span></div>
+                <div class="online"><i></i><span th:text="@{{bx}(bx=${music2.PlaybackValue}>=10000?|${music2.PlaybackValue/1000/10.0}w|:${music2.PlaybackValue})}">6732</span></div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+      <div class="main-side fr" js-tab="true">
+        <div class="main-side__title">
+          <div class="rank-t">
+            <h3>排行</h3>
+          </div>
+          <div class="tab-title">
+            <a href="#" class="cur">热门</a>
+            <!--<a href="#">原创</a>-->
+          </div>
+          <div class="side-select">
+            <span>三日</span>
+            <i></i>
+          </div>
+        </div>
+        <div class="main-side__cont">
+          <div class="tab-cont">
+            <ul class="tab-cont__item main-rank">
+
+              <li class="item" th:each=" music3,iterStat:${topvideo}">
+                <a th:href="@{qt/selvideo(vid=${music3.vid})}" th:title="${music3.vname}"><i class="n2" th:class="${iterStat.count<4}?|n${iterStat.count}|:''" th:text="${iterStat.count}">2</i><span th:text="${music3.vname}">【1月】火影忍者 疾风传 719</span></a>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+</div>
+
+<footer id="footer">
+  <div class="page-width">
+    <ul class="footer-c clearfix">
+      <li>
+        <h6>cilicili</h6>
+        <a href="#" class="card">关于我们</a>
+        <a href="#" class="card">友情链接</a>
+        <a href="#" class="card">周边</a>
+        <a href="#" class="card">联系我们</a>
+        <a href="#" class="card">加入我们</a>
+        <a href="#" class="card">官方认证</a>
+      </li>
+      <li class="middle">
+        <h6>传送门</h6>
+        <a href="#" class="card">帮助中心</a>
+        <a href="#" class="card">高级弹幕</a>
+        <a href="#" class="card">活动专题页</a>
+        <a href="#" class="card">侵权申诉</a>
+        <a href="#" class="card">分院帽计划</a>
+        <a href="#" class="card">活动中心</a>
+        <a href="#" class="card">用户反馈论坛</a>
+        <a href="#" class="card">壁纸站</a>
+        <a href="#" class="card">名人堂</a>
+      </li>
+      <li class="footer-icon">
+        <div class="cont">
+          <a href="#" class="app">
+            <i></i>
+            <em>手机端下载</em>
+            <img src="images/app-qrcode.png" alt="#">
+          </a>
+          <a href="#" class="weibo">
+            <i></i>
+            <em>新浪微博</em>
+            <img src="images/weibo-qrcode.png" alt="#">
+          </a>
+          <a href="#" class="weixin">
+            <i></i>
+            <em>官方微信</em>
+            <img src="images/weixin-arcode.gif" alt="#">
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+
+
+
+<script src="jquery/jquery-1.10.2.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+
+  var lvida=$("#loginvid").val();
+
+  if (lvida!=""){
+    location.href="qt/selvideo?vid="+lvida;
+  }
+  var lfid=$("#loginfid").val();
+  var lfnumber=$("#loginfnumber").val();
+
+  if (lfid!=""){
+    location.href="fj/selonefj?fid="+lfid+"&&fnumber="+lfnumber;
+  }
+</script>
+<script>
+  function VagueSubmit() {
+    var name =$("#name").val();
+    $.post('vague/qt_findbyname',{name:name},function (data) {
+      if (data=='2') {
+        window.location.href = "http://localhost:8080/vague/qt_show";
+      }
+      if (data=='1') {
+        window.location.href = "http://localhost:8080/vague/vagueshow?name="+name;
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

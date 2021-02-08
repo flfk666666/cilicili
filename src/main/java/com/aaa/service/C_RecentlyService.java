@@ -21,4 +21,21 @@ public class C_RecentlyService {
     public List<C_Recently> queryByUidAndType(Integer uid,String type){
         return c_recentlyDAO.queryByUidAndType(uid,type);
     }
+
+    //添加播放历史
+    public int addRecently(C_Recently c_recently){
+        return c_recentlyDAO.insert(c_recently);
+    }
+
+    //判断是否存在
+    public int pdRecently(int id,String type,int uid){
+        return c_recentlyDAO.pdRecently(id, type, uid);
+    }
+
+    //如果存在就删删除之前的
+    public int delRecently(int id,String type,int uid){
+        return c_recentlyDAO.delRecently(id, type, uid);
+    }
+
+
 }

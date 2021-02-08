@@ -1,11 +1,14 @@
 package com.aaa.entity;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "C_UserAdmin")
+@Table(name = "c_useradmin")
 public class C_UserAdmin {
 
     @Id

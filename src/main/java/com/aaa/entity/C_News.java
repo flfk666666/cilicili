@@ -15,6 +15,15 @@ public class C_News {
     private String ncontext;
     private Date datetime;
     private String type;
+    private Integer uid;
+
+    public Integer getUid() {
+        return uid;
+    }
+
+    public void setUid(Integer uid) {
+        this.uid = uid;
+    }
 
     public Integer getNid() {
         return nid;
@@ -55,6 +64,7 @@ public class C_News {
                 ", ncontext='" + ncontext + '\'' +
                 ", datetime=" + datetime +
                 ", type='" + type + '\'' +
+                ", uid=" + uid +
                 '}';
     }
 }

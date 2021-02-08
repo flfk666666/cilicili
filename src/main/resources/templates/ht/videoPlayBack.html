@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://localhost:8080/">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery/jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="echarts/echarts.min.js" type="text/javascript"></script>
+    <script src="echarts/echarts.js"type="text/javascript"></script>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<div id="main2" style="width: 1200px;height:400px;"></div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        var names=[];
+        var values=[];
+        //数据加载完之前先显示一段简单的loading动画
+        myChart.showLoading();
+        var json=[];
+        $.ajax({
+            type : "post",
+            async : true,            //异步请求（同步请求将会锁住浏览器，用户其他操作必须等待请求完成才可以执行）
+            url : "tj/VideoPlayback",    //请求发送到dataActiont处
+            data : {},
+            dataType : "json",        //返回数据形式为json
+            success : function(result) {
+                //请求成功时执行该函数内容，result即为服务器返回的json对象
+                    for(var i=0;i<result.length;i++){
+                        names.push(result[i].vname);
+                        values.push(result[i].PlaybackValue);
+                        json.push({value:result[i]['PlaybackValue'],name:result[i]['vname']});
+                    }
+                    myChart.hideLoading();    //隐藏加载动画
+                    myChart.setOption(
+                        {
+                            title: {
+                                text: '视频播放量Top5',
+                                x: 'center'
+                            },
+                            tooltip: {
+                                trigger: 'item',
+                                formatter: "{a} <br/>{b} : {c} ({d}%)"
+                            },
+                            legend: {
+                                orient: 'vertical',
+                                left: 'left',
+                                data: names
+                            },
+                            series: [
+                                {
+                                    name: '',
+                                    type: 'pie',
+                                    radius: '55%',
+                                    center: ['65%', '70%'],
+                                    data: json,
+                                    itemStyle: {
+                                        emphasis: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    );
+
+            },
+            error : function(errorMsg) {
+                //请求失败时执行该函数
+                alert("图表请求数据失败!");
+                myChart.hideLoading();
+            }
+        });//end ajax
+        var myChart2 = echarts.init(document.getElementById('main2'));
+        var names2=[];
+        var values2=[];
+        var json2=[];
+        $.ajax({
+            type:"POST",
+            cache:false,
+            url:"tj/FolkoperaPlayback",
+            data:{},
+            dataType: "json",
+            success:function (result) {
+                for(var i=0;i<result.length;i++){
+                    names2.push(result[i].fname);
+                    values2.push(result[i].PlaybackValue);
+                    json2.push({value:result[i]['PlaybackValue'],name:result[i]['fname']});
+                }
+                //隐藏加载动画
+                myChart2.hideLoading();
+                myChart2.setOption({
+                    //提示框组件
+                    title: {
+                        text: '番剧播放量Top5',
+                        x: 'center'
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+                    //直角坐标系内绘图网格，left，right，bottom分别是距离容器左侧，右侧和底部的距离
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    //X轴
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: [0, 0.01],
+                        data:names2
+                    },
+                    //Y轴
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [
+                        {
+                            name: '',
+                            type: 'bar',
+                            data: values2
+                        }
+                    ]
+                })
+            }
+        })
+    });//刷新方法结束
+
+</script>
+</body>
+</html>

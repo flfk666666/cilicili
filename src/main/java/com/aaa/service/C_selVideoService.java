@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class C_selVideoService {
@@ -43,6 +44,25 @@ public class C_selVideoService {
 
     public List<C_tjVideo> selxgviedo(int vid){
         return c_selVideoDao.selxgvideo(vid);
+    }
+
+    public  List<Map<String,Object>> selallflvideo(int vfid){
+        return c_selVideoDao.selallflvideo(vfid);
+    }
+
+    public  List<Map<String,Object>> selnewflvideo(int vfid){
+        return c_selVideoDao.selnewflvideo(vfid);
+    }
+
+    public  List<Map<String,Object>> seltopflvideo(int vfid){
+        return c_selVideoDao.seltopflvideo(vfid);
+    }
+    public  List<Map<String,Object>> selheadflvideo(int vfid){
+        return c_selVideoDao.selheadflvideo(vfid);
+    }
+
+    public C_VideoClassification selvideoclass(int vfid){
+        return c_selVideoDao.selvideoclass(vfid);
     }
 
 }

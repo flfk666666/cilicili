@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <base href="http://localhost:8080/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+
+    <!-- Bootstrap core JavaScript-->
+    <!--  <script src="/easyUis/jquery.min.js"></script>-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-charts.min.js"></script>
+
+
+<!--    layui-->
+    <link href="layui/css/layui.css" rel="stylesheet">
+
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <script src="/easyUis/jquery.min.js"></script>
+    <script src="/easyUis/jquery.easyui.min.js"></script>
+    <script src="/easyUis/locale/easyui-lang-zh_CN.js"></script>
+    <link type="text/css" href="/easyUis/themes/default/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="/easyUis/themes/icon.css" rel="stylesheet"/>
+
+
+    <style type="text/css">
+        #fname{
+            width:200px;
+        }
+    </style>
+
+
+
+
+
+
+
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" >
+        <img src="img/logo.png" height="45">
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" th:each="ht:${ht_list}">
+                <a class="nav-link" href="index.html" th:text="${ht.lname}"  th:href="${ht.href}">
+                    <i class="fa fa-fw fa-dashboard"></i>
+
+                </a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa fa-fw fa-sign-out"></i>退出</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="content-wrapper">
+ <h3><center>我的番剧</center></h3>
+<!--    内容-->
+
+
+
+    <div>
+
+        <div class="layui-tab layui-tab-card">
+            <ul class="layui-tab-title">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">已上架</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">未上架</a></li>
+            </ul>
+            <div class="layui-tab-content" style="height: auto;">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div style="border: 1px solid black;margin: 5px;" th:each="yf:${ysjfolk}">
+                            <div style="display: inline-block;">
+                                <img th:src="@{/upload/{img}(img=${yf.folkcover})}" style="width: 200px;height: 250px;">
+                            </div>
+                        <div style="display: inline-block;">
+                            <span th:text="${yf.fname}"></span>
+                            (全<span th:text="${yf.Severalepisodes}"></span>话)<br/>
+                            点赞数:<span th:text="@{{bx}(bx=${yf.Fabulous}>=10000?|${yf.Fabulous/1000/10.0}w|:${yf.Fabulous})}"></span><br/><br/>
+
+                            播放量:<span th:text="@{{bx}(bx=${yf.PlaybackValue}>=10000?|${yf.PlaybackValue/1000/10.0}w|:${yf.PlaybackValue})}"></span><br/><br/>
+                            更新至第<span th:text="${yf.upnumber}"></span>话
+
+                            <a th:href="@{c_folk/folksj(state='未上架',fid=${yf.fid})}">下架</a>
+                        </div>
+                        </div>
+
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <div style="border: 1px solid black;margin: 5px;" th:each="yf:${wsjfolk}">
+                                    <div style="display: inline-block;">
+                                        <img th:src="@{/upload/{img}(img=${yf.folkcover})}" style="width: 200px;height: 250px;">
+                                    </div>
+                                    <div style="display: inline-block;">
+                                        <span th:text="${yf.fname}"></span>
+                                        (全<span th:text="${yf.Severalepisodes}"></span>话)<br/>
+                                        点赞数:<span th:text="@{{bx}(bx=${yf.Fabulous}>=10000?|${yf.Fabulous/1000/10.0}w|:${yf.Fabulous})}"></span><br/><br/>
+
+                                        播放量:<span th:text="@{{bx}(bx=${yf.PlaybackValue}>=10000?|${yf.PlaybackValue/1000/10.0}w|:${yf.PlaybackValue})}"></span><br/><br/>
+                                        更新至第<span th:text="${yf.upnumber}"></span>话
+
+                                        <a th:href="@{c_folk/folksj(state='已上架',fid=${yf.fid})}">上架</a>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    </div>
+
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+        <!-- Logout Modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">退出</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">你确定要退出吗？</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+                        <a class="btn btn-primary" href="/admin/ht_login_show">退出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--使用Bootstrap的js插件，必须先调入jQuery-->
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+
+<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script>
+        function upfolk(state,fid) {
+            if (state==1){
+                alert(fid);
+                // location.href="/c_folk/folksj?state='下架'&&fid="
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -13,10 +13,16 @@
 	<link href="css/kongjian2.css" rel="stylesheet">
 	<link href="css/kongjian3.css" rel="stylesheet">
 	<link href="css/kongjian4.css" rel="stylesheet">
+	<link href="css/fsmb1.css" rel="stylesheet">
+	<link href="css/fsmb2.css" rel="stylesheet">
+	<link href="css/fsmb3.css" rel="stylesheet">
+	<link href="css/fsmb4.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<script src="js/header.js"></script>
 	<script src="js/sentry-5.2.1.min.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/payPlugin.js"></script>
+
 
 	<title>个人空间</title>
 
@@ -3205,7 +3211,7 @@
 
 </head>
 
-<body><svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
+<body style="height: 100px;"><svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
 		<symbol id="header-icon-music" viewBox="0 0 1024 1024">
 			<path
 				d="M881.92 460.8A335.36 335.36 0 0 0 547.584 125.696h-73.216A335.616 335.616 0 0 0 139.776 460.8v313.6a18.688 18.688 0 0 0 18.432 18.688h41.984c13.568 46.336 37.888 80.384 88.576 80.384h98.304a37.376 37.376 0 0 0 37.376-36.864l1.28-284.672a36.864 36.864 0 0 0-37.12-37.12h-99.84a111.616 111.616 0 0 0-51.2 12.8v-73.216a242.432 242.432 0 0 1 241.664-241.664h67.328a242.176 242.176 0 0 1 241.408 241.664v74.496a110.592 110.592 0 0 0-54.272-14.08h-99.84a36.864 36.864 0 0 0-37.12 37.12v284.672a37.376 37.376 0 0 0 37.376 36.864h98.304c51.2 0 75.008-34.048 88.576-80.384h41.984a18.688 18.688 0 0 0 18.432-18.688z"
@@ -3540,128 +3546,129 @@
 				fill="#FB813A"></path>
 		</symbol>
 	</svg>
-	<div id="bili-header-m" class="bili-header-m report-wrap-module stardust-common">
-		<div class="nav-menu">
-			<!---->
-			<div class="nav-mask"></div>
-			<div class="nav-wrapper bili-wrapper">
-				<div class="nav-con nav-wrapper-left">
-					<ul class="nav-con-ul">
-						<li report-id="playpage_main" class="nav-item home"><a href="//www.bilibili.com" title="主站"
-								class="t"><i class="header-iconfont header-icon-bilibili-tv"></i>
-								主站
-								<!----></a>
-							<!---->
-						</li>
-						<li report-id="playpage_game" class="nav-item game"><a href="//game.bilibili.com"
-								target="_blank" title="游戏中心" class="t">游戏中心</a>
-							<!---->
-						</li>
-						<li report-id="playpage_live" class="nav-item live"><a href="//live.bilibili.com"
-								target="_blank" title="直播" class="t">直播</a>
-							<!---->
-						</li>
-						<li report-id="playpage_buy" class="nav-item buy"><a
-								href="//show.bilibili.com/platform/home.html?msource=pc_web" target="_blank" title="会员购"
-								class="t">会员购</a></li>
-						<li report-id="playpage_manga" class="nav-item manga"><a
-								href="//manga.bilibili.com?from=bill_top_mbanner" target="_blank" title="漫画"
-								class="t">漫画</a>
-							<!---->
-						</li>
-						<li report-id="playpage_match" class="nav-item match"><a href="//www.bilibili.com/v/game/match/"
-								target="_blank" title="赛事" class="t">赛事</a></li>
-						<li class="nav-item loc-menu"><a
-								href="https://show.bilibili.com/platform/detail.html?id=21148&amp;noTitleBar=1&amp;msource=ad_bml_cpt78547"
-								target="_blank" class="t">BML</a>
-							<!---->
-						</li>
+<div id="bili-header-m" class="bili-header-m report-wrap-module stardust-video">
+	<div class="nav-menu">
+		<!---->
+		<div class="nav-mask"></div>
+		<div class="nav-wrapper">
+			<div class="nav-con nav-wrapper-left">
+				<ul class="nav-con-ul">
+					<li report-id="playpage_main" class="nav-item home">
+						<a href="http://localhost:8080/qt/index" title="主站"
+						   class="t">
+							<img src="img/qtlogo.png" style="height:50px;width:150px;position: absolute;left:-80px;top:-3px;">
+							主站
+							<span class="header-iconfont header-icon-general_pullup_s drop"></span></a>
 						<!---->
-						<li report-id="playpage_download" class="nav-item mobile"><i
-								class="header-iconfont header-icon-Navbar_mobile b-icon-app"></i><a
-								id="header-mobile-app" href="//app.bilibili.com" target="_blank" title="下载APP"
-								class="t">下载APP</a>
-							<!---->
+					</li>
+					<li report-id="playpage_game" class="nav-item game"><a href="//game.bilibili.com"
+																		   target="_blank" title="游戏中心" class="t">游戏中心</a>
+						<!---->
+					</li>
+					<li report-id="playpage_live" class="nav-item live"><a href="//live.bilibili.com"
+																		   target="_blank" title="直播" class="t">直播</a>
+						<!---->
+					</li>
+					<li report-id="playpage_buy" class="nav-item buy"><a
+							href="//show.bilibili.com/platform/home.html?msource=pc_web" target="_blank" title="会员购"
+							class="t">会员购</a></li>
+					<li report-id="playpage_manga" class="nav-item manga"><a
+							href="//manga.bilibili.com?from=bill_top_mbanner" target="_blank" title="漫画"
+							class="t">漫画</a>
+						<!---->
+					</li>
+					<li report-id="playpage_match" class="nav-item match"><a href="//www.bilibili.com/v/game/match/"
+																			 target="_blank" title="赛事" class="t">赛事</a></li>
+					<li class="nav-item loc-menu"><a
+							href="https://show.bilibili.com/platform/detail.html?id=21148&amp;noTitleBar=1&amp;msource=ad_bml_cpt78547"
+							target="_blank" class="t">BML</a>
+						<!---->
+					</li>
+					<!---->
+					<li report-id="playpage_download" class="nav-item mobile"><i
+							class="header-iconfont header-icon-Navbar_mobile b-icon-app"></i><a
+							id="header-mobile-app" href="//app.bilibili.com" target="_blank" title="下载APP"
+							class="t">下载APP</a>
+						<!---->
+					</li>
+				</ul>
+			</div>
+			<div class="nav-search-box">
+				<div class="nav-search showSearch-media">
+					<form id="nav_searchform">
+						<input type="text"  name="name" id="seanname" autocomplete="off" accesskey="s" x-webkit-speech="" x-webkit-grammar="builtin:translate" placeholder="在此处进行搜索" class="nav-search-keyword">
+						<button type="button" onclick="VagueSubmit()" class="header-iconfont header-icon-general_search nav-search-submit"></button></form>
+					<!---->
+					<ul class="bilibili-suggest nav" style="display: none;">
+						<li class="kw">
+							<div class="b-line">
+								<p><span>历史搜索</span></p>
+							</div>
+						</li>
+						<li class="suggest-item"><a
+								href="//search.bilibili.com/all?keyword=%E9%9D%92%E6%98%A5%E7%8C%AA%E5%A4%B4&amp;from_source=nav_search"
+								target="_blank">青春猪头</a>
+							<div class="cancel"></div>
 						</li>
 					</ul>
-				</div>
-				<div class="nav-search-box">
-					<div class="nav-search showSearch-media">
-						<form id="nav_searchform"><input type="text" autocomplete="off" accesskey="s" x-webkit-speech=""
-								x-webkit-grammar="builtin:translate" placeholder="买的起的小车车（狗头）"
-								class="nav-search-keyword"><button type="submit"
-								class="header-iconfont header-icon-general_search nav-search-submit"></button></form>
-						<!---->
-						<!---->
-					</div><a href="//search.bilibili.com/" target="_blank"
-						class="header-iconfont header-icon-general_search btn-search"></a>
-				</div>
-				<div class="nav-wrapper-right">
-					<!---->
-					<div class="nav-con">
+				</div><a href="//search.bilibili.com/" target="_blank"
+						 class="header-iconfont header-icon-general_search btn-search"></a>
+			</div>
+			<div class="nav-wrapper-right">
+				<div class="nav-con">
+					<div th:if="${session.userAdmin == null}">
+
 						<ul class="nav-con-ul">
-							<li report-id="playpage_account" class="nav-item profile-info"><a
-									href="//space.bilibili.com" target="_blank" class="t">
-									<div class="i-face"><img th:src="@{{img}(img=${userspace.Headimg})}"
-											src="//i2.hdslb.com/bfs/face/a847cb68ea7bbbf6a0eb90bb54ad400a7ecf3a83.jpg@72w_72h.webp"
-											class="face"><img class="pendant">
-										<!---->
-									</div>
-								</a>
-								<!---->
-							</li>
-							<li report-id="big_tab_click" class="nav-item"><a href="//account.bilibili.com/account/big"
-									target="_blank" class="t">
-									大会员<div class="dot"></div></a>
-								<!---->
-							</li>
-							<!---->
-							<li data-v-4d9bc88b="" class="nav-item" report-id="playpage_message"><a data-v-4d9bc88b=""
-									href="//message.bilibili.com" target="_blank" title="消息" class="t">
-									<!---->
-									<!---->
-									消息
-								</a>
-								<!---->
-								<div data-v-4d9bc88b="" class="i-frame" style="display: none;"><iframe
-										data-v-4d9bc88b="" src="//message.bilibili.com/pages/nav/index_new_sync"
-										frameborder="0" width="100%" height="100%"></iframe></div>
-							</li>
-							<li data-v-637a89c0="" class="nav-item" report-id="playpage_dynamic"><a data-v-637a89c0=""
-									href="//t.bilibili.com" target="_blank" class="t">
-									<!---->
-									<!---->
-									动态</a>
-								<!---->
-							</li>
-							<li report-id="playpage_watchlater" class="nav-item"><a
-									href="//www.bilibili.com/watchlater/#/list" target="_blank" class="t">稍后再看</a>
-								<!---->
-							</li>
-							<li report-id="playpage_collection" class="nav-item"><a
-									href="//space.bilibili.com/14341990/favlist" target="_blank" class="t">收藏</a>
-								<!---->
-							</li>
-							<li report-id="playpage_history" class="nav-item"><a
-									href="//www.bilibili.com/account/history" target="_blank" class="t">历史</a>
-								<!---->
-							</li>
-							<li report-id="playpage_create_center" class="nav-item"><a
-									href="//member.bilibili.com/v2#/home" target="_blank" class="t">创作中心</a></li>
+
+							<li report-id="playpage_dynamic" class="nav-item">
+								<a href="/qt/login.html" target="_blank" class="t">登录</a></li>
+							<li report-id="playpage_history" class="nav-item">
+								<a href="/qt/register.html" target="_blank" class="t">注册</a></li>
+
 						</ul>
+
+
 					</div>
-					<div report-id="playpage_contribution" class="up-load"><a
-							href="//member.bilibili.com/v2#/upload/video/frame" target="_blank" class="u-link">
-							投稿
-						</a>
-						<!---->
+					<div th:if="${session.userAdmin != null}">
+						<ul class="nav-con-ul">
+							<li class="nav-item profile-info"><a href="//passport.bilibili.com/login" class="t">
+								<div class="i-face">
+									<img th:src="@{/tx/{img}(img=${session.userAdmin.Headimg})}" class="face">
+								</div>
+							</a>
+								<!---->
+							</li>
+							<li report-id="playpage_dynamic" class="nav-item">
+								<a th:href="@{qt_C_User/goPersonalspace(uid=${session.userAdmin.uid})}" target="_blank" class="t">我的空间</a></li>
+							<li report-id="playpage_history" class="nav-item">
+								<a href="qt/Personal" target="_blank" class="t">个人中心</a></li>
+							<li report-id="playpage_create_center" class="nav-item">
+								<a href="/qt/Creative" target="_blank" class="t">创作中心</a></li>
+							<li report-id="playpage_create_center" class="nav-item">
+								<a href="qt/Voucher" target="_blank" class="t">充值中心</a></li>
+						</ul>
+
+
+
 					</div>
+
+
+				</div>
+				<div class="nav-con">
+					<!---->
+				</div>
+				<div th:if="${session.userAdmin != null}" report-id="playpage_contribution" class="up-load"><a
+						href="/qt/Creative" target="_blank" class="u-link">
+					投稿
+				</a>
+
 				</div>
 			</div>
 		</div>
-		<!---->
-		<!---->
 	</div>
+	<!---->
+	<!---->
+</div>
 	<!--[if lt IE 9]><div id="browser-version-tip">
 	  <div class="wrapper">
 		抱歉，您正在使用不支持的浏览器访问个人空间。推荐您<a href="//www.google.cn/chrome/browser/desktop/index.html">安装 Chrome 浏览器</a>以获得更好的体验 ヾ(o◕∀◕)ﾉ
@@ -3675,12 +3682,13 @@
 				</div>
 				<!---->
 				<div class="h-inner"
-					style="background-image: url(img/beijing1.png);">
+					style="background-image: url(img/beijing1.png);"
+					 th:style="'background-image:url('+ ${userspace.spaceimg}+');'">
 					<div class="h-gradient"></div>
 					<div class="h-user">
 						<div class="h-info clearfix">
 							<div class="h-avatar">
-								<img th:src="@{{img}(img=${userspace.Headimg})}"
+								<img th:src="@{/tx/{img}(img=${userspace.Headimg})}"
 									id="h-avatar">
 								<a target="_blank"
 									href="https://account.bilibili.com/account/face/upload"
@@ -3688,8 +3696,8 @@
 								<span class="user-auth-subscript avatar-m"></span>
 							</div>
 							<div class="h-basic">
-								<div><span id="h-name">言子同学丶</span><span id="h-ceritification" class="icon"></span><span
-										id="h-gender" class="icon gender male"></span>
+								<div><span id="h-name" th:text="${userspace.alias}">言子同学丶</span><span id="h-ceritification" class="icon"></span><span
+										id="h-gender" class="icon gender" th:classappend="${userspace.sex=='男'}?'male':'female'" th:if="${userspace.sex!='保密'}"></span>
 									<a
 										href="//www.bilibili.com/html/help.html#k" target="_blank"  th:attr="lvl=${userspace.grade}"
 										class="h-level m-level"></a><a href="//account.bilibili.com/account/big"
@@ -3701,29 +3709,28 @@
 								<div class="h-basic-spacing">
 									<h4 title="" class="h-sign" style="display: none;">
 
-									</h4><input id="h-sign" type="text" th:value="${userspace.Personalized}" placeholder="编辑个性签名" maxlength="60">
-								</div>
+									</h4>
+									<div th:switch="${trkj==0}">
+
+
+
+									<input th:case="true" id="h-sign" type="text" onchange="updatePersonalized()"  th:value="${userspace.Personalized}" placeholder="编辑个性签名" maxlength="60">
+										<input th:case="false" id="h-sign" type="text"  th:value="${userspace.Personalized}" placeholder="编辑个性签名" maxlength="60" disabled="disabled">
+
+
+									</div>
+
+									</div>
 							</div>
 						</div>
 					</div>
-					<div title="更换皮肤" class="space-theme-trigger icon"></div>
-					<div class="be-dropdown h-version">
-						<div class="h-v-btn popup-select">
-							视角：
-							<span class="h-version-state">我自己</span><span
-								class="h-role-icon d-arrow d-arrow-dark"></span></div>
-						<ul class="be-dropdown-menu menu-align-"
-							style="left: 0px; top: 0px; transform-origin: center top 0px; display: none;">
-							<li class="be-dropdown-item">新访客</li>
-							<li class="be-dropdown-item">我的粉丝</li>
-						</ul>
-						<!---->
-					</div>
-					<!---->
+
+
+
 				</div>
 			</div>
 			<!---->
-			<div id="space-theme" class="t">
+			<div id="space-theme" class="t" style="display:inline-block;">
 				<div id="theme-header">
 					<div class="wrapper">
 						<div class="theme-topright">
@@ -3868,43 +3875,49 @@
 		</div>
 		<div id="navigator" class="n">
 			<div class="wrapper">
-				<div class="n-inner clearfix">
-					<div class="n-tab-links"><a href="/14341990"
-							class="n-btn n-index n-fans n-404 router-link-exact-active router-link-active active"><span
-								class="iconfont icon-ic_home"></span><span class="n-text">主页</span></a><a
-							href="/14341990/dynamic" class="n-btn n-dynamic"><span
-								class="iconfont icon-ic_following"></span><span class="n-text">动态</span></a><a
-							href="/14341990/video" class="n-btn n-video n-audio n-article n-album"><span
-								class="iconfont icon-ic_video"></span><span class="n-text">投稿</span><span
-								class="n-num">0</span></a>
-						<!----><a href="/14341990/channel/index" class="n-btn n-channel"><span
-								class="iconfont icon-ic_channel"></span><span class="n-text">频道</span><span
-								class="n-num">
-								0
-							</span></a>
-						<!----><a href="/14341990/favlist" class="n-btn n-favlist"><span
-								class="iconfont icon-ic_collect"></span><span class="n-text">收藏</span><span
-								class="n-num">
-								1
-							</span></a><a href="/14341990/bangumi" class="n-btn n-bangumi n-subs n-cinema"><span
-								class="iconfont icon-ic_sub"></span><span class="n-text">订阅</span></a><a
-							href="/14341990/setting" class="n-btn n-setting"><span
-								class="iconfont icon-ic_setting"></span><span class="n-text">设置</span></a></div>
+				<div class="n-inner clearfix" style="height: 50px;">
+					<div class="n-tab-links">
+						<ul class="nav nav-tabs" role="tablist">
+
+							<li role="presentation" class="active">
+								<a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+									<span class="iconfont icon-ic_home"></span>
+									<span class="n-text">主页</span>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+									<span class="iconfont icon-ic_collect"></span>
+									<span class="n-text">收藏</span>
+								</a>
+							</li>
+
+							<li role="presentation">
+								<a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
+									<span class="iconfont icon-ic_sub"></span>
+									<span class="n-text">关注/粉丝</span></a>
+								</a>
+							</li>
+
+
+						</ul>
+
+					</div>
 					<div class="clearfix g-search search-container"><input type="text" placeholder="搜索视频"><span
 							class="icon search-btn"></span></div>
-					<div class="n-statistics"><a href="/14341990/fans/follow" class="n-data n-gz" title="35">
-							<p class="n-data-k">关注数</p>
-							<p id="n-gz" class="n-data-v space-attention">35</p>
-						</a><a href="/14341990/fans/fans" class="n-data n-fs" title="0">
-							<p class="n-data-k">粉丝数</p>
-							<p id="n-fs" class="n-data-v space-fans">0</p>
+					<div class="n-statistics">
+						<a class="n-data n-gz">
+							<p class="n-data-k">关注数:<span th:text="${wdgzsize}">1</span></p>
+
 						</a>
-						<!---->
-						<!---->
-						<!---->
+						<a class="n-data n-fs">
+							<p class="n-data-k">粉丝数:<span th:text="${wdfssize}">1</span></p>
+
+						</a>
+
 					</div>
 				</div>
-				<div class="n-cursor" style="width: 50px; left: 20px;"></div>
+
 			</div>
 		</div>
 		<div id="navigator-fixed" class="n n-fix">
@@ -3952,419 +3965,746 @@
 			</div>
 		</div>
 		<div class="s-space">
-			<div>
-				<div id="page-index" class="wrapper clearfix">
-					<div class="col-1">
-						<div class="section i-pin-v">
-							<div class="be-tab">
-								<ul class="be-tab-inner clearfix">
-									<li class="be-tab-item is-active"><input type="radio" name="be-tab-0"
-											class="be-tab-input" value="top"><span>我的粉丝会看到</span></li>
-									<li class="be-tab-item"><input type="radio" name="be-tab-0" class="be-tab-input"
-											value="masterpiece"><span>新访客会看到</span></li>
-								</ul>
-								<div class="be-tab-cursor" style="transform: translateX(0px); width: 84px;"></div>
-							</div>
-							<!---->
-							<div class="i-pin-part">
-								<div class="content clearfix i-pin-empty">
-									<div class="i-pin-empty-set list-create">
-										<div class="create-covers-meta">
-											<div class="icon bold"></div>
-											<div class="text">设置置顶视频</div>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home">
+				<div>
+					<div id="page-index" class="wrapper clearfix" >
+						<div class="col-1" style="width: 920px;height: auto;">
+							<div class="section i-pin-v">
+								<div class="be-tab">
+									<ul class="be-tab-inner clearfix">
+										<li class="be-tab-item is-active"><input type="radio" name="be-tab-0"
+																				 class="be-tab-input" value="top"><span>置顶视频</span></li>
+									</ul>
+									<div class="be-tab-cursor" style="transform: translateX(0px); width: 84px;"></div>
+								</div>
+								<!---->
+
+								<div th:if="${trkj==0}" class="i-pin-part" onclick="sszd()">
+									<div class="content clearfix i-pin-empty">
+										<div class="i-pin-empty-set list-create">
+
+											<a th:if="${userzdvideo!=null}">
+											<img style="width: 280px;height: 157px;" th:src="@{/upload/{img}(img=${userzdvideo.Videocover})}">
+												<span th:text="${userzdvideo.vname}"></span>
+
+											</a>
+
+											<div th:if="${userzdvideo==null}" class="create-covers-meta">
+												<div class="icon bold"></div>
+												<div class="text">设置置顶视频</div>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<!---->
-							<div id="pin-wrapper" class="" style="display: none;">
-								<div id="pin-layer">
-									<div class="pin-layer-header"><span class="pin-layer-close icon"></span>
-										<p class="pin-layer-header-text"></p>
-									</div>
-									<div class="pin-layer-body">
-										<div class="pin-layer-search"><input type="text" id="pin-layer-search"
-												placeholder="搜索我上传的视频"><span id="pin-layer-search-btn"
-												class="icon"></span>
-											<p class="pin-layer-search-result" style="display: none;">
-												共找到关于“
-												<span class="pin-layer-search-keyword"></span> ”的
-												<span class="pin-layer-search-count"></span> 0个视频
-											</p>
+
+								<div th:if="${trkj==1}" class="i-pin-part">
+									<div class="content clearfix i-pin-empty">
+										<div class="i-pin-empty-set list-create">
+
+
+
+											<a th:href="@{qt/selvideo(vid=${userzdvideo.vid})}" th:if="${userzdvideo!=null}">
+												<img style="width: 280px;height: 157px;" th:src="@{/upload/{img}(img=${userzdvideo.Videocover})}">
+												<span th:text="${userzdvideo.vname}"></span>
+											</a>
+
+											<div th:if="${userzdvideo==null}" class="create-covers-meta">
+												<div class="icon bold"></div>
+												<div class="text">暂无置顶视频</div>
+											</div>
+
 										</div>
-										<div class="pin-layer-order clearfix">
-											<p class="pin-layer-order-tip">未添加视频列表</p>
-											<div class="be-dropdown pin-layer-order-dropdown">
-												<div><span>最新发布</span><span class="d-arrow"></span></div>
-												<ul class="be-dropdown-menu menu-align-"
-													style="left: 0px; top: 0px; transform-origin: center top 0px; display: none;">
-													<li class="be-dropdown-item">最新发布</li>
-													<li class="be-dropdown-item">最多播放</li>
+									</div>
+								</div>
+
+								<!---->
+								<div id="pin-wrapper" class="" style="display: none;">
+									<div id="pin-layer">
+										<div class="pin-layer-header"><span class="pin-layer-close icon"></span>
+											<p class="pin-layer-header-text"></p>
+										</div>
+										<div class="pin-layer-body">
+											<div class="pin-layer-search"><input type="text" id="pin-layer-search"
+																				 placeholder="搜索我上传的视频"><span id="pin-layer-search-btn"
+																											  class="icon"></span>
+												<p class="pin-layer-search-result" style="display: none;">
+													共找到关于“
+													<span class="pin-layer-search-keyword"></span> ”的
+													<span class="pin-layer-search-count"></span> 0个视频
+												</p>
+											</div>
+											<div class="pin-layer-order clearfix">
+												<p class="pin-layer-order-tip">未添加视频列表</p>
+												<div class="be-dropdown pin-layer-order-dropdown">
+													<div><span>最新发布</span><span class="d-arrow"></span></div>
+													<ul class="be-dropdown-menu menu-align-"
+														style="left: 0px; top: 0px; transform-origin: center top 0px; display: none;">
+														<li class="be-dropdown-item">最新发布</li>
+														<li class="be-dropdown-item">最多播放</li>
+													</ul>
+													<!---->
+												</div>
+											</div>
+											<div class="be-scrollbar pin-layer-video empty ps">
+												<ul class="pin-layer-vlist">
+													<div class="m-loading" style="display: none;"><i
+															class="icon"></i><span>加载中...</span></div>
 												</ul>
-												<!---->
-											</div>
-										</div>
-										<div class="be-scrollbar pin-layer-video empty ps">
-											<ul class="pin-layer-vlist">
-												<div class="m-loading" style="display: none;"><i
-														class="icon"></i><span>加载中...</span></div>
-											</ul>
-											<div class="pin-layer-video-empty" style="display: none;">
-												还没有上传过视频哦，
-												<a href="//member.bilibili.com/v/video/submit.html" target="_blank">立即上传
-													&gt;</a></div>
-											<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
-												<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">
+												<div class="pin-layer-video-empty" style="display: none;">
+													还没有上传过视频哦，
+													<a href="//member.bilibili.com/v/video/submit.html" target="_blank">立即上传
+														&gt;</a></div>
+												<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+													<div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">
+													</div>
+												</div>
+												<div class="ps__rail-y" style="top: 0px; right: 0px;">
+													<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;">
+													</div>
 												</div>
 											</div>
-											<div class="ps__rail-y" style="top: 0px; right: 0px;">
-												<div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;">
-												</div>
-											</div>
+											<!---->
 										</div>
-										<!---->
-									</div>
-									<div data-v-126b46cf="" class="btn-container pin-layer-footer btn-center"><a
-											data-v-eb6e1e50="" class="btn primary btn-disabled" data-v-126b46cf="">
+										<div data-v-126b46cf="" class="btn-container pin-layer-footer btn-center"><a
+												data-v-eb6e1e50="" class="btn primary btn-disabled" data-v-126b46cf="">
 											<!----><span data-v-eb6e1e50="" class="btn-content">确定</span></a><a
-											data-v-eb6e1e50="" class="btn default" data-v-126b46cf="">
-											<!----><span data-v-eb6e1e50="" class="btn-content">取消</span></a></div>
-								</div>
-							</div>
-						</div>
-						<div class="section video empty full-rows host">
-							<h3 class="section-title"><a href="/14341990/video" class="t">我的视频</a><span
-									class="count">0</span>
-								<!---->
-								<!---->
-								<div class="sec-empty-hint sec-empty-hint-host">
-									还没有上传过视频哦~
-									<a href="//member.bilibili.com/v/video/submit.html" target="_blank">
-										立即上传
-									</a></div>
-							</h3>
-							<div class="content clearfix"></div>
-						</div>
-						<div class="section article">
-							<h3 class="section-title"><a href="/14341990/article" class="t">我的专栏</a>
-								<!---->
-								<!---->
-							</h3>
-							<div class="content clearfix" style="display: none;">
-								<div class="article-wrap"></div>
-							</div>
-						</div>
-						<div class="section channel empty host">
-							<h3 class="section-title"><a href="/14341990/channel/index" class="t">我的频道</a>
-								<!---->
-							</h3>
-							<div class="empty-state">
-								<p>投稿视频可以分类展示了</p>
-								<div data-v-126b46cf="" class="btn-container btn-center"><a data-v-eb6e1e50=""
-										class="btn primary btn-large" data-v-126b46cf="">
-										<!----><span data-v-eb6e1e50="" class="btn-content">
-											创建频道
-										</span></a></div>
-							</div>
-							<div class="content"></div>
-							<div class="modal-container create-channel-popup" style="display: none;">
-								<div class="modal-mask"></div>
-								<div class="modal-wrapper">
-									<div class="modal">
-										<div class="modal-header"><i
-												class="modal-header-close iconfont icon-ic_close"></i>
-											<div class="modal-title">新建频道</div>
-										</div>
-										<div class="modal-body">
-											<div class="be-input be-input--append"><input type="input" rows="4"
-													placeholder="填写频道标题" maxlength="20" class="be-input_inner">
-												<!---->
-												<div class="be-input-word-counter">0/20</div>
-												<!---->
-											</div>
-											<div class="be-textarea be-input--append">
-												<!----><textarea rows="4" type="textarea" placeholder="填写频道简介（选填）"
-													maxlength="60" class="be-textarea_inner"></textarea>
-												<div class="be-input-word-counter">0/60</div>
-												<!---->
-											</div>
-										</div>
-										<div data-v-126b46cf="" class="btn-container modal-footer btn-center"><a
-												data-v-eb6e1e50="" class="btn primary" data-v-126b46cf="">
-												<!----><span data-v-eb6e1e50="" class="btn-content">确定</span></a><a
 												data-v-eb6e1e50="" class="btn default" data-v-126b46cf="">
-												<!----><span data-v-eb6e1e50="" class="btn-content">取消</span></a></div>
+											<!----><span data-v-eb6e1e50="" class="btn-content">取消</span></a></div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="section fav">
-							<h3 class="section-title"><a href="/14341990/favlist" class="t">我的收藏夹</a><span
-									class="count">1</span><a href="/14341990/favlist" class="more">更多</a><span
-									class="private-hint" style="display: none;"><span
-										class="icon"></span><span>仅自己可见</span></span></h3>
-							<div class="content clearfix">
-								<div data-count="http://i0.hdslb.com/bfs/archive/3240c7a892d760a3114b57a3ffec354df1a4d429.jpg"
-									class="fav-item"><a href="/14341990/favlist?fid=75256590&amp;ftype=create"
-										class="fav-covers"><img
-											src="//i0.hdslb.com/bfs/archive/3240c7a892d760a3114b57a3ffec354df1a4d429.jpg@152w_152h_100Q_1c.webp"
-											alt=""></a><span class="fav-count">3</span>
-									<div class="m"><span class="state">
+							<div class="section video empty full-rows host" style="height: 650px;">
+								<h3 class="section-title"><a href="/14341990/video" class="t" th:text="${trkj==0?'我的视频':'他的视频'}">我的视频</a><span
+										class="count">1</span>
+
+									<div style="overflow:auto;height:600px;">
+										<div th:if="${userVideos.size()!=0}" class="small-item fakeDanmu-item" th:each="mevideo:${userVideos}">
+											<a th:href="@{qt/selvideo(vid=${mevideo.vid})}">
+												<img th:src="@{/upload/{img}(img=${mevideo.Videocover})}">
+												<span class="i-watchlater"></span>
+											</a>
+											<a th:href="@{qt/selvideo(vid=${mevideo.vid})}" style="font-size: 13px;" th:text="${mevideo.vname}" target="_blank" class="title">
+												因为曝光豫章书院，我朋友被逼到自杀。
+											</a>
+											<div class="meta"><span class="play"><em class="icon"></em>
+
+										<span th:text="@{{bx}(bx=${mevideo.PlaybackValue}>=10000?|${mevideo.PlaybackValue/1000/10.0}w|:${mevideo.PlaybackValue})}">3.30</span>
+
+										</span><span class="comments"><em class="icon"></em>
+										<span th:text="@{{bx}(bx=${mevideo.Fabulous}>=10000?|${mevideo.Fabulous/10000}w|:${mevideo.Fabulous})}">3.30</span>
+
+										</span></div>
+										</div>
+
+
+									</div>
+
+
+
+
+									<div class="sec-empty-hint sec-empty-hint-host" th:if="${userVideos.size()==0}">
+										还没有上传过视频哦~
+										<a href="/qt/Creative" target="_blank">
+											立即上传
+										</a>
+
+
+
+
+									</div>
+
+
+
+
+								</h3>
+								<div class="content clearfix"></div>
+							</div>
+
+
+							<div class="section fav">
+								<h3 class="section-title"><a href="/14341990/favlist" th:text="${trkj==0?'我的收藏夹':'他的收藏夹'}" class="t">我的收藏夹</a><span
+										class="count" th:text="${selcoll.size()}">1</span><a href="http://localhost:8080/qt/index" class="more">更多</a><span
+										class="private-hint" style="display: none;"></span></h3>
+
+
+
+                                <!--我的收藏夹-->
+								<div class="content clearfix">
+									<div class="fav-item" th:each="sc,index:${selcoll}"><a class="fav-covers">
+										<img th:src="@{upload/{img}(img=${sc.Videocover})}"></a><span class="fav-count" th:text="${tc__${index.count}__.size()}">3</span>
+										<div class="m"><span class="state" th:text="|(${sc.openYN=='0'?'公开':'私有'})|">
 											公开
-										</span><a href="/14341990/favlist?fid=75256590&amp;ftype=create" class="name"
-											title="默认收藏夹">
+										</span><a class="name"
+												  title="默认收藏夹" th:text="${sc.type}">
 											默认收藏夹
 										</a></div>
+									</div>
+
+
 								</div>
+
+
+
 							</div>
-						</div>
-						<div class="section bangumi">
-							<h3 class="section-title"><a href="/14341990/bangumi" class="t">订阅番剧</a><a
-									href="/14341990/bangumi" class="more">更多</a><span class="private-hint"
-									style="display: none;"><span class="icon"></span><span>仅自己可见</span></span></h3>
-							<div class="content clearfix" style="">
-								<div class="large-item clearfix"><a href="//bangumi.bilibili.com/anime/5852"
-										target="_blank" class="cover"><img
-											src="//i0.hdslb.com/bfs/bangumi/958cffa5054239ae9695469708949de0caaeabe4.jpg@110w_144h_100Q_1c.webp"
-											alt="全职高手 第一季"></a>
-									<div class="detail"><a href="//bangumi.bilibili.com/anime/5852" target="_blank"
-											title="全职高手 第一季" class="title"><span class="icon end"></span>
+							<div class="section bangumi">
+								<h3 class="section-title"><a href="/14341990/bangumi" class="t">订阅番剧</a><a
+										href="http://localhost:8080/qt/index" class="more">更多</a><span class="private-hint"
+																						  style="display: none;"><span class="icon"></span><span>仅自己可见</span></span></h3>
+								<div class="content clearfix" style="width: 880px;">
+									<div class="large-item clearfix" th:each="sub:${selsub}">
+										<a th:href="@{fj/selonefj(fid=${sub.fid})}" target="_blank" class="cover">
+											<img th:src="@{/upload/{img}(img=${sub.folkcover})}">
+										</a>
+										<div class="detail">
+										<a th:href="@{fj/selonefj(fid=${sub.fid})}" th:text="${sub.folkname}" target="_blank"  class="title">
+											<span class="icon end"></span>
 											全职高手 第一季
 										</a>
-										<p title="根据蝴蝶蓝同名电子游戏竞技小说改编，一个被战队驱逐的超级职业选手离开老东家，进入网吧自行组建战队，结..." class="desc">
-											根据蝴蝶蓝同名电子游戏竞技小说改编，一个被战队驱逐的超级职业选手离开老东家，进入网吧自行组建战队，结...
-										</p>
-										<!---->
+											<p th:text="${sub.folkintroduction}" class="desc">
+												根据蝴蝶蓝同名电子游戏竞技小说改编，一个被战队驱逐的超级职业选手离开老东家，进入网吧自行组建战队，结...
+											</p>
+
+										</div>
 									</div>
-								</div>
-								<div class="large-item clearfix"><a href="//bangumi.bilibili.com/anime/2543"
-										target="_blank" class="cover"><img
-											src="//i0.hdslb.com/bfs/bangumi/cbb20ee03e97a9f3ad2e1506a10fd1271f1c584a.jpg@110w_144h_100Q_1c.webp"
-											alt="狐妖小红娘"></a>
-									<div class="detail"><a href="//bangumi.bilibili.com/anime/2543" target="_blank"
-											title="狐妖小红娘" class="title">
-											<!---->
-											狐妖小红娘
-										</a>
-										<p title="根据古典小说记载，世上有人有妖，妖会与人相恋，妖寿命千年，人的寿命有限，人死了，妖活着。人会投胎转世..." class="desc">
-											根据古典小说记载，世上有人有妖，妖会与人相恋，妖寿命千年，人的寿命有限，人死了，妖活着。人会投胎转世...
-										</p>
-										<!---->
-									</div>
-								</div>
-								<div class="large-item clearfix"><a href="//bangumi.bilibili.com/anime/5626"
-										target="_blank" class="cover"><img
-											src="//i0.hdslb.com/bfs/bangumi/image/063598851cd83528573263c5164817d236e72b1e.png@110w_144h_100Q_1c.webp"
-											alt="镇魂街 第二季"></a>
-									<div class="detail"><a href="//bangumi.bilibili.com/anime/5626" target="_blank"
-											title="镇魂街 第二季" class="title">
-											<!---->
-											镇魂街 第二季
-										</a>
-										<p title="罗刹街镇魂将曹焱兵和寄灵人夏铃踏上修复灵槐之路，羽林街镇魂将南御夫却受命缉拿曹焱兵，恰有菩提街镇魂将..." class="desc">
-											罗刹街镇魂将曹焱兵和寄灵人夏铃踏上修复灵槐之路，羽林街镇魂将南御夫却受命缉拿曹焱兵，恰有菩提街镇魂将...
-										</p>
-										<!---->
-									</div>
-								</div>
-								<div class="large-item clearfix"><a href="//bangumi.bilibili.com/anime/5031"
-										target="_blank" class="cover"><img
-											src="//i0.hdslb.com/bfs/bangumi/6f0fc60f4319db3f3463488df5a0cae5ee283281.jpg@110w_144h_100Q_1c.webp"
-											alt="Taboo Tattoo－禁忌咒纹－"></a>
-									<div class="detail"><a href="//bangumi.bilibili.com/anime/5031" target="_blank"
-											title="Taboo Tattoo－禁忌咒纹－" class="title"><span class="icon end"></span>
-											Taboo Tattoo－禁忌咒纹－
-										</a>
-										<p title="“咒纹”是通过装填每人固有的物质“Trigger”来启动，使被称为“印者”的操纵者的身体能力飞跃性提..." class="desc">
-											“咒纹”是通过装填每人固有的物质“Trigger”来启动，使被称为“印者”的操纵者的身体能力飞跃性提...
-										</p>
-										<!---->
-									</div>
+
+
+
+
+
+
 								</div>
 							</div>
-						</div>
-						<div class="section subs empty">
-							<h3 class="section-title"><a href="/14341990/subs" class="t">订阅标签</a><span
-									class="count">0</span>
-								<!----><span class="private-hint" style="display: none;"><span
-										class="icon"></span><span>仅自己可见</span></span></h3>
-							<div class="content clearfix" style=""></div>
-						</div>
-						<div class="section coin">
-							<h3 title="30天内投过硬币的视频" class="section-title">
-								最近投币的视频
-								<span class="count">4</span><span class="private-hint" style="display: none;"><span
-										class="icon"></span><span>仅自己可见</span></span></h3>
-							<div class="content clearfix" style="">
-								<div data-aid="73372900" class="small-item fakeDanmu-item"><a
-										href="//www.bilibili.com/video/av73372900" target="_blank" class="cover"><img
-											src="//i1.hdslb.com/bfs/archive/0c62940b1582a3a056d4fbea3ee3d2f0ddd3ab01.jpg@380w_240h_100Q_1c.webp"
-											alt="因为曝光豫章书院，我朋友被逼到自杀。"><span class="i-watchlater"></span>
-										<!----></a><a href="//www.bilibili.com/video/av73372900" target="_blank"
-										title="因为曝光豫章书院，我朋友被逼到自杀。" class="title">
+
+							<div class="section coin" style="height:auto;">
+								<h3  class="section-title">
+									最近投币的视频
+									<span class="count" th:text="${dzvideo.size()}">4</span>
+									<span class="private-hint" style="display: none;">
+										<span class="icon"></span></span></h3>
+								<div class="content clearfix">
+									<div style="margin: 10px;" class="small-item fakeDanmu-item" th:each="mevideo:${dzvideo}">
+										<a th:href="@{qt/selvideo(vid=${mevideo.vid})}">
+										<img th:src="@{/upload/{img}(img=${mevideo.Videocover})}">
+										<span class="i-watchlater"></span>
+										</a>
+										<a th:href="@{qt/selvideo(vid=${mevideo.vid})}" th:text="${mevideo.vname}" target="_blank" class="title">
 										因为曝光豫章书院，我朋友被逼到自杀。
-									</a>
-									<div class="meta"><span class="play"><em class="icon"></em>1072.7万
-										</span><span class="comments"><em class="icon"></em>13.4万
+									    </a>
+										<div class="meta"><span class="play"><em class="icon"></em>
+
+										<span th:text="@{{bx}(bx=${mevideo.PlaybackValue}>=10000?|${mevideo.PlaybackValue/1000/10.0}w|:${mevideo.PlaybackValue})}">3.30</span>
+
+										</span><span class="comments"><em class="icon"></em>
+										<span th:text="@{{bx}(bx=${mevideo.Fabulous}>=10000?|${mevideo.Fabulous/10000}w|:${mevideo.Fabulous})}">3.30</span>
+
 										</span></div>
-								</div>
-								<div data-aid="73836578" class="small-item fakeDanmu-item"><a
-										href="//www.bilibili.com/video/av73836578" target="_blank" class="cover"><img
-											src="//i0.hdslb.com/bfs/archive/974d6874f4bcac76c7cf0e8b4dee7f2558af30ea.jpg@380w_240h_100Q_1c.webp"
-											alt="当事人告诉你豫章书院事件的完整始末！"><span class="i-watchlater"></span>
-										<!----></a><a href="//www.bilibili.com/video/av73836578" target="_blank"
-										title="当事人告诉你豫章书院事件的完整始末！" class="title">
-										当事人告诉你豫章书院事件的完整始末！
-									</a>
-									<div class="meta"><span class="play"><em class="icon"></em>1446.1万
-										</span><span class="comments"><em class="icon"></em>21.1万
-										</span></div>
-								</div>
-								<div data-aid="74638397" class="small-item fakeDanmu-item"><a
-										href="//www.bilibili.com/video/av74638397" target="_blank" class="cover"><img
-											src="//i0.hdslb.com/bfs/archive/86842e24b454e96631f705f3bef17b11834a12f4.jpg@380w_240h_100Q_1c.webp"
-											alt="有人冒充我的名字来骗钱，居然还骗到了！？豫章书院事件意想不到的风波……"><span class="i-watchlater"></span>
-										<!----></a><a href="//www.bilibili.com/video/av74638397" target="_blank"
-										title="有人冒充我的名字来骗钱，居然还骗到了！？豫章书院事件意想不到的风波……" class="title">
-										有人冒充我的名字来骗钱，居然还骗到了！？豫章书院事件意想不到的风波……
-									</a>
-									<div class="meta"><span class="play"><em class="icon"></em>237.4万
-										</span><span class="comments"><em class="icon"></em>2.9万
-										</span></div>
-								</div>
-								<div data-aid="74163306" class="small-item fakeDanmu-item"><a
-										href="//www.bilibili.com/video/av74163306" target="_blank" class="cover"><img
-											src="//i1.hdslb.com/bfs/archive/fd244b58cf7472802602d093e39b698f00c71360.jpg@380w_240h_100Q_1c.webp"
-											alt="曝光豫章书院，我也收到了死亡威胁"><span class="i-watchlater"></span>
-										<!----></a><a href="//www.bilibili.com/video/av74163306" target="_blank"
-										title="曝光豫章书院，我也收到了死亡威胁" class="title">
-										曝光豫章书院，我也收到了死亡威胁
-									</a>
-									<div class="meta"><span class="play"><em class="icon"></em>636.6万
-										</span><span class="comments"><em class="icon"></em>8.9万
-										</span></div>
+									</div>
 								</div>
 							</div>
+
 						</div>
-						<div class="section album empty">
-							<h3 class="section-title"><a href="/14341990/album" class="t">我的相簿</a>
-								<!---->
-								<!---->
-							</h3>
-							<div class="content clearfix">
-								<div class="album-wrapper"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-2">
-						<div class="section shop" style="display: none;">
-							<h3 class="section-title">商家中心</h3><a href="" target="_blank" class="shop-link">进入 &gt;</a>
-							<div class="info">
-								<div class="content">
-									<div class="detail clearfix">
-										<div class="item"><span class="title">在售商品</span><span class="number">0</span>
-										</div>
-										<div class="item"><span class="title">本月销量</span><span class="number">0</span>
+						<div class="col-2">
+							<div class="section shop" style="display: none;">
+								<h3 class="section-title">商家中心</h3><a href="" target="_blank" class="shop-link">进入 &gt;</a>
+								<div class="info">
+									<div class="content">
+										<div class="detail clearfix">
+											<div class="item"><span class="title">在售商品</span><span class="number">0</span>
+											</div>
+											<div class="item"><span class="title">本月销量</span><span class="number">0</span>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div>
-							<!---->
-							<div class="section">
-								<div class="row user-auth no-auth"><img
-										src="images/icon-auth.png"
-										alt="获得 bilibili 认证，享受多重认证福利！" class="icon-auth">
-									<div class="no-auth-title"><a href="//account.bilibili.com/account/official/home"
-											title="点此申请 bilibili 认证" target="_blank" class="goto-auth">点此申请 bilibili
+							<div>
+
+								<div class="section">
+									<div class="row user-auth no-auth"><img
+											src="images/icon-auth.png"
+											alt="获得 bilibili 认证，享受多重认证福利！" class="icon-auth">
+										<div class="no-auth-title"><a href="//account.bilibili.com/account/official/home"
+																	  title="点此申请 bilibili 认证" target="_blank" class="goto-auth">点此申请 bilibili
 											认证<em class="icon i-m-ra"></em></a><span>获得 bilibili 认证，享受多重认证福利！</span>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="section i-m">
-							<div class="i-m-r1"><a href="https://member.bilibili.com/v2#/home" target="_blank"
-									class="i-m-title"><span class="icon-i-title"></span><span
+							<div class="section i-m" th:if="${trkj==0}">
+								<div class="i-m-r1"><a href="http://localhost:8080/qt/Creative" target="_blank"
+													   class="i-m-title"><span class="icon-i-title"></span><span
 										class="icon-m-ra"></span></a></div>
-							<div class="i-m-r2 clearfix"><a href="https://member.bilibili.com/v2#/upload/video/frame"
-									target="_blank" class="i-m-btn i-m-upload"><span
+								<div class="i-m-r2 clearfix"><a href="http://localhost:8080/qt/Creative"
+																target="_blank" class="i-m-btn i-m-upload"><span
 										class="i-m-u-icon icon"></span><span class="i-m-text">视频投稿</span></a><a
-									href="https://member.bilibili.com/v2#/upload-manager/article" target="_blank"
-									class="i-m-btn i-m-v"><span class="i-m-v-icon icon"></span><span
+										href="http://localhost:8080/qt/Creative" target="_blank"
+										class="i-m-btn i-m-v"><span class="i-m-v-icon icon"></span><span
 										class="i-m-text">内容管理</span></a></div>
-						</div>
-						<div class="section elec" style="display: none;">
-							<div class="elec-action">
-								<div class="elec-trigger"><span class="elec-trigger-icon icon"></span>为TA充电</div>
-								<div class="elec-map">
-									<div class="elec-status">共
-										<span class="elec-count">0</span>人</div>
-									<div class="elec-status-bg"></div>
-									<div class="elec-status-bg-grey"></div>
-								</div>
-								<div id="elec-hover-bg-preloader"></div>
 							</div>
-							<!---->
-						</div>
-						<div class="section i-ann">
-							<h3 class="section-title">公告</h3>
-							<div class="content">
-								<div class="be-textarea be-input--append" id="i-ann-content">
-									<!----><textarea rows="4" type="textarea" placeholder="编辑我的空间公告" maxlength="150"
-										class="be-textarea_inner"></textarea>
-									<div class="be-input-word-counter">0/150</div>
+							<div class="section elec" style="display: none;">
+								<div class="elec-action">
+									<div class="elec-trigger"><span class="elec-trigger-icon icon"></span>为TA充电</div>
+									<div class="elec-map">
+										<div class="elec-status">共
+											<span class="elec-count">0</span>人</div>
+										<div class="elec-status-bg"></div>
+										<div class="elec-status-bg-grey"></div>
+									</div>
+									<div id="elec-hover-bg-preloader"></div>
+								</div>
+								<!---->
+							</div>
+							<div class="section i-ann">
+								<h3 class="section-title">公告</h3>
+								<div class="content">
+									<div class="be-textarea be-input--append" id="i-ann-content">
+
+										<div th:switch="${trkj==0}">
+
+										<textarea th:case="true" rows="4" type="textarea" placeholder="编辑我的空间公告" maxlength="150"
+												  class="be-textarea_inner" th:maxlength="150" onchange="updateSpacedeclaration()" id="txt" onkeyup="updateFont()" th:text="${userspace.Spacedeclaration}"></textarea>
+
+
+											<textarea th:case="false" rows="4" type="textarea" placeholder="编辑我的空间公告" maxlength="150"
+													  disabled="disabled" class="be-textarea_inner" th:maxlength="150" id="txt" th:text="${userspace.Spacedeclaration}"></textarea>
+
+
+
+										</div>
+
+											<div class="be-input-word-counter" id="font123">0/150</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="section i-live">
+								<h3 class="section-title">直播间</h3>
+								<div class="content">
+									<!---->
+									<!---->
+									<div class="i-live-off i-live-off-host"><a href="//live.bilibili.com/2426918"
+																			   target="_blank" class="i-live-link"><span class="i-live-icon icon"></span><span
+											class="i-live-host-text">前往我的直播间</span><span
+											class="r-arrow icon i-live-arrow"></span></a></div>
 									<!---->
 								</div>
 							</div>
-						</div>
-						<div class="section i-live">
-							<h3 class="section-title">直播间</h3>
-							<div class="content">
-								<!---->
-								<!---->
-								<div class="i-live-off i-live-off-host"><a href="//live.bilibili.com/2426918"
-										target="_blank" class="i-live-link"><span class="i-live-icon icon"></span><span
-											class="i-live-host-text">前往我的直播间</span><span
-											class="r-arrow icon i-live-arrow"></span></a></div>
-								<!---->
-							</div>
-						</div>
-						<div class="section user">
-							<div class="section-title" style="display: none;">
-								<div class="private-hint"><span class="icon"></span><span>仅自己可见</span></div>
-							</div>
-							<div class="info">
-								<div class="content">
-									<div class="meta">
-										<div class="row">
-											<div class="item uid"><span class="icon"></span><span
-													class="text">14341990</span></div>
-											<div class="item birthday"><span class="icon"></span><a
-													href="//account.bilibili.com/site/setting" target="_blank"
-													class="text">
+							<div class="section user">
+								<div class="section-title" style="display: none;">
+									<div class="private-hint"><span class="icon"></span><span>仅自己可见</span></div>
+								</div>
+								<div class="info">
+									<div class="content">
+										<div class="meta">
+											<div class="row">
+												<div class="item uid"><span class="icon"></span><span
+														class="text">14341990</span></div>
+												<div class="item birthday"><span class="icon"></span><a
+														href="//account.bilibili.com/site/setting" target="_blank"
+														class="text">
 													11-25
 												</a></div>
+											</div>
 										</div>
 									</div>
+									<!---->
 								</div>
-								<!---->
+							</div>
+							<!---->
+							<div class="section game empty">
+								<h3 class="section-title">最近玩过的游戏</h3>
+								<div class="content"></div>
 							</div>
 						</div>
-						<!---->
-						<div class="section game empty">
-							<h3 class="section-title">最近玩过的游戏</h3>
-							<div class="content"></div>
+					</div>
+				</div>
+				</div>
+				<!-- 收藏 -->
+				<div role="tabpanel" class="tab-pane" id="profile">
+					<div>
+						<div  class="wrapper clearfix">
+
+							<div>
+
+								<!-- Nav tabs -->
+								<ul class="nav nav-pills nav-stacked" role="tablist">
+									<li role="presentation" class="active" style="width: 150px;">
+										<a href="#home1" role="tab" data-toggle="tab">全部</a>
+									</li>
+									<li role="presentation" style="width: 150px;" th:each="coll,i:${selcoll}">
+										<a href="#profile1" th:href="@{#pro{index}(index=${i.index})}"  role="tab" data-toggle="tab" th:text="${coll.type}" >Profile</a>
+									</li>
+
+								</ul>
+
+
+								<div class="tab-content" style="position:absolute;top: 0px; left:180px;">
+									<div role="tabpanel" class="tab-pane active" id="home1">
+
+										<div class="panel panel-default" style="width: 1100px;" th:each="colldiv,i:${selcoll}">
+											<div class="panel-heading">
+												<h3 class="panel-title" style="display: inline-block;" th:text="${colldiv.type}">Panel title</h3>
+												<a th:if="${trkj==0}" href="javascript:void(0)" th:onclick="mtyp([[${colldiv.type}]],[[${colldiv.type}]])">编辑名称</a>
+												<div style="float: right;display: inline-block;" th:text="|创建时间:${#dates.format(colldiv.datetime,'yyyy-MM-dd')}|"></div>
+											</div>
+											<div class="panel-body">
+												<div class="row" th:each="tc:${tc__${i.count}__}" style="display:inline-block;float: left;">
+													<div class="col-sm-6 col-md-4">
+														<div class="thumbnail" style="display:inline-block;width: 200px;">
+															<img th:src="@{/upload/{img}(img=${tc.Videocover})}">
+															<div class="caption">
+																<h6 th:text="${tc.vname}">Thumbnail label</h6>
+																<p th:text="|(${tc.openYN=='0'?'公开':'私有'})|"></p>
+																<p th:text="${#dates.format(tc.datetime,'yyyy-MM-dd')}">...</p>
+
+
+
+																<p th:if="${trkj==0}">
+																	<a th:if="${tc.openYN=='0'}" th:href="@{/qt_C_User/upcolltype(type='1',vid=${tc.vid},uid=${tc.uid})}" class="btn btn-primary" role="button">私有</a>
+																	<a th:if="${tc.openYN=='1'}" th:href="@{/qt_C_User/upcolltype(type='0',vid=${tc.vid},uid=${tc.uid})}"  class="btn btn-primary" role="button">公开</a>
+																	<a th:href="@{/qt_C_User/delsc(vid=${tc.vid},uid=${tc.uid})}" class="btn btn-default" role="button">取消收藏</a>
+																</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+									<div th:id="@{pro{index}(index=${i.index})}" role="tabpanel" class="tab-pane" id="pro0" style="height: 800px;width: 1100px;background-color: white;" th:each="colldiv,i:${selcoll}" >
+
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h3 class="panel-title" style="display: inline-block;" th:text="${colldiv.type}">Panel title</h3>
+													<a th:if="${trkj==0}" href="javascript:void(0)" th:onclick="mtyp([[${colldiv.type}]],[[${colldiv.type}]])">编辑名称</a>
+
+													<div style="float: right;display: inline-block;" th:text="|创建时间:${#dates.format(colldiv.datetime,'yyyy-MM-dd')}|"></div>
+												</div>
+												<div class="panel-body">
+													<div class="row" th:each="tc:${tc__${i.count}__}" style="display:inline-block;float: left;">
+														<div class="col-sm-6 col-md-4">
+															<div class="thumbnail" style="display:inline-block;width: 200px;">
+																<img th:src="@{/upload/{img}(img=${tc.Videocover})}">
+																<div class="caption">
+																	<h6 th:text="${tc.vname}">Thumbnail label</h6>
+																	<p th:text="|(${tc.openYN=='0'?'公开':'私有'})|"></p>
+																	<p th:text="${#dates.format(tc.datetime,'yyyy-MM-dd')}">...</p>
+
+																	<p>
+																		<a th:if="${tc.openYN=='0'}" th:href="@{/qt_C_User/upcolltype(type='1',vid=${tc.vid},uid=${tc.uid})}" class="btn btn-primary" role="button">私有</a>
+																		<a th:if="${tc.openYN=='1'}" th:href="@{/qt_C_User/upcolltype(type='0',vid=${tc.vid},uid=${tc.uid})}"  class="btn btn-primary" role="button">公开</a>
+																		<a th:href="@{/qt_C_User/delsc(vid=${tc.vid},uid=${tc.uid})}" class="btn btn-default" role="button">取消收藏</a>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+
+
+
+
+
+									</div>
+
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="messages">
+					<div>
+						<div  class="wrapper clearfix">
+							我的投稿
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="settings">
+					<div>
+						<div  class="wrapper clearfix">
+							<div>
+
+								<!-- Nav tabs -->
+								<ul class="nav nav-pills nav-stacked" role="tablist" >
+									<li role="presentation" class="active" style="width: 150px;">
+										<a href="#wdfs" role="tab" data-toggle="tab" th:text="${trkj==1?'他的粉丝':'我的粉丝'}" >我的粉丝</a>
+									</li>
+									<li role="presentation" style="width: 150px;">
+										<a href="#wdgz" role="tab" data-toggle="tab" th:text="${trkj==1?'他的关注':'我的关注'}">我的关注</a>
+									</li>
+								</ul>
+
+								<!-- Tab panes -->
+								<div class="tab-content" style="position:absolute;top: 0px; left:180px;">
+									<div role="tabpanel" class="tab-pane active" id="wdfs" style="height: 800px;width: 1100px;background-color: white;">
+										<div class="follow-header follow-header-info" >
+											<div class="breadcrumb clearfix" style="background-color: white;border-bottom: 1px solid black;">
+												<p class="item cur" th:text="${trkj==1?'他的粉丝':'我的粉丝'}">我的粉丝</p>
+
+											</div>
+											<!---->
+										</div>
+
+										<div class="follow-content section">
+
+											<div class="content" style="padding-bottom: 10px;">
+												<ul class="relation-list">
+													<li class="list-item clearfix" th:each="gz:${wdfs}">
+														<div class="follow-select" style="display: none;">
+															<div class="icon icon-follow-watched"></div>
+														</div>
+														<a style="margin-left:20px;" th:href="@{qt_C_User/goPersonalspace(uid=${gz.uid})}" target="_blank" class="cover">
+															<img th:src="|/tx/${gz.Headimg}|" style="width: 58px;height: 58px;border-radius:50%;margin-top:2px;">
+														</a>
+														<div class="content"><a href="//space.bilibili.com/1413585/" target="_blank" class="title">
+															<div style="margin-left:100px;">
+																<a th:href="@{qt_C_User/goPersonalspace(uid=${gz.uid})}"><span class="vip-name-check fans-name this-is-vip" th:text="${gz.alias}">啾小妍SAMA</span></a>
+																<p th:text="${gz.Personalized}" class="desc">
+																	微博：啾小妍Deer
+																</p>
+															</div>
+
+															<div class="fans-action" style="margin-top:30px;margin-right: 30px;">
+																<div class="be-dropdown fans-action-btn fans-action-follow">
+																	<a th:href="@{qt_C_User/goPersonalspace(uid=${gz.uid})}" style="height: 30px;" class="fans-action-text">
+																		查看空间
+																	</a>
+
+
+																</div>
+																<div class="be-dropdown">
+																</div>
+															</div>
+														</div>
+													</li>
+
+
+												</ul>
+												<ul class="be-pager" style="">
+													<li title="上一页" class="be-pager-prev be-pager-disabled"><a>上一页</a></li>
+													<li title="第一页" class="be-pager-item be-pager-item-active"><a>1</a></li>
+
+													<li title="最后一页:2" class="be-pager-item"><a>2</a></li>
+													<li title="下一页" class="be-pager-next"><a>下一页</a></li><span class="be-pager-total">共 2 页，</span><span class="be-pager-options-elevator">
+				跳至
+				<input type="text"> 页
+			</span>
+												</ul>
+											</div>
+										</div>
+
+									</div>
+									<div role="tabpanel" class="tab-pane" id="wdgz" style="height: 800px;width: 1100px;background-color: white;">
+										<div class="follow-header follow-header-info" >
+											<div class="breadcrumb clearfix" style="background-color: white;border-bottom: 1px solid black;">
+												<p class="item cur">全部关注</p>
+
+											</div>
+											<!---->
+										</div>
+										<!---->
+										<div class="follow-content section">
+
+											<div class="content" style="padding-bottom: 10px;">
+												<ul class="relation-list">
+													<li class="list-item clearfix" th:each="gz:${wdgz}">
+														<div class="follow-select" style="display: none;">
+															<div class="icon icon-follow-watched"></div>
+														</div>
+														<a th:href="@{qt_C_User/goPersonalspace(uid=${gz.uid})}" style="margin-left:20px;" target="_blank" class="cover">
+														<img th:src="|/tx/${gz.Headimg}|" style="width: 58px;height: 58px;border-radius:50%;margin-top:2px;">
+														</a>
+														<div class="content"><a th:href="@{qt_C_User/goPersonalspace(uid=${gz.uid})}" target="_blank" class="title">
+															<div style="margin-left:100px;">
+																<a th:href="@{qt_C_User/goPersonalspace(uid=${gz.uid})}"><span class="vip-name-check fans-name this-is-vip" th:text="${gz.alias}">啾小妍SAMA</span></a>
+															    <p th:text="${gz.Personalized}" class="desc">
+																微博：啾小妍Deer
+																</p>
+														   </div>
+
+															<div class="fans-action" style="margin-top:30px;margin-right: 30px;">
+																<div th:if="${trkj==0}" class="be-dropdown fans-action-btn fans-action-follow">
+
+
+																	<a  th:href="@{/follow/grqg(fuid=${gz.uid})}" style="height: 30px;" class="fans-action-text">
+																		取消关注
+																	</a>
+
+
+																</div>
+																<div class="be-dropdown">
+																</div>
+															</div>
+														</div>
+													</li>
+
+
+												</ul>
+												<ul class="be-pager" style="">
+													<li title="上一页" class="be-pager-prev be-pager-disabled"><a>上一页</a></li>
+													<li title="第一页" class="be-pager-item be-pager-item-active"><a>1</a></li>
+
+													<li title="最后一页:2" class="be-pager-item"><a>2</a></li>
+													<li title="下一页" class="be-pager-next"><a>下一页</a></li><span class="be-pager-total">共 2 页，</span><span class="be-pager-options-elevator">
+				跳至
+				<input type="text"> 页
+			</span>
+												</ul>
+											</div>
+										</div>
+
+
+
+
+									</div>
+								</div>
+
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+
 		</div>
 		<div class="to-top" style="display: none; background-position-x: -40px;"></div>
 		<!---->
 	</div>
 
+<!-- 设置置顶视频 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">我的视频</h4>
+			</div>
+			<div class="modal-body">
+				<table class="table table-hover">
+					<tbody><tr>
+
+						<th>视频封面</th>
+						<th>视频标题</th>
+						<th>投稿时间</th>
+						<th>操作</th>
+					</tr>
+					<tr th:each="userVideo:${userVideos}">
+
+						<td>
+							<img width="200px" height="100px" th:src="@{upload/{img}(img=${userVideo.Videocover})}" alt="">
+						</td>
+						<td th:text="${userVideo.vname}"></td>
+
+						<td th:text="${#dates.format(userVideo.vtime,'yyyy-MM-dd hh:mm:ss')}"></td>
+					    <td th:if="${userVideo.Z_index=='0'}">
+
+							<a th:href="@{qt_C_User/qxzd(z_index=1,uid=${userVideo.uid},vid=${userVideo.vid})}">置顶</a>
+
+						</td>
+						<td th:if="${userVideo.Z_index=='1'}">
+							<a th:href="@{qt_C_User/qxzd(z_index=0,uid=${userVideo.uid},vid=${userVideo.vid})}">取消置顶</a>
+
+						</td>
+
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 模态框编辑器 -->
+<div class="modal fade" id="myModalbjmc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabelbjmc">修改收藏夹名称</h4>
+			</div>
+			<div class="modal-body">
+				<form action="/qt_C_User/xgwjj" method="post">
+					<input type="hidden" id="upcvid" name="upcvid">
+					<input type="hidden" name="uid" th:value="${session.userAdmin==null?'0':session.userAdmin.uid}">
+					<input type="text" id="uptype" name="uptype"><br/>
+					<input type="submit" class="btn btn-success" value="提交">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 </body>
+<!--使用Bootstrap的js插件，必须先调入jQuery-->
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+
+<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+<script>
+
+	function sszd(){
+		$('#myModal').modal('show');
+	}
+	function mtyp(type,cvid){
+		$('#myModalbjmc').modal('show');
+		$("#upcvid").val(cvid);
+		$("#uptype").val(type);
+	}
+
+
+	$(function () {
+        $("#font123").text($("#txt").val().length+"/150")
+    })
+    function updateFont() {
+        $("#font123").text($("#txt").val().length+"/150")
+    }
+    function updateSpacedeclaration() {
+        var con=$("#txt").val();
+        alert('保存成功');
+		$.post('qt_C_User/updateSpacedeclaration',{con:con},function (data) {
+
+        })
+    }
+    function updatePersonalized() {
+		var con=$("#h-sign").val();
+        $.post('qt_C_User/updatePersonalized',{Personalized:con},function (data) {
+
+        })
+    }
+</script>
+<script>
+	function VagueSubmit() {
+		var name =$("#seanname").val();
+		$.post('vague/qt_findbyname',{name:name},function (data) {
+			if (data=='2') {
+				window.location.href = "http://localhost:8080/vague/qt_show";
+			}
+			if (data=='1') {
+				window.location.href = "http://localhost:8080/vague/vagueshow?name="+name;
+			}
+		});
+	}
+</script>
 
 </html>
